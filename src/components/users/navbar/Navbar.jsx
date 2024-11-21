@@ -10,11 +10,11 @@ const Navbar = () => {
       <div className="container flex items-center justify-between">
         <div>
           <a href="#">
-            <img src={brand} className="max-w-[70px] max-h-[70px]" alt="" />
+            <img src={brand} className="max-w-[55px] max-h-[55px]" alt="" />
           </a>
         </div>
-        <div>
-          <ul className="flex gap-10 navbar-ul">
+        <div className="hidden custom-mobile-screen:block">
+          <ul className="flex gap-10 navbar-ul navigation-menu">
             <li>
               <a href="">About</a>
             </li>
@@ -39,10 +39,11 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <div>
-          <button className="text-white h-[50px] w-[50px] rounded-full border-2 border-white flex items-center justify-center">
+        <div className="flex">
+          <button className="text-white h-[40px] w-[40px] rounded-full border-2 border-white flex items-center justify-center">
             <User size={24} color="white" />
           </button>
+          <button className="block custom-mobile-screen:hidden ml-[1rem] text-2xl">&#9776;</button>
         </div>
       </div>
     </div>

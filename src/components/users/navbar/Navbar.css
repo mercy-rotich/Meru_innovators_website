@@ -30,7 +30,14 @@
     transition:all 0.5s;
 
 }
-pi
+
 .navbar .navbar-ul li:hover::after{
     width:100%;
+}
+
+
+@media(max-width:820px){
+
+    
+
 }

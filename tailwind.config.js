@@ -5,7 +5,10 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    screens: {
+    
+      'custom-mobile-screen': '820px',
+    },
   },
   plugins: [],
 }

@@ -5,9 +5,9 @@ const Hero = () => {
   return (
     <div className="hero bg-orange-500">
       <Navbar />
-      <div className="content text-white w-full">
+      <div className="content text-white w-full z-10">
         <div className="container text-center custom-mobile-screen:text-start px-4">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-4 tracking-wider hero-header">
             Empowering Meru's <br />
             Brightest Innovators
           </h1>

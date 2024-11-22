@@ -1,0 +1,6 @@
+.slick-slide > div {
+    margin: 0 10px;
+}
+.events-slide .overlay{
+    background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75));
+}

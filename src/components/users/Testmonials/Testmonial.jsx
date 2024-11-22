@@ -1,8 +1,8 @@
 import { Instagram, Linkedin } from "lucide-react";
 const Testmonial = () => {
   return (
-    <div className="p-[10px] border border-neutral-300 rounded-md">
-      <div>
+    <div className="p-[10px] border border-b-0 border-neutral-300 rounded-md">
+      <div className="border-2 border-orange-500 p-[10px] translate-y-6 rounded-md">
         <div className="flex items-center gap-4 mt-4">
           <img
             src="https://images.pexels.com/photos/14723868/pexels-photo-14723868.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -36,6 +36,7 @@ const Testmonial = () => {
           >
             <Linkedin size={24} />
           </a>
+          <div className="universal-button">View profile</div>
         </div>
       </div>
     </div>

@@ -28,7 +28,7 @@ const Event = () => {
     {
       id: 1,
       image:
-        "https://images.pexels.com/photos/27176219/pexels-photo-27176219/free-photo-of-young-woman-decorating-a-christmas-tree.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       caption: "Fullstack Meetup",
       description: "Date: 15th March, 2024 | Time: 10:00 AM | Venue: ECA24",
     },

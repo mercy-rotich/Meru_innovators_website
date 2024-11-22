@@ -20,7 +20,10 @@
 
   --primary:#117909;
 
+  --descriptions-color:#676767;
+
 }
+
 
 
 ::-webkit-scrollbar {
@@ -36,6 +39,17 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.subtopic{
+
+  font-weight:700;
+
+  font-size:2.3rem;
+
+  text-align:center;
+
+}
+
 
 img{
 
@@ -62,6 +76,11 @@ a{
 
 }
 
+
+.description{
+  color:#676767;
+  line-height:2rem;
+}
 
 ul{
 

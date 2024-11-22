@@ -11,7 +11,7 @@ const Event = () => {
     slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 1700,
     arrows: true,
     responsive:[
       {
@@ -46,13 +46,20 @@ const Event = () => {
       caption: "IoT Engineering Gossip Night",
       description: "Date: 10th May, 2024 | Time: 6:00 PM | Venue: AC13",
     },
+    {
+      id: 4,
+      image:
+        "https://images.pexels.com/photos/8851457/pexels-photo-8851457.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      caption: "Surgeons convention",
+      description: "Date: 13th Dec, 2024 | Time: 6:00 PM | Venue: TB7",
+    },
   ];
   
 
   return (
-    <div className="bg-gray-100 py-8 px-4 events-slide">
+    <div className="mt-[7rem] px-4 events-slide">
       <div className="max-w-screen-lg mx-auto">
-        <h1 className="text-3xl md:text-5xl font-bold text-center mb-8">
+        <h1 className="subtopic text-topicColor mb-8">
           Event Highlights
         </h1>
         <Slider {...settings}>

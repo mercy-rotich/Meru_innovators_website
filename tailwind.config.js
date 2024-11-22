@@ -5,6 +5,7 @@ export default {
     extend: {
       screens: {
         "custom-mobile-screen": "820px",
+        "neon-screen": "404px",
       },
       colors: {
         darkOrange: "#ff8c00",

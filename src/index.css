@@ -87,3 +87,13 @@ ul{
   list-style:none;
 
 }
+
+@media(max-width:600px){
+
+  .subtopic{
+
+    font-size:1.8rem;
+
+  }
+
+}

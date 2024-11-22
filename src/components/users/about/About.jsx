@@ -6,7 +6,7 @@ const About = () => {
   return (
     <div className="mt-[7rem]">
       <div className="container">
-        <div className="flex gap-[1rem] justify-between">
+        <div className="flex flex-col-reverse sm:flex-row gap-[1rem] justify-between">
           <div>
             <div className="basis-1/2 relative">
               <img
@@ -24,7 +24,7 @@ const About = () => {
           </div>
           <div className="basis-1/2">
             <h3 className="subtopic text-topicColor">ABOUT UNIVERSITY</h3>
-            <p className="description">
+            <p className="description text-center sm:text-start">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Voluptas, nisi adipisci. Voluptates officia maxime quaerat nihil
               fuga alias cum iusto commodi, earum voluptas iure molestiae hic

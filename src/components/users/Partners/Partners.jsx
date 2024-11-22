@@ -14,9 +14,9 @@ const partners = [
 const Partners = () => {
   return (
     <div className="mt-[7rem]">
-      <h3 className="subtopic text-topicColor mb-8">Our Partners</h3>
+         <h3 className="subtopic text-topicColor">Our patners</h3>
       <div className="container">
-        <div className="grid grid-cols-4 gap-10 text-center">
+        <div className="grid grid-cols-1 neon-screen:grid-cols-2  sm:grid-cols-3 md:grid-cols-4 gap-10 text-center">
           {partners.map((partner, index) => (
             <div
               key={index}

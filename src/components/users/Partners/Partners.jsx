@@ -22,7 +22,7 @@ const Partners = () => {
           {partners.map((partner, index) => (
             <div
               key={index}
-              className="p-[1rem] border border-neutral-300 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105 flex justify-center items-center flex-col bg-white"
+              className="p-[1rem] border border-neutral-300 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105 flex justify-center items-center flex-col bg-white"
             >
               <div className="mb-[1rem]">
                 <img

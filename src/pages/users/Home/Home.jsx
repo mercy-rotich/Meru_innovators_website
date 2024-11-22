@@ -1,5 +1,6 @@
 import About from "../../../components/users/about/About";
 import Event from "../../../components/users/events/Event";
+import Footer from "../../../components/users/Footer/Footer";
 import Hero from "../../../components/users/Hero/Hero";
 import LatestBlogs from "../../../components/users/LatestBlogs/LatestBlogs";
 import Partners from "../../../components/users/Partners/Partners";
@@ -14,6 +15,7 @@ const Home = () => {
         <LatestBlogs/>
         <Testmonials/>
         <Partners/>
+        <Footer/>
       </div>
     </div>
   );

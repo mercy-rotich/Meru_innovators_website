@@ -2,7 +2,7 @@ import { ThumbsUp, MessageSquare } from "lucide-react";
 import { ArrowRight } from "lucide-react";
 const Blog = () => {
   return (
-    <div className="p-[20px] bg-white border border-neutral-300 rounded-md shadow-lg hover:shadow-xl transition-shadow ease-in-out duration-300">
+    <div className="p-[20px] bg-white border border-neutral-300 rounded-md  transition-shadow ease-in-out duration-300">
       <div className="relative">
         <img
           src="https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"

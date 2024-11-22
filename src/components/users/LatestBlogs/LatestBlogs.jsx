@@ -1,8 +1,6 @@
 import React from "react";
 import Blog from "../blog/Blog";
 
-import { ArrowRight } from "lucide-react";
-
 const LatestBlogs = () => {
   return (
     <div className="mt-[8rem]">

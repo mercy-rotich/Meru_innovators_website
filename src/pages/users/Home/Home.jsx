@@ -3,6 +3,7 @@ import Event from "../../../components/users/events/Event";
 import Hero from "../../../components/users/Hero/Hero";
 import LatestBlogs from "../../../components/users/LatestBlogs/LatestBlogs";
 import Partners from "../../../components/users/Partners/Partners";
+import Testmonials from "../../../components/users/Testmonials/Testmonials";
 const Home = () => {
   return (
     <div>
@@ -11,6 +12,7 @@ const Home = () => {
         <About />
         <Event />
         <LatestBlogs/>
+        <Testmonials/>
         <Partners/>
       </div>
     </div>

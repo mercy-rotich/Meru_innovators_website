@@ -37,7 +37,7 @@ const Blog = () => {
           #TypeScript
         </li>
       </ul>
-      <div className="flex items-center gap-6 mt-4">
+      <div className="flex items-center flex-wrap gap-6 mt-4">
         <div className="flex items-center gap-2">
           <button>
             <ThumbsUp size={24} />
@@ -50,6 +50,9 @@ const Blog = () => {
           </button>
           <span className="text-sm text-neutral-700">1k</span>
         </div>
+        <button className="universal-button">
+          Readmore
+        </button>
       </div>
     </div>
   );

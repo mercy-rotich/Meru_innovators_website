@@ -1,4 +1,5 @@
 import { ThumbsUp, MessageSquare } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 const Blog = () => {
   return (
     <div className="p-[20px] bg-white border border-neutral-300 rounded-md shadow-lg hover:shadow-xl transition-shadow ease-in-out duration-300">
@@ -50,8 +51,8 @@ const Blog = () => {
           </button>
           <span className="text-sm text-neutral-700">1k</span>
         </div>
-        <button className="universal-button">
-          Readmore
+        <button className="universal-button flex items-center justify-between">
+          Readmore <ArrowRight size={16} color="white" />
         </button>
       </div>
     </div>

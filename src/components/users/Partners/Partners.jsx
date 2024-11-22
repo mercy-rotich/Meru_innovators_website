@@ -1,5 +1,7 @@
 import image from "../../../assets/images/partner.avif";
 
+
+
 const partners = [
   { name: "Firefox", buttonText: "Explore" },
   { name: "Chrome", buttonText: "Discover" },
@@ -33,7 +35,7 @@ const Partners = () => {
                 <h3 className="text-cardtopic text-lg font-semibold border-b border-neutral-300 pb-[1rem] mb-[1rem]">
                   {partner.name}
                 </h3>
-                <button className="universal-button">
+                <button className="">
                   {partner.buttonText}
                 </button>
               </div>

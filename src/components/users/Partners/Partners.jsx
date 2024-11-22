@@ -35,7 +35,7 @@ const Partners = () => {
                 <h3 className="text-cardtopic text-lg font-semibold border-b border-neutral-300 pb-[1rem] mb-[1rem]">
                   {partner.name}
                 </h3>
-                <button className="">
+                <button className="universal-button">
                   {partner.buttonText}
                 </button>
               </div>

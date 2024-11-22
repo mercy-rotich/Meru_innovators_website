@@ -23,7 +23,7 @@ const About = () => {
             </div>
           </div>
           <div className="basis-1/2">
-            <h3 className="subtopic text-topicColor">ABOUT UNIVERSITY</h3>
+            <h3 className="subtopic text-topicColor">About University</h3>
             <p className="description text-center sm:text-start">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Voluptas, nisi adipisci. Voluptates officia maxime quaerat nihil
@@ -34,14 +34,7 @@ const About = () => {
               exercitationem corporis maiores blanditiis quasi sit enim a! Ipsa
               rerum modi vero neque obcaecati sunt mollitia, dolores nesciunt
               enim dicta ipsam voluptatibus fuga consequuntur eaque? Blanditiis,
-              ab, minima fugit quibusdam asperiores debitis aliquam nam eum
-              labore adipisci cupiditate dolore, modi voluptatem? Fuga, nihil
-              ut. Ut distinctio maxime asperiores excepturi possimus dignissimos
-              neque sapiente atque fugiat, dolore inventore repudiandae ea
-              temporibus, consequatur maiores vero quis nulla! At quas neque
-              tenetur sapiente ut, deserunt ratione pariatur autem unde ducimus
-              ipsum distinctio doloribus voluptatum ea officia numquam voluptas?
-              Esse, obcaecati nihil. Odit, sapiente.
+              ab.
             </p>
           </div>
         </div>

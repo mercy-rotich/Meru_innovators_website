@@ -17,6 +17,8 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 import UserModal from "./UserModel";
 import Subtitle from "../../../components/Subtitle/Subtitle";
 
+import Communities from "./Communities";
+
 const Community = () => {
   const [user, setUser] = useState(null);
 
@@ -76,10 +78,14 @@ const Community = () => {
             </div>
           </div>
         </div>
+      </div>
 
-        <Subtitle title={"COMMUNITY LEADS"} centered />
+      <Communities />
 
-        {/* User Cards Grid */}
+      <Subtitle title={"COMMUNITY LEADS"} centered />
+
+      {/* User Cards Grid */}
+      <div className="container">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-[3rem]">
           {users.map((user) => (
             <div
@@ -147,7 +153,6 @@ const Community = () => {
           ))}
         </div>
       </div>
-
       {/* Footer */}
       <div className="mt-20">
         <Footer />

@@ -15,6 +15,7 @@ import { Mail } from "lucide-react";
 
 import { FaSquareXTwitter } from "react-icons/fa6";
 import UserModal from "./UserModel";
+import Subtitle from "../../../components/Subtitle/Subtitle";
 
 const Community = () => {
   const [user, setUser] = useState(null);
@@ -76,8 +77,10 @@ const Community = () => {
           </div>
         </div>
 
+        <Subtitle title={"COMMUNITY LEADS"} centered />
+
         {/* User Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-[3rem]">
           {users.map((user) => (
             <div
               key={user.id}

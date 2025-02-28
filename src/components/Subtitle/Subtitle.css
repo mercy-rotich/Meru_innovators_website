@@ -1,0 +1,16 @@
+.line{
+
+
+
+    height:4px;
+
+    width:40px;
+
+    background:orange;
+
+
+    transform:translate(-50%, -50%);
+
+    margin-top:1rem;
+
+}

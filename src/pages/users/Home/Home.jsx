@@ -7,16 +7,17 @@ import Partners from "../../../components/users/Partners/Partners";
 import Testmonials from "../../../components/users/Testmonials/Testmonials";
 const Home = () => {
   return (
-    <div >
+    <div>
       <Hero />
       <div className="container">
         <About />
         <Event />
-        <LatestBlogs/>
-        <Testmonials/>
-        <Partners/>
-        <Footer/>
+        <LatestBlogs />
+        <Testmonials />
+        <Partners />
       </div>
+
+      <Footer />
     </div>
   );
 };

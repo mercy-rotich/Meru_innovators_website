@@ -1,0 +1,178 @@
+export const users = [
+  {
+    id: 1,
+    name: "Sarah Chen",
+    role: "Full Stack Developer",
+    location: "San Francisco, CA",
+    avatar:
+      "https://images.pexels.com/photos/14723868/pexels-photo-14723868.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    company: "TechForward",
+    bio: "Building scalable web applications with React and Node.js. Open source contributor and community mentor.",
+    skills: ["React", "Node.js", "TypeScript", "AWS", "GraphQL"],
+    stats: {
+      projects: 34,
+      contributions: 856,
+      followers: 2.1,
+    },
+    badges: ["Top Contributor", "Mentor", "Community Leader"],
+    social: {
+      github: "sarahchen",
+      twitter: "sarahcodes",
+      linkedin: "sarahchen",
+    },
+  },
+  {
+    id: 2,
+    name: "Marcus Thompson",
+    role: "AI Research Engineer",
+    location: "London, UK",
+    avatar:
+      "https://images.pexels.com/photos/14723868/pexels-photo-14723868.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    company: "AILabs",
+    bio: "Researching large language models and their applications. PhD in Machine Learning from UCL.",
+    skills: ["Python", "PyTorch", "NLP", "Deep Learning", "MLOps"],
+    stats: {
+      projects: 28,
+      contributions: 623,
+      followers: 1.8,
+    },
+    badges: ["Research Fellow", "Paper Author", "Tech Speaker"],
+    social: {
+      github: "marcust",
+      twitter: "marcusai",
+      linkedin: "marcusthompson",
+    },
+  },
+  {
+    id: 3,
+    name: "Aisha Patel",
+    role: "DevOps Engineer",
+    location: "Toronto, Canada",
+    avatar:
+      "https://images.pexels.com/photos/14723868/pexels-photo-14723868.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    company: "CloudScale",
+    bio: "Automating infrastructure and optimizing deployment pipelines. Kubernetes enthusiast.",
+    skills: ["Kubernetes", "Docker", "Terraform", "CI/CD", "Azure"],
+    stats: {
+      projects: 42,
+      contributions: 934,
+      followers: 1.5,
+    },
+    badges: ["Cloud Expert", "Security Champion", "DevOps Guru"],
+    social: {
+      github: "aishap",
+      twitter: "devopsaisha",
+      linkedin: "aishapatel",
+    },
+  },
+  {
+    id: 4,
+    name: "Aisha Patel",
+    role: "DevOps Engineer",
+    location: "Toronto, Canada",
+    avatar:
+      "https://images.pexels.com/photos/14723868/pexels-photo-14723868.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    company: "CloudScale",
+    bio: "Automating infrastructure and optimizing deployment pipelines. Kubernetes enthusiast.",
+    skills: ["Kubernetes", "Docker", "Terraform", "CI/CD", "Azure"],
+    stats: {
+      projects: 42,
+      contributions: 934,
+      followers: 1.5,
+    },
+    badges: ["Cloud Expert", "Security Champion", "DevOps Guru"],
+    social: {
+      github: "aishap",
+      twitter: "devopsaisha",
+      linkedin: "aishapatel",
+    },
+  },
+  {
+    id: 5,
+    name: "Aisha Patel",
+    role: "DevOps Engineer",
+    location: "Toronto, Canada",
+    avatar:
+      "https://images.pexels.com/photos/14723868/pexels-photo-14723868.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    company: "CloudScale",
+    bio: "Automating infrastructure and optimizing deployment pipelines. Kubernetes enthusiast.",
+    skills: ["Kubernetes", "Docker", "Terraform", "CI/CD", "Azure"],
+    stats: {
+      projects: 42,
+      contributions: 934,
+      followers: 1.5,
+    },
+    badges: ["Cloud Expert", "Security Champion", "DevOps Guru"],
+    social: {
+      github: "aishap",
+      twitter: "devopsaisha",
+      linkedin: "aishapatel",
+    },
+  },
+  {
+    id: 6,
+    name: "Aisha Patel",
+    role: "DevOps Engineer",
+    location: "Toronto, Canada",
+    avatar:
+      "https://images.pexels.com/photos/14723868/pexels-photo-14723868.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    company: "CloudScale",
+    bio: "Automating infrastructure and optimizing deployment pipelines. Kubernetes enthusiast.",
+    skills: ["Kubernetes", "Docker", "Terraform", "CI/CD", "Azure"],
+    stats: {
+      projects: 42,
+      contributions: 934,
+      followers: 1.5,
+    },
+    badges: ["Cloud Expert", "Security Champion", "DevOps Guru"],
+    social: {
+      github: "aishap",
+      twitter: "devopsaisha",
+      linkedin: "aishapatel",
+    },
+  },
+  {
+    id: 8,
+    name: "Aisha Patel",
+    role: "DevOps Engineer",
+    location: "Toronto, Canada",
+    avatar:
+      "https://images.pexels.com/photos/14723868/pexels-photo-14723868.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    company: "CloudScale",
+    bio: "Automating infrastructure and optimizing deployment pipelines. Kubernetes enthusiast.",
+    skills: ["Kubernetes", "Docker", "Terraform", "CI/CD", "Azure"],
+    stats: {
+      projects: 42,
+      contributions: 934,
+      followers: 1.5,
+    },
+    badges: ["Cloud Expert", "Security Champion", "DevOps Guru"],
+    social: {
+      github: "aishap",
+      twitter: "devopsaisha",
+      linkedin: "aishapatel",
+    },
+  },
+  {
+    id: 9,
+    name: "Aisha Patel",
+    role: "DevOps Engineer",
+    location: "Toronto, Canada",
+    avatar:
+      "https://images.pexels.com/photos/14723868/pexels-photo-14723868.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    company: "CloudScale",
+    bio: "Automating infrastructure and optimizing deployment pipelines. Kubernetes enthusiast.",
+    skills: ["Kubernetes", "Docker", "Terraform", "CI/CD", "Azure"],
+    stats: {
+      projects: 42,
+      contributions: 934,
+      followers: 1.5,
+    },
+    badges: ["Cloud Expert", "Security Champion", "DevOps Guru"],
+    social: {
+      github: "aishap",
+      twitter: "devopsaisha",
+      linkedin: "aishapatel",
+    },
+  },
+];

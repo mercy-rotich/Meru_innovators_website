@@ -5,7 +5,9 @@ import "./Navbar.css";
 
 import { User } from "lucide-react";
 
-const Navbar = () => {
+import { Link } from "react-router-dom";
+
+const DesktopNav = ({ openMobileNav }) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -26,7 +28,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={` fixed w-full right-0 left-0 top-0 py-[0.4rem] navbar ${
+      className={` fixed w-full right-0 left-0 top-0 navbar ${
         isScrolled
           ? "bg-white transition duration-300 ease-in-out text-black  shadow-least"
           : "bg-transparent text-white"
@@ -41,36 +43,41 @@ const Navbar = () => {
         <div className="hidden custom-mobile-screen:block">
           <ul className="flex gap-10 navbar-ul navigation-menu">
             <li>
-              <a href="">About</a>
+              <Link to="#">About</Link>
             </li>
             <li>
-              <a href="">Community</a>
+              <Link to="/communities">Community</Link>
             </li>
             <li>
-              <a href="">Events</a>
+              <Link to="#">Events</Link>
             </li>
             <li>
-              <a href="">Alumni</a>
+              <Link to="#">Alumni</Link>
             </li>
             <li>
-              <a href="">Testmonials</a>
+              <Link to="#">Testmonials</Link>
             </li>
             <li>
-              <a href="">Blogs</a>
+              <Link to="#">Blogs</Link>
             </li>
             <li>
-              <a href="">Support</a>
+              <Link to="#">Support</Link>
             </li>
           </ul>
         </div>
 
         <div className="flex">
           <button
-            className={`text-white h-[40px] w-[40px] rounded-full border-2 border-white flex items-center justify-center ${isScrolled ? "text-black border-black" : "text-white border-white"}`}
+            className={`text-white h-[40px] w-[40px] rounded-full border-2 border-white flex items-center justify-center ${
+              isScrolled ? "text-black border-black" : "text-white border-white"
+            }`}
           >
-            <User size={24} color={isScrolled ? 'black' : 'white'} />
+            <User size={24} color={isScrolled ? "black" : "white"} />
           </button>
-          <button className="block custom-mobile-screen:hidden ml-[1rem] text-2xl">
+          <button
+            className="block custom-mobile-screen:hidden ml-[1rem] text-2xl"
+            onClick={openMobileNav}
+          >
             &#9776;
           </button>
         </div>
@@ -79,4 +86,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default DesktopNav;

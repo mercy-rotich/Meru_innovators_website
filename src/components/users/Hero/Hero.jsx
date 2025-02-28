@@ -1,10 +1,17 @@
-import Navbar from "../navbar/Navbar";
+
 import "./Hero.css";
 
+import MegaDashboard from "../navbar/MegaDashboard";
+
 const Hero = () => {
+ 
+
   return (
     <div className="hero bg-orange-500">
-      <Navbar />
+      <MegaDashboard
+        
+      />
+
       <div className="content text-white w-full z-10">
         <div className="container text-center custom-mobile-screen:text-start px-4">
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-4 tracking-wider hero-header">

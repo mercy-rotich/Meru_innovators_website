@@ -26,8 +26,6 @@ export default {
 
         cardbtnbg: "#5c1f2d",
 
-
-
         mediumPurple: "#9370db",
         darkPurple: "#4b0082",
         lavenderPurple: "#7a5c99",
@@ -36,17 +34,17 @@ export default {
 
         maroon: "#800000",
 
-
         cardtopic: "#4b0000",
-
 
         mediumMaroon: "#9e1b32",
         brownMaroon: "#7e4b3a",
-       
+
         mutedMaroon: "#9b4d53",
         vividMaroon: "#9e1b32",
         richMaroon: "#6a1e1a",
+        fadeYellow: "linear-gradient(to bottom, #fef9c3, #fef9c3)",
       },
+
       transitionProperty: {
         all: "all",
       },
@@ -70,8 +68,6 @@ export default {
       fontFamily: {
         itim: ["'Itim', sans-serif"],
       },
-
-     
     },
   },
   plugins: [],

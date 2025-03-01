@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import MegaDashboard from "../../components/users/navbar/MegaDashboard";
 import Footer from "../../components/users/Footer/Footer";
 import Subtitle from "../../components/Subtitle/Subtitle";
@@ -7,6 +7,8 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Locate } from "lucide-react";
 import { hotEvents } from "./EventsCustom";
+import { Play, X } from "lucide-react";
+import { motion } from "framer-motion";
 
 // Carousel responsive settings
 const responsive = {
@@ -29,7 +31,14 @@ const responsive = {
 };
 
 const EventsPage = () => {
-  // Sample events data
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const handlePlay = () => {
+    setIsPlaying(true);
+  };
+
   const events = [
     {
       id: 1,
@@ -70,6 +79,69 @@ const EventsPage = () => {
 
       {/* SubHero Section */}
       <SubHero title={"EVENTS"} />
+
+      <div className="mt-[3rem]">
+        <Subtitle title={"MAJOR ANOUNCEMENT"} />
+        <div className="flex justify-center mt-4">
+          <div className="relative w-full max-w-4xl">
+            {/* Video Placeholder */}
+            <div
+              className="relative w-full h-[400px] rounded-lg shadow-lg overflow-hidden cursor-pointer"
+              onClick={() => setIsModalOpen(true)}
+            >
+              <img
+                src="https://img.youtube.com/vi/FRNmrfhGFFI/maxresdefault.jpg"
+                alt="Video Thumbnail"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-60 rounded-lg">
+                <motion.div
+                  className="relative flex items-center justify-center w-24 h-24 bg-white rounded-full cursor-pointer shadow-lg"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <Play className="text-gray-900 w-10 h-10" />
+                  {[1, 2, 3].map((i) => (
+                    <motion.div
+                      key={i}
+                      className="absolute w-full h-full bg-blue-500 opacity-30 rounded-full"
+                      initial={{ scale: 1, opacity: 0.3 }}
+                      animate={{ scale: 2.5, opacity: 0 }}
+                      transition={{
+                        duration: 1.5,
+                        repeat: Infinity,
+                        delay: i * 0.4,
+                      }}
+                    />
+                  ))}
+                </motion.div>
+              </div>
+            </div>
+
+            {/* Video Modal */}
+            {isModalOpen && (
+              <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 z-50">
+                <div className="relative w-full max-w-4xl p-4">
+                  <button
+                    className="absolute top-2 right-2 text-white bg-gray-800 rounded-full p-2 hover:bg-gray-700"
+                    onClick={() => setIsModalOpen(false)}
+                  >
+                    <X size={24} />
+                  </button>
+                  <iframe
+                    className="w-full h-[80vh] rounded-lg"
+                    src="https://www.youtube.com/embed/FRNmrfhGFFI?autoplay=1"
+                    title="University Innovation Week"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
 
       {/* Main Content */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -119,6 +191,36 @@ const EventsPage = () => {
         {/* Upcoming Events Section */}
         <div className="mb-12">
           <Subtitle title={"UPCOMING EVENTS"} centered />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {events.map((event) => (
+              <div
+                key={event.id}
+                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              >
+                <img
+                  src={event.image}
+                  alt={event.title}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <h2 className="text-xl font-bold text-gray-900 mb-2">
+                    {event.title}
+                  </h2>
+                  <p className="text-sm text-gray-600 mb-2">
+                    <span className="font-semibold">Date:</span> {event.date}
+                  </p>
+                  <p className="text-sm text-gray-600 mb-4">
+                    <span className="font-semibold">Location:</span>{" "}
+                    {event.location}
+                  </p>
+                  <p className="text-gray-700 mb-4">{event.description}</p>
+                  <button className="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                    Learn More
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {events.map((event) => (
               <div

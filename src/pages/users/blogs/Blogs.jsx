@@ -18,6 +18,8 @@ import Subtitle from "../../../components/Subtitle/Subtitle";
 
 import "./Blogs.css";
 
+import { useNavigate } from "react-router-dom";
+
 const blogPosts = [
   {
     id: 1,
@@ -70,6 +72,8 @@ const blogPosts = [
 ];
 
 const Blogs = () => {
+  const navigate = useNavigate();
+
   const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
@@ -115,6 +119,11 @@ const Blogs = () => {
               className="bg-white shadow-least rounded-xl p-6 flex flex-col gap-4  transition-shadow cursor-pointer"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
+              onClick={() => {
+                navigate(
+                  "/blogs/dywehwedjwndjnwejdnwejndwejdnjwendweddqwdqwdwqd"
+                );
+              }}
             >
               <div className="flex items-center gap-3">
                 {post.icon}
@@ -136,6 +145,11 @@ const Blogs = () => {
               className="bg-white shadow-least rounded-xl p-6 flex flex-col gap-4  transition-shadow cursor-pointer"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
+              onClick={() => {
+                navigate(
+                  "/blogs/dywehwedjwndjnwejdnwejndwejdnjwendweddqwdqwdwqd"
+                );
+              }}
             >
               <div className="flex items-center gap-3">
                 {post.icon}
@@ -157,6 +171,11 @@ const Blogs = () => {
               className="bg-white shadow-least rounded-xl p-6 flex flex-col gap-4  transition-shadow cursor-pointer"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
+              onClick={() => {
+                navigate(
+                  "/blogs/dywehwedjwndjnwejdnwejndwejdnjwendweddqwdqwdwqd"
+                );
+              }}
             >
               <div className="flex items-center gap-3">
                 {post.icon}

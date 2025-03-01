@@ -19,6 +19,8 @@ import Blogs from "./pages/users/blogs/Blogs";
 import ScrollNumber from "antd/es/badge/ScrollNumber";
 import ScrollToTop from "./components/Utility/ScrollTop";
 
+import SingleBlog from "./pages/users/blogs/SingleBlog";
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -30,6 +32,7 @@ const App = () => {
         <Route path="/auth/signup" element={<Signup />} />
         <Route path="/events" element={<EventsPage />} />
         <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blogs/:id" element={<SingleBlog />} />
       </Routes>
       <SocialMedia />
       <NavigateTopArrow />

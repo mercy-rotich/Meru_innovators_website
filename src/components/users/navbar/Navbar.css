@@ -1,9 +1,14 @@
 .navbar .navbar-ul li {
   position: relative;
 
-  padding: 0.7rem 0;
+  
 
   cursor: pointer;
+}
+
+.navbar .navbar-ul li a{
+  display:block;
+  padding: 0.7rem 0;
 }
 
 .navbar{
@@ -27,6 +32,11 @@
   left: 0;
 
   /* transition:all 0.5s; */
+}
+
+.navbar-ul .active {
+  font-weight: bold; /* Example style for active link */
+  border-bottom: 4px solid blue; /* Example style for active link */
 }
 
 .navbar .navbar-ul li:hover::after {

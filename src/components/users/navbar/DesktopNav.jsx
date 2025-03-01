@@ -1,18 +1,14 @@
 import { useState, useEffect } from "react";
 import brand from "../../../assets/brand/logo.svg";
-
 import "./Navbar.css";
-
 import { User } from "lucide-react";
-
-import { Link } from "react-router-dom";
-
-import { useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const DesktopNav = ({ openMobileNav }) => {
   const navigate = useNavigate();
-
+  const location = useLocation(); // Get the current route location
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeLink, setActiveLink] = useState(location.pathname); // Set initial active link based on the current route
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,11 +26,16 @@ const DesktopNav = ({ openMobileNav }) => {
     };
   }, []);
 
+  // Update the active link when the route changes
+  useEffect(() => {
+    setActiveLink(location.pathname);
+  }, [location.pathname]);
+
   return (
     <div
-      className={` fixed w-full right-0 left-0 top-0 navbar ${
+      className={`fixed w-full right-0 left-0 top-0 navbar ${
         isScrolled
-          ? "bg-white transition duration-300 ease-in-out text-black  shadow-least"
+          ? "bg-white transition duration-300 ease-in-out text-black shadow-least"
           : "bg-transparent text-white"
       }`}
     >
@@ -47,41 +48,62 @@ const DesktopNav = ({ openMobileNav }) => {
         <div className="hidden custom-mobile-screen:block">
           <ul className="flex gap-10 navbar-ul navigation-menu">
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/" className={activeLink === "/" ? "active" : ""}>
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="/communities">Community</Link>
+              <Link
+                to="/communities"
+                className={activeLink === "/communities" ? "active" : ""}
+              >
+                Community
+              </Link>
             </li>
             <li>
-              <Link to="/events">Events</Link>
+              <Link
+                to="/events"
+                className={activeLink === "/events" ? "active" : ""}
+              >
+                Events
+              </Link>
             </li>
             <li>
-              <Link to="#">Alumni</Link>
+              <Link to="#" className={activeLink === "/alumni" ? "active" : ""}>
+                Alumni
+              </Link>
             </li>
             <li>
-              <Link to="#">Testmonials</Link>
+              <Link
+                to="#"
+                className={activeLink === "/testimonials" ? "active" : ""}
+              >
+                Testimonials
+              </Link>
             </li>
             <li>
-              <Link to="#">Blogs</Link>
+              <Link
+                to="/blogs"
+                className={activeLink === "/blogs" ? "active" : ""}
+              >
+                Blogs
+              </Link>
             </li>
             <li>
-              <Link to="#">Support</Link>
+              <Link
+                to="#"
+                className={activeLink === "/support" ? "active" : ""}
+              >
+                Support
+              </Link>
             </li>
           </ul>
         </div>
 
         <div className="flex items-center">
-          {/* <button
-            className={`text-white h-[40px] w-[40px] rounded-full border-2 border-white flex items-center justify-center ${
-              isScrolled ? "text-black border-black" : "text-white border-white"
-            }`}
-          >
-            <User size={24} color={isScrolled ? "black" : "white"} />
-          </button> */}
           <div>
             <button
-              className="bg-steelBlue px-[2rem] py-[0.4rem]
-            rounded-md text-sm"
+              className="bg-steelBlue px-[2rem] py-[0.4rem] rounded-md text-sm"
               onClick={() => {
                 navigate("/auth/login");
               }}

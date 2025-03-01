@@ -14,6 +14,8 @@ import SocialMedia from "./components/Utility/SocialMedia";
 
 import NavigateTopArrow from "./components/Utility/NavigateTopArrow";
 
+import Blogs from "./pages/users/blogs/Blogs";
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -23,6 +25,7 @@ const App = () => {
         <Route path="/auth/login" element={<Login />} />
         <Route path="/auth/signup" element={<Signup />} />
         <Route path="/events" element={<EventsPage />} />
+        <Route path="/blogs" element={<Blogs />} />
       </Routes>
       <SocialMedia />
       <NavigateTopArrow />

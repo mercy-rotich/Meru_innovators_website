@@ -6,115 +6,82 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const DesktopNav = ({ openMobileNav }) => {
   const navigate = useNavigate();
-  const location = useLocation(); // Get the current route location
+  const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeLink, setActiveLink] = useState(location.pathname); // Set initial active link based on the current route
+  const [activeLink, setActiveLink] = useState(location.pathname);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 10);
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Update the active link when the route changes
   useEffect(() => {
     setActiveLink(location.pathname);
   }, [location.pathname]);
 
   return (
     <div
-      className={`fixed w-full right-0 left-0 top-0 navbar ${
+      className={`fixed w-full top-0 left-0 right-0 z-20 navbar transition-all duration-300 ${
         isScrolled
-          ? "bg-white transition duration-300 ease-in-out text-black shadow-least"
+          ? "bg-white shadow-md text-black"
           : "bg-transparent text-white"
       }`}
     >
-      <div className="container flex items-center justify-between">
-        <div>
-          <a href="#">
-            <img src={brand} className="max-w-[55px] max-h-[55px]" alt="" />
-          </a>
-        </div>
-        <div className="hidden custom-mobile-screen:block">
-          <ul className="flex gap-10 navbar-ul navigation-menu">
-            <li>
-              <Link to="/" className={activeLink === "/" ? "active" : ""}>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/communities"
-                className={activeLink === "/communities" ? "active" : ""}
-              >
-                Community
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/events"
-                className={activeLink === "/events" ? "active" : ""}
-              >
-                Events
-              </Link>
-            </li>
-            <li>
-              <Link to="#" className={activeLink === "/alumni" ? "active" : ""}>
-                Alumni
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="#"
-                className={activeLink === "/testimonials" ? "active" : ""}
-              >
-                Testimonials
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/blogs"
-                className={activeLink === "/blogs" ? "active" : ""}
-              >
-                Blogs
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="#"
-                className={activeLink === "/support" ? "active" : ""}
-              >
-                Support
-              </Link>
-            </li>
-          </ul>
-        </div>
+      <div className="container flex items-center justify-between py-3 px-6">
+        {/* Logo */}
+        <Link to="/">
+          <img
+            src={brand}
+            className="max-w-[55px] max-h-[55px]"
+            alt="Brand Logo"
+          />
+        </Link>
 
-        <div className="flex items-center">
-          <div>
-            <button
-              className="bg-steelBlue px-[2rem] py-[0.4rem] rounded-md text-sm"
-              onClick={() => {
-                navigate("/auth/login");
-              }}
+        {/* Navigation Links */}
+        <nav className="hidden md:flex gap-8 text-base font-medium">
+          {[
+            { path: "/", label: "Home" },
+            { path: "/communities", label: "Community" },
+            { path: "/events", label: "Events" },
+            { path: "/alumni", label: "Alumni" },
+            { path: "/testimonials", label: "Testimonials" },
+            { path: "/blogs", label: "Blogs" },
+            { path: "/support", label: "Support" },
+          ].map(({ path, label }) => (
+            <Link
+              key={path}
+              to={path}
+              className={`hover:text-orange-500 transition ${
+                activeLink === path ? "text-orange-600 font-semibold" : ""
+              }`}
             >
-              LOGIN
-            </button>
-          </div>
+              {label}
+            </Link>
+          ))}
+        </nav>
+
+        {/* Action Buttons */}
+        <div className="flex items-center gap-4">
           <button
-            className="block custom-mobile-screen:hidden ml-[1rem] text-2xl"
-            onClick={openMobileNav}
+            className="bg-blue-600 text-white px-5 py-2 rounded-md text-sm font-medium transition hover:bg-blue-700"
+            onClick={() => navigate("/auth/login")}
           >
+            Login
+          </button>
+
+          <button
+            className="bg-orange-500 text-white px-5 py-2 rounded-md text-sm font-medium transition hover:bg-orange-600"
+            onClick={() => navigate("/auth/signup")}
+          >
+            Signup
+          </button>
+
+          {/* Mobile Menu Icon */}
+          <button className="block md:hidden text-2xl" onClick={openMobileNav}>
             &#9776;
           </button>
         </div>

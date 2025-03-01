@@ -7,12 +7,16 @@ import { User } from "lucide-react";
 
 import { Link } from "react-router-dom";
 
+import { useNavigate } from "react-router-dom";
+
 const DesktopNav = ({ openMobileNav }) => {
+  const navigate = useNavigate();
+
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 20) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -43,13 +47,13 @@ const DesktopNav = ({ openMobileNav }) => {
         <div className="hidden custom-mobile-screen:block">
           <ul className="flex gap-10 navbar-ul navigation-menu">
             <li>
-              <Link to="#">About</Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
               <Link to="/communities">Community</Link>
             </li>
             <li>
-              <Link to="#">Events</Link>
+              <Link to="/events">Events</Link>
             </li>
             <li>
               <Link to="#">Alumni</Link>
@@ -66,14 +70,25 @@ const DesktopNav = ({ openMobileNav }) => {
           </ul>
         </div>
 
-        <div className="flex">
-          <button
+        <div className="flex items-center">
+          {/* <button
             className={`text-white h-[40px] w-[40px] rounded-full border-2 border-white flex items-center justify-center ${
               isScrolled ? "text-black border-black" : "text-white border-white"
             }`}
           >
             <User size={24} color={isScrolled ? "black" : "white"} />
-          </button>
+          </button> */}
+          <div>
+            <button
+              className="bg-steelBlue px-[2rem] py-[0.4rem]
+            rounded-md text-sm"
+              onClick={() => {
+                navigate("/auth/login");
+              }}
+            >
+              LOGIN
+            </button>
+          </div>
           <button
             className="block custom-mobile-screen:hidden ml-[1rem] text-2xl"
             onClick={openMobileNav}

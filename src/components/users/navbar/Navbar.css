@@ -8,7 +8,7 @@
 
 .navbar{
   transition: background-color 0.3s ease-in-out;
-  z-index:9;
+  z-index:99;
 }
 
 .navbar .navbar-ul li::after {

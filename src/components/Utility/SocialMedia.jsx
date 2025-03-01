@@ -35,7 +35,7 @@ const SocialMedia = () => {
 
   return (
     <div
-      className={`fixed left-4 bottom-[40%] z-50 transition-opacity duration-500 ${
+      className={`fixed left-4 bottom-[40%] z-30 transition-opacity duration-500 ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >

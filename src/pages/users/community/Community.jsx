@@ -11,7 +11,7 @@ import Communities from "./Communities";
 
 import SubHero from "../../../components/users/Hero/SubHero";
 
-import "./Community.css"
+import "./Community.css";
 
 const Community = () => {
   const [selectedUser, setSelectedUser] = useState(null);
@@ -35,7 +35,7 @@ const Community = () => {
       {/* Search and Filters */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mb-8">
-          <div className="flex items-center bg-white rounded-lg shadow-sm w-full sm:w-auto">
+          <div className="flex items-center bg-white rounded-lg border border-neutral-300 w-full sm:w-auto">
             <input
               type="text"
               placeholder="Search users"
@@ -46,11 +46,11 @@ const Community = () => {
             </button>
           </div>
           <div className="flex items-center gap-4">
-            <button className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
+            <button className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg border border-neutral-300 hover:bg-gray-100 transition">
               <Filter size={20} />
               <span>Filters</span>
             </button>
-            <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-sm">
+            <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg border border-neutral-300">
               <User size={20} />
               <span>{users.length} Users</span>
             </div>

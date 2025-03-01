@@ -22,6 +22,8 @@ import SingleBlog from "./pages/users/blogs/SingleBlog";
 
 import AlumniPage from "./pages/users/Alumni/AlumniPage";
 
+import Gallery from "./components/users/Gallery/Gallery";
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -35,6 +37,7 @@ const App = () => {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blogs/:id" element={<SingleBlog />} />
         <Route path="/alumni/" element={<AlumniPage />} />
+        <Route path="/gallery/" element={<Gallery />} />
       </Routes>
       <SocialMedia />
       <NavigateTopArrow />

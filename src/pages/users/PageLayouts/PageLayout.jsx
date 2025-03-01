@@ -1,11 +1,10 @@
 import MegaDashboard from "../../../components/users/navbar/MegaDashboard";
 import Footer from "../../../components/users/Footer/Footer";
-import ScrollToTop from "../../../components/Utility/ScrollTop";
-const PageLayout = ({ children }) => {
+const PageLayout = ({ children,title }) => {
   return (
     <>
     
-      <MegaDashboard />
+      <MegaDashboard title={title} />
       {children}
       <Footer />
     </>

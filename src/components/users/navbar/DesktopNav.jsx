@@ -4,7 +4,7 @@ import "./Navbar.css";
 import { User } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
-const DesktopNav = ({ openMobileNav }) => {
+const DesktopNav = ({ openMobileNav, title }) => {
   const navigate = useNavigate();
   const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,6 +30,7 @@ const DesktopNav = ({ openMobileNav }) => {
           ? "bg-green shadow-md text-black"
           : "bg-transparent text-white"
       }`}
+      style={title === "gallery" ? { background: "green" } : ""}
     >
       <div className="container flex items-center justify-between py-3 px-6">
         {/* Logo */}
@@ -50,7 +51,8 @@ const DesktopNav = ({ openMobileNav }) => {
             { path: "/alumni", label: "Alumni" },
 
             { path: "/blogs", label: "Blogs" },
-            { path: "/support", label: "Support" },
+
+            { path: "/gallery", label: "Gallery" },
           ].map(({ path, label }) => (
             <Link
               key={path}
@@ -70,7 +72,6 @@ const DesktopNav = ({ openMobileNav }) => {
 
         {/* Action Buttons */}
         <div className="flex items-center gap-4">
-          
           <button
             className="bg-blue-600 text-white px-5 py-2 rounded-sm text-sm font-medium transition hover:bg-blue-700"
             onClick={() => navigate("/auth/login")}

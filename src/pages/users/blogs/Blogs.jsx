@@ -117,7 +117,7 @@ const Blogs = () => {
           {blogPosts.map((post) => (
             <motion.div
               key={post.id}
-              className="bg-white shadow-least rounded-xl p-6 flex flex-col gap-4  transition-shadow cursor-pointer"
+              className="bg-white shadow-least rounded-sm p-6 flex flex-col gap-4  transition-shadow cursor-pointer"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               onClick={() => {
@@ -143,7 +143,7 @@ const Blogs = () => {
           {blogPosts.map((post) => (
             <motion.div
               key={post.id}
-              className="bg-white shadow-least rounded-xl p-6 flex flex-col gap-4  transition-shadow cursor-pointer"
+              className="bg-white shadow-least rounded-sm p-6 flex flex-col gap-4  transition-shadow cursor-pointer"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               onClick={() => {
@@ -169,7 +169,7 @@ const Blogs = () => {
           {blogPosts.map((post) => (
             <motion.div
               key={post.id}
-              className="bg-white shadow-least rounded-xl p-6 flex flex-col gap-4  transition-shadow cursor-pointer"
+              className="bg-white shadow-least rounded-sm p-6 flex flex-col gap-4  transition-shadow cursor-pointer"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               onClick={() => {

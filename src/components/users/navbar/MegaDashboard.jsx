@@ -6,7 +6,7 @@ import { useState } from "react";
 
 import DesktopNav from "./DesktopNav";
 
-const MegaDashboard = ({title}) => {
+const MegaDashboard = ({gallery}) => {
   const [showMobile, setMobileNav] = useState(false);
 
   const closeMobileNav = () => {
@@ -18,7 +18,7 @@ const MegaDashboard = ({title}) => {
 
   return (
     <Fragment>
-      <DesktopNav openMobileNav={openMobileNav} title={title} />
+      <DesktopNav openMobileNav={openMobileNav} gallery={"gallery"} />
       <MobileNav onClose={closeMobileNav} showMobile={showMobile} />
     </Fragment>
   );

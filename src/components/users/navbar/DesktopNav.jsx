@@ -4,7 +4,7 @@ import "./Navbar.css";
 import { User } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
-const DesktopNav = ({ openMobileNav, title }) => {
+const DesktopNav = ({ openMobileNav, gallery }) => {
   const navigate = useNavigate();
   const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,7 +30,7 @@ const DesktopNav = ({ openMobileNav, title }) => {
           ? "bg-green shadow-md text-black"
           : "bg-transparent text-white"
       }`}
-      style={title === "gallery" ? { background: "green" } : ""}
+      style={gallery === "gallery" ? { background: "green" } : ""}
     >
       <div className="container flex items-center justify-between py-3 px-6">
         {/* Logo */}

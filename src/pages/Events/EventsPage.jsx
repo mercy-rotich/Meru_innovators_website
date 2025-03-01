@@ -129,8 +129,8 @@ const EventsPage = () => {
                     <X size={24} />
                   </button>
                   <iframe
-                    className="w-full h-[80vh] rounded-lg"
-                    src="https://youtu.be/drkW5To0dN4?si=GR8WkwfK1geOyHhA"
+                    className="w-full h-[400px] rounded-lg shadow-lg"
+                    src="https://www.youtube.com/embed/SKBZMDu41oY"
                     title="University Innovation Week"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

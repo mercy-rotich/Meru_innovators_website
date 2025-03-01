@@ -1,30 +1,15 @@
 import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import "./Event.css";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import Subtitle from "../../Subtitle/Subtitle";
+const responsive = {
+  superLargeDesktop: { breakpoint: { max: 4000, min: 3000 }, items: 5 },
+  desktop: { breakpoint: { max: 3000, min: 1024 }, items: 3 },
+  tablet: { breakpoint: { max: 1024, min: 464 }, items: 2 },
+  mobile: { breakpoint: { max: 464, min: 0 }, items: 1 },
+};
 const Event = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 1700,
-    arrows: true,
-    responsive: [
-      {
-        breakpoint: 642,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
-
   const slides = [
     {
       id: 1,
@@ -58,23 +43,30 @@ const Event = () => {
 
   return (
     <div className="mt-[7rem] px-4 events-slide">
-      <div className="max-w-screen-lg mx-auto">
+      <div className="container mx-auto">
         <Subtitle title={" Event Highlights"} />
-        <Slider {...settings}>
+        <Carousel
+          responsive={responsive}
+          infinite
+          autoPlay
+          autoPlaySpeed={3000}
+        >
           {slides.map((slide) => (
-            <div key={slide.id} className="relative h-96">
-              <img
-                src={slide.image}
-                alt={slide.caption}
-                className="w-full h-full object-cover rounded-lg shadow-lg"
-              />
-              <div className="absolute bottom-0 w-full text-white p-4 rounded-b-lg overlay">
-                <h2 className="text-lg font-semibold">{slide.caption}</h2>
-                <p>{slide.description}</p>
+            <div key={slide.id}>
+              <div className="m-[0.3rem] relative h-96">
+                <img
+                  src={slide.image}
+                  alt={slide.caption}
+                  className="w-full h-full object-cover rounded-lg shadow-lg"
+                />
+                <div className="absolute bottom-0 w-full text-white p-4 rounded-b-lg overlay">
+                  <h2 className="text-lg font-semibold">{slide.caption}</h2>
+                  <p>{slide.description}</p>
+                </div>
               </div>
             </div>
           ))}
-        </Slider>
+        </Carousel>
       </div>
     </div>
   );

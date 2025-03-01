@@ -25,7 +25,7 @@ const About = () => {
           <div className="relative w-full max-w-3xl">
             <iframe
               className="w-full h-[400px] rounded-lg shadow-lg"
-              src="https://www.youtube.com/embed/FRNmrfhGFFI?si=WfOV84k358N3VmKA"
+              src="https://youtu.be/drkW5To0dN4?si=GR8WkwfK1geOyHhA"
               title="University Innovation Week"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -64,7 +64,7 @@ const About = () => {
         <div className="mt-12">
           <Subtitle title={"Our Core Values"} />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 container">
-            <div className="p-4 border rounded-lg shadow-sm bg-gray-50">
+            <div className="p-4 border border-neutral-300 rounded-lg shadow-sm bg-gray-50">
               <h3 className="font-semibold text-lg text-gray-800">
                 Excellence
               </h3>
@@ -74,7 +74,7 @@ const About = () => {
                 education.
               </p>
             </div>
-            <div className="p-4 border rounded-lg shadow-sm bg-gray-50">
+            <div className="p-4 border border-neutral-300 rounded-lg shadow-sm bg-gray-50">
               <h3 className="font-semibold text-lg text-gray-800">
                 Innovation
               </h3>
@@ -84,7 +84,7 @@ const About = () => {
                 challenges.
               </p>
             </div>
-            <div className="p-4 border rounded-lg shadow-sm bg-gray-50">
+            <div className="p-4 border border-neutral-300 rounded-lg shadow-sm bg-gray-50">
               <h3 className="font-semibold text-lg text-gray-800">Integrity</h3>
               <p className="text-gray-600 mt-2">
                 We emphasize ethical leadership and integrity in all aspects of

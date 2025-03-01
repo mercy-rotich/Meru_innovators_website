@@ -48,7 +48,7 @@ const DesktopNav = ({ openMobileNav }) => {
             { path: "/communities", label: "Community" },
             { path: "/events", label: "Events" },
             { path: "/alumni", label: "Alumni" },
-            { path: "/testimonials", label: "Testimonials" },
+           
             { path: "/blogs", label: "Blogs" },
             { path: "/support", label: "Support" },
           ].map(({ path, label }) => (
@@ -67,15 +67,18 @@ const DesktopNav = ({ openMobileNav }) => {
 
         {/* Action Buttons */}
         <div className="flex items-center gap-4">
+          <button className="bg-blue-600 text-white px-5 py-2 rounded-sm text-sm font-medium transition hover:bg-blue-700">
+            Dashboard
+          </button>
           <button
-            className="bg-blue-600 text-white px-5 py-2 rounded-md text-sm font-medium transition hover:bg-blue-700"
+            className="bg-blue-600 text-white px-5 py-2 rounded-sm text-sm font-medium transition hover:bg-blue-700"
             onClick={() => navigate("/auth/login")}
           >
             Login
           </button>
 
           <button
-            className="bg-orange-500 text-white px-5 py-2 rounded-md text-sm font-medium transition hover:bg-orange-600"
+            className="bg-orange-500 text-white px-5 py-2 rounded-sm text-sm font-medium transition hover:bg-orange-600"
             onClick={() => navigate("/auth/signup")}
           >
             Signup

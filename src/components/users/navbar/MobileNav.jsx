@@ -39,7 +39,7 @@ const MobileNav = ({ onClose, showMobile }) => {
                   { label: "Community", href: "/communities" },
                   { label: "Events", href: "/events" },
                   { label: "Alumni", href: "/alumni" },
-                  { label: "Testimonials", href: "/testimonials" },
+
                   { label: "Blogs", href: "/blogs" },
                   { label: "Support", href: "/support" },
                 ].map((item, index) => (

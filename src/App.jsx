@@ -16,10 +16,11 @@ import NavigateTopArrow from "./components/Utility/NavigateTopArrow";
 
 import Blogs from "./pages/users/blogs/Blogs";
 
-import ScrollNumber from "antd/es/badge/ScrollNumber";
 import ScrollToTop from "./components/Utility/ScrollTop";
 
 import SingleBlog from "./pages/users/blogs/SingleBlog";
+
+import AlumniPage from "./pages/users/Alumni/AlumniPage";
 
 const App = () => {
   return (
@@ -33,6 +34,7 @@ const App = () => {
         <Route path="/events" element={<EventsPage />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blogs/:id" element={<SingleBlog />} />
+        <Route path="/alumni/" element={<AlumniPage />} />
       </Routes>
       <SocialMedia />
       <NavigateTopArrow />

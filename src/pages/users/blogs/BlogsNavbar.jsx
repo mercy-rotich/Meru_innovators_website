@@ -1,7 +1,7 @@
 import React from "react";
 import { Menu } from "antd";
 
-const BlogsNavbar = ({ onNavigate }) => {
+const BlogsNavbar = ({ onNavigate, activeKey }) => {
   const navItems = [
     { title: "All", key: "live-ticker" },
     { title: "Development", key: "top-gainers-losers" },
@@ -10,20 +10,20 @@ const BlogsNavbar = ({ onNavigate }) => {
     { title: "AI", key: "commodities-overview" },
     { title: "Graphic", key: "graphic" },
     { title: "Block Chain", key: "blockchain" },
-    // { title: "PORTFOLIO", key: "portfolio" },
   ];
 
   return (
     <Menu
       mode="horizontal"
       theme="light"
-      defaultSelectedKeys={["live-ticker"]}
-      className="mb-[0.5rem] fixed z-20 left-0 right-0 px-auto pr-[-1rem] sm:pr-[4rem] justify-between"
+      selectedKeys={[activeKey]} // Use selectedKeys to control the active item
+      className="mb-[0.5rem]  z-20 left-0 right-0 px-auto sm:px-[4rem] justify-center sm:justify-between"
+      style={{ lineHeight: "64px" }} // Adjust line height for better alignment
     >
       {navItems.map((item) => (
         <Menu.Item
           key={item.key}
-          className="text-xs mx-auto sm:text-sm"
+          className="text-xs sm:text-sm"
           onClick={() => onNavigate(item.key)}
         >
           {item.title}

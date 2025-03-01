@@ -1,18 +1,7 @@
-.line{
-
-
-
-    height:4px;
-
-    width:40px;
-
-    background:orange;
-
-
-    transform:translate(-50%, -50%);
-
-    margin-top:1rem;
-
-    margin-bottom:3rem;
-
+.line {
+  margin-top: 0.5rem;
+  height: 4px;
+  width: 60px;
+  background: orange;
+  border-radius: 2px;
 }

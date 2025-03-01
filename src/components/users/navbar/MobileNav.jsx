@@ -1,6 +1,8 @@
 import React from "react";
 import { X } from "lucide-react";
 
+import { Link } from "react-router-dom";
+
 const MobileNav = ({ onClose, showMobile }) => {
   return (
     <div
@@ -22,20 +24,20 @@ const MobileNav = ({ onClose, showMobile }) => {
           <ul className="flex flex-col gap-2 px-4">
             {[
               { label: "About", href: "#about" },
-              { label: "Community", href: "#community" },
-              { label: "Events", href: "#events" },
+              { label: "Community", href: "/community" },
+              { label: "Events", href: "/events" },
               { label: "Alumni", href: "#alumni" },
               { label: "Testimonials", href: "#testimonials" },
               { label: "Blogs", href: "#blogs" },
               { label: "Support", href: "#support" },
             ].map((item, index) => (
               <li key={index}>
-                <a
-                  href={item.href}
+                <Link
+                  to={item.href}
                   className="block px-4 py-3 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
                 >
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

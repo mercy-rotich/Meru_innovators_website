@@ -1,18 +1,13 @@
 import React from "react";
-
-import "./Subtitle.css"
+import "./Subtitle.css";
 
 const Subtitle = ({ title, centered }) => {
   return (
-    <div className="relative flex flex-col justify-between items-center">
-      <h3
-        className={`font-semibold text-3xl tracking-wider relative subtitle ${
-          centered ? "text-center" : "text-start "
-        }`}
-      >
+    <div className={`flex flex-col items-center ${centered ? "text-center" : "text-start"}`}>
+      <h3 className="font-bold text-3xl tracking-wide relative">
         {title}
       </h3>
-      <div className="line"></div>
+      <div className="line bg-orange-500 mt-2 w-16 h-1 rounded-full"></div>
     </div>
   );
 };

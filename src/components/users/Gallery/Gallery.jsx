@@ -3,33 +3,38 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import PageLayout from "../../../pages/users/PageLayouts/PageLayout";
 import Subtitle from "../../Subtitle/Subtitle";
 
+import Image1 from "../../../assets/images/innovators/meru15.jpeg";
+import Image2 from "../../../assets/images/innovators/meru14.jpeg";
+import Image3 from "../../../assets/images/innovators/meru13.jpeg";
+import Image4 from "../../../assets/images/innovators/meru12.jpeg";
+import Image5 from "../../../assets/images/innovators/meru11.jpeg";
+import Image6 from "../../../assets/images/innovators/meru10.jpeg";
+import Image7 from "../../../assets/images/innovators/meru9.jpeg";
+import Image8 from "../../../assets/images/innovators/meru8.jpeg";
+import Image9 from "../../../assets/images/innovators/meru7.jpeg";
+import Image10 from "../../../assets/images/innovators/meru6.jpeg";
+import Image12 from "../../../assets/images/innovators/meru5.jpeg";
+import Image13 from "../../../assets/images/innovators/meru4.jpeg";
+import Image14 from "../../../assets/images/innovators/meru3.jpeg";
+import Image15 from "../../../assets/images/innovators/meru2.jpeg";
+import Image16 from "../../../assets/images/innovators/meru1.jpeg";
+
 const images = [
-  "https://images.pexels.com/photos/8199602/pexels-photo-8199602.jpeg?auto=compress&cs=tinysrgb&w=600",
-  "https://images.pexels.com/photos/7973205/pexels-photo-7973205.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/6146978/pexels-photo-6146978.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/7973039/pexels-photo-7973039.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/7972556/pexels-photo-7972556.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/6209562/pexels-photo-6209562.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/6209562/pexels-photo-6209562.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/6209562/pexels-photo-6209562.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/8199602/pexels-photo-8199602.jpeg?auto=compress&cs=tinysrgb&w=600",
-  "https://images.pexels.com/photos/7973205/pexels-photo-7973205.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/8199602/pexels-photo-8199602.jpeg?auto=compress&cs=tinysrgb&w=600",
-  "https://images.pexels.com/photos/7973205/pexels-photo-7973205.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/8199602/pexels-photo-8199602.jpeg?auto=compress&cs=tinysrgb&w=600",
-  "https://images.pexels.com/photos/7973205/pexels-photo-7973205.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/6209562/pexels-photo-6209562.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/8199231/pexels-photo-8199231.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/7683704/pexels-photo-7683704.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/8199231/pexels-photo-8199231.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/7683704/pexels-photo-7683704.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/8199231/pexels-photo-8199231.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/7683704/pexels-photo-7683704.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/6147395/pexels-photo-6147395.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/7972360/pexels-photo-7972360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/6209107/pexels-photo-6209107.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/7972556/pexels-photo-7972556.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/6209562/pexels-photo-6209562.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  Image1,
+  Image2,
+  Image3,
+  Image4,
+  Image5,
+  Image6,
+  Image8,
+  Image7,
+  Image9,
+  Image10,
+  Image14,
+  Image15,
+  Image16,
+  Image13,
+  Image12,
 ];
 
 const Gallery = () => {
@@ -97,6 +102,7 @@ const Gallery = () => {
     <PageLayout title={"gallery"}>
       <div className="pt-[6rem]">
         <Subtitle title={"GALLERY"} />
+
         <div className="container mx-auto py-12 px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {shuffledImages.map((img, index) => (
             <img

@@ -4,7 +4,13 @@ import { CommunitiesData } from "./CommunitiesData";
 
 const Communities = () => {
   return (
-    <div className="mt-20 bg-green-50 py-12">
+    <div
+      className="mt-20 py-12 bg-fixed communities-bg"
+      // style={{
+      //   background: "linear-gradient(to bottom, #fef9c3, #fef9c3)",
+      //   backgroundAttachment: "fixed", 
+      // }}
+    >
       {/* Title Section */}
       <div className="text-center mb-12">
         <Subtitle title={"COMMUNITIES"} centered />

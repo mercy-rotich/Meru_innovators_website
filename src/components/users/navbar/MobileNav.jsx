@@ -68,6 +68,9 @@ const MobileNav = ({ onClose, showMobile }) => {
                   </motion.li>
                 ))}
               </ul>
+              <button className="bg-blue-600 text-white px-5 py-2 rounded-sm text-sm font-medium transition hover:bg-blue-700 ml-4">
+                Dashboard
+              </button>
             </nav>
           </motion.div>
         </motion.div>

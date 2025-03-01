@@ -9,13 +9,12 @@ const Home = () => {
   return (
     <div>
       <Hero />
-      <div className="container">
-        <About />
-        <Event />
-        <LatestBlogs />
-        <Testmonials />
-        <Partners />
-      </div>
+
+      <About />
+      <Event />
+      <LatestBlogs />
+      <Testmonials />
+      <Partners />
 
       <Footer />
     </div>

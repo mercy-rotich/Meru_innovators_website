@@ -1,41 +1,96 @@
 import React from "react";
-
 import { Video } from "lucide-react";
+import Subtitle from "../../Subtitle/Subtitle";
 
 const About = () => {
   return (
     <div className="mt-[7rem]">
-      <div className="container">
-        <div className="flex flex-col-reverse sm:flex-row gap-[1rem] justify-between">
-          <div>
-            <div className="basis-1/2 relative">
+      <div className="mx-auto px-6">
+        {/* Introduction Section */}
+        <div className="text-center">
+          <Subtitle title={"About Our Meru University Innovators"} />
+          <p className="text-gray-700 leading-relaxed mt-4">
+            Our university is a beacon of academic excellence, committed to
+            fostering innovation, research, and professional development. We aim
+            to equip students with the critical thinking skills and expertise
+            needed to drive meaningful societal change. Through a dynamic
+            curriculum, hands-on experiences, and global collaborations, we
+            nurture future leaders who are prepared to tackle real-world
+            challenges.
+          </p>
+        </div>
+
+        {/* Video Section */}
+        <div className="mt-8 flex justify-center">
+          <div className="relative w-full max-w-3xl">
+            <iframe
+              className="w-full h-[400px] rounded-lg shadow-lg"
+              src="https://www.youtube.com/embed/FRNmrfhGFFI?si=WfOV84k358N3VmKA"
+              title="University Innovation Week"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+
+        {/* Our Mission Section */}
+        <div className="mt-10 flex flex-col sm:flex-row gap-[1rem] bg-orange-300">
+          <div className="max-w-5xl flex flex-col sm:flex-row gap-6 mx-auto py-[2rem] px-[2rem] items-center">
+            <div className="sm:w-1/3">
               <img
-                src="https://images.pexels.com/photos/19547609/pexels-photo-19547609/free-photo-of-smiling-woman-in-graduate-gown-and-brown-dress-in-front-of-a-building.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt=""
-                className="h-full w-full rounded-md"
+                src="https://simpleboyfoundation.com/wp-content/uploads/2024/11/who.png"
+                className="h-auto w-[100px] rounded-lg"
+                alt="Our Mission"
               />
-              <div className="mt-4 flex items-center text-xl absolute h-full top-0 right-0 w-full justify-center text-white">
-                <div className="bg-gradient-to-r from-black to-transparent p-2 flex flex-col items-center justify-center">
-                  <Video size={30} className="mr-2" color="white" />{" "}
-                  <span className="text-sm">Watch Our Previous innovation week</span>
-                </div>
-              </div>
+            </div>
+            <div className="sm:w-2/3 text-center sm:text-left">
+              <Subtitle title={"Our Mission"} />
+              <p className="text-gray-600 leading-relaxed mt-2">
+                Our mission is to empower students with a holistic education
+                that integrates academic knowledge, ethical values, and
+                practical skills. We strive to create an inclusive environment
+                where students are encouraged to think critically, innovate
+                boldly, and lead responsibly. By fostering research, community
+                engagement, and cross-disciplinary collaboration, we aim to
+                shape professionals who contribute meaningfully to their
+                communities and industries.
+              </p>
             </div>
           </div>
-          <div className="basis-1/2">
-            <h3 className="subtopic text-topicColor">About University</h3>
-            <p className="description text-center sm:text-start">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptas, nisi adipisci. Voluptates officia maxime quaerat nihil
-              fuga alias cum iusto commodi, earum voluptas iure molestiae hic
-              tenetur necessitatibus architecto provident ipsum doloribus cumque
-              nemo neque, beatae, porro ad. Nesciunt ut, dolorum dolore
-              repellendus architecto distinctio beatae quas, possimus quia, quam
-              exercitationem corporis maiores blanditiis quasi sit enim a! Ipsa
-              rerum modi vero neque obcaecati sunt mollitia, dolores nesciunt
-              enim dicta ipsam voluptatibus fuga consequuntur eaque? Blanditiis,
-              ab.
-            </p>
+        </div>
+
+        {/* Core Values Section */}
+        <div className="mt-12">
+          <Subtitle title={"Our Core Values"} />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 container">
+            <div className="p-4 border rounded-lg shadow-sm bg-gray-50">
+              <h3 className="font-semibold text-lg text-gray-800">
+                Excellence
+              </h3>
+              <p className="text-gray-600 mt-2">
+                We uphold the highest standards of academic and professional
+                excellence, ensuring that our students receive a world-class
+                education.
+              </p>
+            </div>
+            <div className="p-4 border rounded-lg shadow-sm bg-gray-50">
+              <h3 className="font-semibold text-lg text-gray-800">
+                Innovation
+              </h3>
+              <p className="text-gray-600 mt-2">
+                We foster a culture of creativity and innovation, encouraging
+                students to explore new ideas and solutions to global
+                challenges.
+              </p>
+            </div>
+            <div className="p-4 border rounded-lg shadow-sm bg-gray-50">
+              <h3 className="font-semibold text-lg text-gray-800">Integrity</h3>
+              <p className="text-gray-600 mt-2">
+                We emphasize ethical leadership and integrity in all aspects of
+                learning, research, and professional conduct.
+              </p>
+            </div>
           </div>
         </div>
       </div>

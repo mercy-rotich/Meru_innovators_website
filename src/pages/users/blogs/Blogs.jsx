@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import {
   LayoutGrid,
@@ -15,6 +15,8 @@ import BlogsNavbar from "./BlogsNavbar";
 import Footer from "../../../components/users/Footer/Footer";
 
 import Subtitle from "../../../components/Subtitle/Subtitle";
+
+import "./Blogs.css";
 
 const blogPosts = [
   {
@@ -68,11 +70,33 @@ const blogPosts = [
 ];
 
 const Blogs = () => {
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div className="bg-gray-100">
       <MegaDashboard />
       <SubHero title="BLOGS" />
-      <BlogsNavbar />
+      <div
+        className={`transition-all duration-300 ${
+          isSticky ? "fixed top-[55px] w-full right-0 left-0   z-50 " : ""
+        }`}
+      >
+        <BlogsNavbar />
+      </div>
 
       <motion.div
         className="container mx-auto px-4 sm:px-8 py-12"

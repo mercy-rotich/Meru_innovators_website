@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Event.css";
+import Subtitle from "../../Subtitle/Subtitle";
 const Event = () => {
   const settings = {
     dots: true,
@@ -13,15 +14,15 @@ const Event = () => {
     autoplay: true,
     autoplaySpeed: 1700,
     arrows: true,
-    responsive:[
+    responsive: [
       {
-        breakpoint: 642, 
+        breakpoint: 642,
         settings: {
-          slidesToShow: 1, 
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
-      }
-    ]
+      },
+    ],
   };
 
   const slides = [
@@ -54,14 +55,11 @@ const Event = () => {
       description: "Date: 13th Dec, 2024 | Time: 6:00 PM | Venue: TB7",
     },
   ];
-  
 
   return (
     <div className="mt-[7rem] px-4 events-slide">
       <div className="max-w-screen-lg mx-auto">
-        <h1 className="subtopic text-topicColor mb-8">
-          Event Highlights
-        </h1>
+        <Subtitle title={" Event Highlights"} />
         <Slider {...settings}>
           {slides.map((slide) => (
             <div key={slide.id} className="relative h-96">

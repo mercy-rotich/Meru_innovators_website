@@ -4,6 +4,8 @@ import image2 from "../../../assets/images/partner2.jpg";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
+import Subtitle from "../../Subtitle/Subtitle";
+
 const responsive = {
   superLargeDesktop: { breakpoint: { max: 4000, min: 3000 }, items: 5 },
   desktop: { breakpoint: { max: 3000, min: 1024 }, items: 3 },
@@ -73,9 +75,7 @@ const partners = [
 const Partners = () => {
   return (
     <div className="mt-[7rem]">
-      <h3 className="text-3xl font-bold text-topicColor text-center mb-8">
-        Our University Partners
-      </h3>
+      <Subtitle title="Our University Partners" />
       <div className="container">
         <Carousel
           responsive={responsive}
@@ -84,24 +84,25 @@ const Partners = () => {
           autoPlaySpeed={3000}
         >
           {partners.map((partner, index) => (
-            <div
-              key={index}
-              className="bg-white shadow-least rounded-xl overflow-hidden transition-transform transform hover:scale-105 hover:shadow-2xl duration-300 mx-3 p-4 flex flex-col items-center"
-            >
-              <img
-                src={partner.img}
-                alt={partner.name}
-                className="w-full h-[180px] object-cover rounded-lg shadow-md"
-              />
-              <h3 className="text-lg font-semibold text-gray-900 mt-4">
-                {partner.name}
-              </h3>
-              <p className="text-gray-600 text-sm text-center mt-2 px-4">
-                {partner.description}
-              </p>
-              <button className="mt-4 px-5 py-2 text-sm font-medium text-white bg-orange-600 hover:bg-orange-700 rounded-lg transition-all duration-200">
-                {partner.buttonText}
-              </button>
+            <div key={index}>
+              <div className="bg-white shadow-least rounded-xl overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl duration-300 mx-3 p-6 flex flex-col items-center text-center border ">
+                <div className="w-32 h-32 rounded-full overflow-hidden shadow-lg border-4 border-gray-200">
+                  <img
+                    src={partner.img}
+                    alt={partner.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mt-4">
+                  {partner.name}
+                </h3>
+                <p className="text-gray-600 text-sm mt-2 px-4">
+                  {partner.description}
+                </p>
+                <button className="mt-4 px-5 py-2 text-sm font-medium text-white bg-orange-600 hover:bg-orange-700 rounded-full transition-all duration-200">
+                  {partner.buttonText}
+                </button>
+              </div>
             </div>
           ))}
         </Carousel>

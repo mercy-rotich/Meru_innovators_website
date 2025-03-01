@@ -26,16 +26,16 @@ const Navbar = () => {
 
   return (
     <div
-      className={` fixed w-full right-0 left-0 top-0 py-[0.4rem] navbar ${
+      className={` fixed w-full right-0 left-0 top-0 py-[0.4rem] navbar z-30 ${
         isScrolled
-          ? "bg-white transition duration-300 ease-in-out text-black  shadow-least"
+          ? "bg-white transition duration-300 ease-in-out text-white  shadow-least"
           : "bg-transparent text-white"
       }`}
     >
       <div className="container flex items-center justify-between">
         <div>
           <a href="#">
-            <img src={brand} className="max-w-[55px] max-h-[55px]" alt="" />
+            <img src={brand} className="max-w-[50px] max-h-[50px]" alt="" />
           </a>
         </div>
         <div className="hidden custom-mobile-screen:block">

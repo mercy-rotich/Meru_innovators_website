@@ -16,9 +16,13 @@ import NavigateTopArrow from "./components/Utility/NavigateTopArrow";
 
 import Blogs from "./pages/users/blogs/Blogs";
 
+import ScrollNumber from "antd/es/badge/ScrollNumber";
+import ScrollToTop from "./components/Utility/ScrollTop";
+
 const App = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/communities" element={<Community />} />

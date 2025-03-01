@@ -149,6 +149,14 @@ const Blogs = () => {
         </div>
       </motion.div>
 
+      <div>
+        <div className="container flex items-center">
+          <button className="bg-blue-600 text-white px-5 py-2 rounded-md text-sm font-medium transition hover:bg-blue-700 mx-auto">
+            SHOW MORE
+          </button>
+        </div>
+      </div>
+
       <Footer />
     </div>
   );

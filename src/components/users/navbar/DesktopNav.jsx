@@ -25,9 +25,9 @@ const DesktopNav = ({ openMobileNav }) => {
 
   return (
     <div
-      className={`fixed w-full top-0 left-0 right-0 z-20 navbar transition-all duration-300 ${
+      className={`fixed w-full top-0 left-0 right-0 z-20 navbar transition-all duration-300 py-[0.5rem] ${
         isScrolled
-          ? "bg-white shadow-md text-black"
+          ? "bg-green shadow-md text-black"
           : "bg-transparent text-white"
       }`}
     >
@@ -36,7 +36,7 @@ const DesktopNav = ({ openMobileNav }) => {
         <Link to="/">
           <img
             src={brand}
-            className="max-w-[55px] max-h-[55px]"
+            className="max-w-[50px] max-h-[50px]"
             alt="Brand Logo"
           />
         </Link>
@@ -54,6 +54,7 @@ const DesktopNav = ({ openMobileNav }) => {
           ].map(({ path, label }) => (
             <Link
               key={path}
+              style={isScrolled ? { color: "white" } : {}}
               to={path}
               className={`hover:text-orange-500 transition ${
                 activeLink === path ? "text-orange-600 font-semibold" : ""
@@ -81,7 +82,12 @@ const DesktopNav = ({ openMobileNav }) => {
           </button>
 
           {/* Mobile Menu Icon */}
-          <button className="block md:hidden text-2xl" onClick={openMobileNav}>
+          <button
+            className={`block md:hidden text-2xl ${
+              isScrolled ? "text-white" : ""
+            }`}
+            onClick={openMobileNav}
+          >
             &#9776;
           </button>
         </div>

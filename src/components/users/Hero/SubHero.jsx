@@ -1,35 +1,70 @@
 import React from "react";
+import { motion } from "framer-motion";
+import "./Subhero.css";
 
 const SubHero = ({ title, subtitle }) => {
   return (
-    <div className="relative bg-gradient-to-r from-orange-700 to-orange-500 text-white py-24 rounded-b-lg shadow-xl">
+    <motion.div
+      className="relative bg-gradient-to-r text-white py-24 rounded-b-lg shadow-xl sub-hero"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+    >
       <div className="max-w-3xl mx-auto text-center px-6">
         {/* Main Title */}
-        <h1 className="text-5xl font-extrabold tracking-wide mb-4">{title}</h1>
+        <motion.h1
+          className="text-5xl font-extrabold tracking-wide mb-4"
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+        >
+          {title}
+        </motion.h1>
 
         {/* Subtitle (optional) */}
         {subtitle && (
-          <p className="text-lg font-medium opacity-90 mb-6">{subtitle}</p>
+          <motion.p
+            className="text-lg font-medium opacity-90 mb-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            {subtitle}
+          </motion.p>
         )}
 
         {/* Description */}
-        <p className="text-lg opacity-85 leading-relaxed mb-8">
+        <motion.p
+          className="text-lg opacity-85 leading-relaxed mb-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.4 }}
+        >
           Unlock the full potential of your projects with our cutting-edge
           platform. Join a thriving community of professionals, enhance your
           workflow, and take your career to the next level.
-        </p>
+        </motion.p>
 
         {/* CTA Buttons */}
         <div className="flex justify-center gap-4">
-          <button className="bg-white text-orange-700 px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-gray-100 transition-all duration-300">
+          <motion.button
+            className="bg-white text-orange-700 px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-gray-100 transition-all duration-300"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
             Get Started
-          </button>
-          <button className="border border-white px-6 py-3 rounded-lg font-semibold text-white shadow-md hover:bg-white hover:text-orange-700 transition-all duration-300">
+          </motion.button>
+
+          <motion.button
+            className="border border-white px-6 py-3 rounded-lg font-semibold text-white shadow-md hover:bg-white hover:text-orange-700 transition-all duration-300"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
             Learn More
-          </button>
+          </motion.button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,12 +1,16 @@
 import React from "react";
 import { Mail, Github, Twitter, MapPin, X } from "lucide-react"; // Added X icon
 
-import "./userModal.css"
+import "./userModal.css";
 
-const UserModal = ({user,closeUser}) => {
+const UserModal = ({ user, closeUser }) => {
   // Added onClose prop for closing the modal
   return (
-    <div className={`fixed inset-0 bg-black/50 flex justify-center items-center p-4 z-30 ${user ? 'visible' : 'hidden'}`}>
+    <div
+      className={`fixed inset-0 bg-black/50 flex justify-center items-center p-4 z-50 ${
+        user ? "visible" : "hidden"
+      }`}
+    >
       {/* Modal Container */}
       <div className="bg-white rounded-lg shadow-xl max-w-[900px] w-[90%] overflow-y-scroll inner-modal">
         {/* Header Section */}
@@ -122,7 +126,6 @@ const UserModal = ({user,closeUser}) => {
 
         {/* Close Button */}
         <button
-         
           className="absolute top-4 right-4 p-2 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
           aria-label="Close modal"
           onClick={closeUser}

@@ -35,42 +35,44 @@ const SocialMedia = () => {
 
   return (
     <div
-      className={`fixed left-[1rem] bottom-[40%] z-20 text-white rounded-sm ${
-        isVisible ? "visible" : "hidden"
-      } `}
-      style={{
-        background: "rgba(0,0,140,0.65)",
-      }}
+      className={`fixed left-4 bottom-[40%] z-50 transition-opacity duration-500 ${
+        isVisible ? "opacity-100" : "opacity-0"
+      }`}
     >
-      <ul className="flex flex-col">
-        <li className="hover:bg-orange-500 p-[0.8rem] transition-colors duration-300">
-          <button
-            className="text-4xl"
-            onClick={handleWhatsAppClick}
-            aria-label="Subscribe on WhatsApp"
-          >
-            <FaWhatsappSquare />
-          </button>
-        </li>
-        <li className="bg-green-500 hover:bg-orange-500 p-[0.8rem] transition-colors duration-300">
-          <button
-            className="text-4xl"
-            onClick={handleFacebookClick}
-            aria-label="Subscribe on Facebook"
-          >
-            <FaFacebookSquare />
-          </button>
-        </li>
-        <li className="hover:bg-orange-500 p-[0.8rem] transition-colors duration-300">
-          <button
-            className="text-4xl"
-            onClick={handleTwitterClick}
-            aria-label="Follow on Twitter"
-          >
-            <FaTwitterSquare />
-          </button>
-        </li>
-      </ul>
+      <div
+        className="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden"
+        style={{ border: "1px solid rgba(255, 255, 255, 0.2)" }}
+      >
+        <ul className="flex flex-col space-y-2 p-2">
+          <li>
+            <button
+              className="flex items-center justify-center w-12 h-12 bg-[#128C7E] hover:bg-green-700 rounded-lg border-2 border-white transition-all duration-300 transform hover:scale-110"
+              onClick={handleWhatsAppClick}
+              aria-label="Subscribe on WhatsApp"
+            >
+              <FaWhatsappSquare className="text-white text-3xl" />
+            </button>
+          </li>
+          <li>
+            <button
+              className="flex items-center justify-center w-12 h-12 bg-blue-600 hover:bg-blue-700 rounded-lg transition-all duration-300 transform hover:scale-110"
+              onClick={handleFacebookClick}
+              aria-label="Subscribe on Facebook"
+            >
+              <FaFacebookSquare className="text-white text-3xl" />
+            </button>
+          </li>
+          <li>
+            <button
+              className="flex items-center justify-center w-12 h-12 bg-blue-400 hover:bg-blue-500 rounded-lg transition-all duration-300 transform hover:scale-110"
+              onClick={handleTwitterClick}
+              aria-label="Follow on Twitter"
+            >
+              <FaTwitterSquare className="text-white text-3xl" />
+            </button>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };

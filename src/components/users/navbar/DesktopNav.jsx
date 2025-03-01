@@ -42,13 +42,13 @@ const DesktopNav = ({ openMobileNav }) => {
         </Link>
 
         {/* Navigation Links */}
-        <nav className="hidden md:flex gap-8 text-base font-medium">
+        <nav className="hidden md:flex gap-8 text-base font-medium items-center">
           {[
             { path: "/", label: "Home" },
             { path: "/communities", label: "Community" },
             { path: "/events", label: "Events" },
             { path: "/alumni", label: "Alumni" },
-           
+
             { path: "/blogs", label: "Blogs" },
             { path: "/support", label: "Support" },
           ].map(({ path, label }) => (
@@ -63,13 +63,14 @@ const DesktopNav = ({ openMobileNav }) => {
               {label}
             </Link>
           ))}
+          <button className="bg-blue-600 text-white px-5 py-2 rounded-sm text-sm font-medium transition hover:bg-blue-700">
+            Dashboard
+          </button>
         </nav>
 
         {/* Action Buttons */}
         <div className="flex items-center gap-4">
-          <button className="bg-blue-600 text-white px-5 py-2 rounded-sm text-sm font-medium transition hover:bg-blue-700">
-            Dashboard
-          </button>
+          
           <button
             className="bg-blue-600 text-white px-5 py-2 rounded-sm text-sm font-medium transition hover:bg-blue-700"
             onClick={() => navigate("/auth/login")}

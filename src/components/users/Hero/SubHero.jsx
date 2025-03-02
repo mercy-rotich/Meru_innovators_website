@@ -48,7 +48,7 @@ const SubHero = ({ title, subtitle }) => {
         {/* CTA Buttons */}
         <div className="flex justify-center gap-4">
           <motion.button
-            className="bg-white text-orange-700 px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-gray-100 transition-all duration-300"
+            className="btn-primary"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -56,7 +56,7 @@ const SubHero = ({ title, subtitle }) => {
           </motion.button>
 
           <motion.button
-            className="border border-white px-6 py-3 rounded-lg font-semibold text-white shadow-md hover:bg-white hover:text-orange-700 transition-all duration-300"
+            className="btn-primary"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

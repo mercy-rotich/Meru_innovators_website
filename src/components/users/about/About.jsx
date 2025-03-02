@@ -65,12 +65,26 @@ const About = () => {
           <Subtitle title="Our Core Values" />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
             {[
-              { title: "Excellence", desc: "We uphold the highest standards of academic and professional excellence, ensuring that our students receive a world-class education." },
-              { title: "Innovation", desc: "We foster a culture of creativity and innovation, encouraging students to explore new ideas and solutions to global challenges." },
-              { title: "Integrity", desc: "We emphasize ethical leadership and integrity in all aspects of learning, research, and professional conduct." },
+              {
+                title: "Excellence",
+                desc: "We uphold the highest standards of academic and professional excellence, ensuring that our students receive a world-class education.",
+              },
+              {
+                title: "Innovation",
+                desc: "We foster a culture of creativity and innovation, encouraging students to explore new ideas and solutions to global challenges.",
+              },
+              {
+                title: "Integrity",
+                desc: "We emphasize ethical leadership and integrity in all aspects of learning, research, and professional conduct.",
+              },
             ].map((value, index) => (
-              <div key={index} className="p-4 border border-neutral-300 rounded-lg shadow-sm bg-gray-50">
-                <h3 className="font-semibold text-lg text-gray-800">{value.title}</h3>
+              <div
+                key={index}
+                className="p-4 border border-neutral-300 rounded-lg shadow-sm bg-gray-50"
+              >
+                <h3 className="font-semibold text-lg text-gray-800">
+                  {value.title}
+                </h3>
                 <p className="text-gray-600 mt-2">{value.desc}</p>
               </div>
             ))}

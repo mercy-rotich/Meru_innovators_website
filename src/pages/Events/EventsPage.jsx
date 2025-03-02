@@ -9,6 +9,7 @@ import { Locate } from "lucide-react";
 import { hotEvents } from "./EventsCustom";
 import { Play, X } from "lucide-react";
 import { motion } from "framer-motion";
+import EventCard from "./EventCard";
 
 // Carousel responsive settings
 const responsive = {
@@ -193,62 +194,22 @@ const EventsPage = () => {
           <Subtitle title={"UPCOMING EVENTS"} centered />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {events.map((event) => (
-              <div
-                key={event.id}
-                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-              >
-                <img
-                  src={event.image}
-                  alt={event.title}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <h2 className="text-xl font-bold text-gray-900 mb-2">
-                    {event.title}
-                  </h2>
-                  <p className="text-sm text-gray-600 mb-2">
-                    <span className="font-semibold">Date:</span> {event.date}
-                  </p>
-                  <p className="text-sm text-gray-600 mb-4">
-                    <span className="font-semibold">Location:</span>{" "}
-                    {event.location}
-                  </p>
-                  <p className="text-gray-700 mb-4">{event.description}</p>
-                  <button className="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-                    Learn More
-                  </button>
-                </div>
-              </div>
+              <EventCard event={event} key={event.id} />
             ))}
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {events.map((event) => (
-              <div
-                key={event.id}
-                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-              >
-                <img
-                  src={event.image}
-                  alt={event.title}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <h2 className="text-xl font-bold text-gray-900 mb-2">
-                    {event.title}
-                  </h2>
-                  <p className="text-sm text-gray-600 mb-2">
-                    <span className="font-semibold">Date:</span> {event.date}
-                  </p>
-                  <p className="text-sm text-gray-600 mb-4">
-                    <span className="font-semibold">Location:</span>{" "}
-                    {event.location}
-                  </p>
-                  <p className="text-gray-700 mb-4">{event.description}</p>
-                  <button className="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-                    Learn More
-                  </button>
-                </div>
-              </div>
+              <EventCard event={event} key={event.id} />
+            ))}
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {events.map((event) => (
+              <EventCard event={event} key={event.id} />
+            ))}
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {events.map((event) => (
+              <EventCard event={event} key={event.id} />
             ))}
           </div>
         </div>

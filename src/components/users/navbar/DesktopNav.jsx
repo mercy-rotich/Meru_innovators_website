@@ -71,30 +71,36 @@ const DesktopNav = ({ openMobileNav, gallery }) => {
         </nav>
 
         {/* Action Buttons */}
-        <div className="flex items-center gap-4">
-          <button
-            className="bg-blue-600 text-white px-5 py-2 rounded-sm text-sm font-medium transition hover:bg-blue-700"
-            onClick={() => navigate("/auth/login")}
-          >
-            Login
-          </button>
+        <div className="flex items-center gap-[2rem]">
+          <div className="flex items-center gap-[1rem]">
+            <button
+              className="bg-blue-600 text-white px-5 py-2 rounded-sm text-sm font-medium transition hover:bg-blue-700"
+              onClick={() => navigate("/auth/login")}
+            >
+              Login
+            </button>
 
-          <button
-            className="bg-orange-500 text-white px-5 py-2 rounded-sm text-sm font-medium transition hover:bg-orange-600"
-            onClick={() => navigate("/auth/signup")}
-          >
-            Signup
-          </button>
+            <button
+              className="bg-orange-500 text-white px-5 py-2 rounded-sm text-sm font-medium transition hover:bg-orange-600"
+              onClick={() => navigate("/auth/signup")}
+            >
+              Signup
+            </button>
+          </div>
 
-          {/* Mobile Menu Icon */}
-          <button
-            className={`block md:hidden text-2xl ${
-              isScrolled ? "text-white" : ""
-            }`}
-            onClick={openMobileNav}
-          >
-            &#9776;
-          </button>
+          <div className="flex gap-[1rem]">
+            <button className="border-2 rounded-full border-white p-[0.5rem]">
+              <User />
+            </button>
+            <button
+              className={`block md:hidden text-3xl ${
+                isScrolled ? "text-white" : ""
+              }`}
+              onClick={openMobileNav}
+            >
+              &#9776;
+            </button>
+          </div>
         </div>
       </div>
     </div>

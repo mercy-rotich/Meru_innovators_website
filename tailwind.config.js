@@ -65,6 +65,12 @@ export default {
       boxShadow: {
         least: "0 0 5px rgba(0,0,0,0.25)",
       },
+      gradientColorStops: {
+        bgprimary: {
+          from: "#fef9c3",
+          to: "#fef9c3",
+        },
+      },
       fontFamily: {
         itim: ["'Itim', sans-serif"],
       },

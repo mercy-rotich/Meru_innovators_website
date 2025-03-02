@@ -2,7 +2,7 @@ import { Instagram, Linkedin } from "lucide-react";
 
 const Testmonial = () => {
   return (
-    <div className="p-[10px] border border-b-0 border-neutral-300 rounded-md">
+    <div className="p-[10px] bg-white border border-b-0 border-neutral-300 rounded-md">
       <div className="border-2 border-orange-500 p-[10px] translate-y-6 rounded-md">
         <div className="flex items-center gap-4 mt-4">
           <img

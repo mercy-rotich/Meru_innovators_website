@@ -1,7 +1,7 @@
 const Alumnis = [
   {
     id: 1,
-    name: "Caroline Alexis",
+    name: "Brian Otieno",
     profession: "Software Engineer",
     company: "Microsoft",
     description: "Expert in cloud computing and AI-driven applications.",
@@ -10,7 +10,7 @@ const Alumnis = [
   },
   {
     id: 2,
-    name: "James Oliver",
+    name: "James Mwangi",
     profession: "Data Scientist",
     company: "Google",
     description: "Passionate about big data, machine learning, and analytics.",
@@ -19,7 +19,7 @@ const Alumnis = [
   },
   {
     id: 3,
-    name: "Sophia Martinez",
+    name: "Sophia Wanjiru",
     profession: "UX Designer",
     company: "Apple",
     description:
@@ -29,7 +29,7 @@ const Alumnis = [
   },
   {
     id: 4,
-    name: "David Kim",
+    name: "David Kamau",
     profession: "Cybersecurity Analyst",
     company: "IBM",
     description:
@@ -39,7 +39,7 @@ const Alumnis = [
   },
   {
     id: 5,
-    name: "Emily Chen",
+    name: "Emily Achieng",
     profession: "Product Manager",
     company: "Amazon",
     description: "Manages innovative e-commerce and cloud solutions.",
@@ -48,7 +48,7 @@ const Alumnis = [
   },
   {
     id: 6,
-    name: "Michael Brown",
+    name: "Michael Njoroge",
     profession: "AI Researcher",
     company: "OpenAI",
     description: "Focuses on deep learning, neural networks, and AI ethics.",
@@ -57,7 +57,7 @@ const Alumnis = [
   },
   {
     id: 7,
-    name: "Aisha Patel",
+    name: "Aisha Hassan",
     profession: "Blockchain Developer",
     company: "Meta",
     description:
@@ -67,7 +67,7 @@ const Alumnis = [
   },
   {
     id: 8,
-    name: "Robert Green",
+    name: "Robert Onyango",
     profession: "Cloud Architect",
     company: "Oracle",
     description: "Designs scalable cloud solutions for global enterprises.",

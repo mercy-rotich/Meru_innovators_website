@@ -1,36 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Itim&family=Outfit:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Itim&family=Outfit:wght@100..900&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Itim&family=Outfit:wght@100..900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Itim&family=Outfit:wght@100..900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-
-
-  font-family:'Outfit',sans-serif;
+@layer components {
+  .btn-primary {
+    @apply border border-white px-12 py-2 rounded-sm font-semibold text-white 
+           shadow-md hover:bg-white hover:text-orange-700 transition-all 
+           duration-300;
+  }
 }
 
-:root{
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 
-  --primary:#117909;
-
-  --descriptions-color:#676767;
-
-  --orange:#ff8c00
-
+  font-family: "Outfit", sans-serif;
 }
 
+:root {
+  --primary: #117909;
 
+  --descriptions-color: #676767;
+
+  --orange: #ff8c00;
+}
 
 ::-webkit-scrollbar {
   width: 3px;
-  height:2px;
+  height: 2px;
 }
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
@@ -42,75 +44,58 @@
   background: #555;
 }
 
-.subtopic{
+.subtopic {
+  font-weight: 700;
 
-  font-weight:700;
+  font-size: 2.3rem;
 
-  font-size:2.3rem;
-
-  text-align:center;
-
+  text-align: center;
 }
 
-.universal-button{
+.universal-button {
   background: #ff8c00;
-  padding:0.3rem 2rem;
-  border-radius:30px;
-  color:#fff;
-  transition:All 0.5s;
-  border:2px solid #ff8c00;
+  padding: 0.3rem 2rem;
+  border-radius: 30px;
+  color: #fff;
+  transition: All 0.5s;
+  border: 2px solid #ff8c00;
 }
 
-.universal-button:hover{
+.universal-button:hover {
+  background: transparent;
 
-  background:transparent;
-
-  color:#ff8c00;
-
+  color: #ff8c00;
 }
 
-img{
-
-  width:100%;
-
+img {
+  width: 100%;
 }
 
-.container{
+.container {
+  width: 100%;
 
-  width:100%;
+  max-width: 1300px;
 
-  max-width:1300px;
+  margin: 0 auto;
 
-  margin:0 auto;
-
-  padding:0 2%;
-
+  padding: 0 2%;
 }
 
-a{
-
-  text-decoration:none;
-
+a {
+  text-decoration: none;
 }
 
-
-.description{
-  color:#676767;
-  line-height:2rem;
+.description {
+  color: #676767;
+  line-height: 2rem;
 }
 
-ul{
-
-  list-style:none;
-
+ul {
+  list-style: none;
 }
 
-@media(max-width:600px){
-
-  .subtopic{
-
-    font-size:1.8rem;
-
+@media (max-width: 600px) {
+  .subtopic {
+    font-size: 1.8rem;
   }
-
 }

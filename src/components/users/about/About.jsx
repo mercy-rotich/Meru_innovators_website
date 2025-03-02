@@ -5,9 +5,9 @@ import Subtitle from "../../Subtitle/Subtitle";
 const About = () => {
   return (
     <div className="mt-[7rem]">
-      <div className="mx-auto px-6">
+      <div className="mx-auto ">
         {/* Introduction Section */}
-        <div className="text-center">
+        <div className="text-center container">
           <Subtitle title="About Our Meru University Innovators" />
           <p className="text-gray-700 leading-relaxed mt-4">
             Our university is a beacon of academic excellence, committed to
@@ -35,7 +35,7 @@ const About = () => {
         </div>
 
         {/* Our Mission Section */}
-        <div className="mt-10 flex flex-col sm:flex-row gap-4 bg-orange-300">
+        <div className="mt-10 flex flex-col sm:flex-row gap-4 bg-gradient-to-b from-[#fef9c3] to-[#fef9c3]">
           <div className="max-w-5xl flex flex-col sm:flex-row gap-6 mx-auto py-6 px-6 items-center">
             <div className="sm:w-1/3">
               <img
@@ -61,9 +61,9 @@ const About = () => {
         </div>
 
         {/* Core Values Section */}
-        <div className="mt-12 container mx-auto">
+        <div className=" mx-auto bg-green-200 py-[3rem]">
           <Subtitle title="Our Core Values" />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+          <div className="container grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
             {[
               {
                 title: "Excellence",
@@ -80,7 +80,7 @@ const About = () => {
             ].map((value, index) => (
               <div
                 key={index}
-                className="p-4 border border-neutral-300 rounded-lg shadow-sm bg-gray-50"
+                className="p-4 border border-neutral-300 bg-white  rounded-sm shadow-sm bg-gray-50"
               >
                 <h3 className="font-semibold text-lg text-gray-800">
                   {value.title}

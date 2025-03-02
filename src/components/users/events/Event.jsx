@@ -42,7 +42,7 @@ const Event = () => {
   ];
 
   return (
-    <div className="mt-[7rem] px-4 events-slide">
+    <div className=" py-[3rem] bg-gradient-to-b from-[#fef9c3] to-[#fef9c3] px-4 events-slide">
       <div className="container mx-auto">
         <Subtitle title={" Event Highlights"} />
         <Carousel

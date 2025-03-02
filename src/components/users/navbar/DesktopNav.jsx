@@ -5,8 +5,10 @@ import { User } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useTheme } from "../../../context/ThemeContext";
 
+import { Sun, Moon } from "lucide-react";
+
 const DesktopNav = ({ openMobileNav, gallery }) => {
-  const { isDarkMode } = useTheme();
+  const { isDarkMode, toggleTheme } = useTheme();
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -32,7 +34,9 @@ const DesktopNav = ({ openMobileNav, gallery }) => {
         isScrolled ? "onscroll" : "bg-transparent text-white"
       }`}
       style={
-        gallery === "gallery" && isDarkMode ? { background: "#333" } : "green"
+        gallery === "gallery" && isDarkMode
+          ? { background: "#333" }
+          : { background: "green" }
       }
     >
       <div className="container flex items-center justify-between py-3 px-6">
@@ -90,6 +94,9 @@ const DesktopNav = ({ openMobileNav, gallery }) => {
           </div>
 
           <div className="flex gap-[1rem]">
+            <button className="theme-button" onClick={toggleTheme}>
+              {isDarkMode ? <Sun /> : <Moon />}
+            </button>
             <button className="border-2 rounded-full border-white p-[0.5rem]">
               <User />
             </button>

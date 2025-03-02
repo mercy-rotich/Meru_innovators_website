@@ -118,7 +118,7 @@ const SingleBlog = () => {
           </button>
 
           <motion.div
-            className="bg-white p-6 rounded-sm shadow-lg border border-neutral-200"
+            className="bg-white p-6 rounded-sm shadow-lg border border-neutral-200 mb-[3rem]"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}

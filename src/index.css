@@ -93,6 +93,9 @@ body.dark-mode input[type="password"] {
   background: transparent;
 }
 
+body.dark-mode .desktop-navbar .theme-button {
+}
+
 ::-webkit-scrollbar {
   width: 3px;
   height: 2px;

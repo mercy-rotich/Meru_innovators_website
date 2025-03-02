@@ -52,7 +52,7 @@ const SubHero = ({ title, subtitle }) => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Get Started
+            Join Community
           </motion.button>
 
           <motion.button

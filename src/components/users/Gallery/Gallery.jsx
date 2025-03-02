@@ -98,66 +98,68 @@ const Gallery = () => {
   }, [selectedImage, handleKeyDown]);
 
   return (
-    <PageLayout gallery={"gallery"}>
-      <div className="pt-[6rem]">
-        <Subtitle title={"GALLERY"} />
-        {images.map((event, eventIndex) => (
-          <div key={eventIndex} className="mb-8">
-            <h2 className="text-xl font-semibold text-center mb-4">
-              {event.title}
-            </h2>
-            <div className="container mx-auto py-4 px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
-              {event.data.map((img, index) => (
-                <img
-                  key={index}
-                  src={img}
-                  alt={`Gallery Image ${index + 1}`}
-                  className="w-full h-60 object-cover rounded-sm cursor-pointer hover:opacity-80 transition"
-                  onClick={() => openModal(event.title, event.data, index)}
-                />
-              ))}
-            </div>
-          </div>
-        ))}
-
-        {/* Modal */}
-        {selectedImage && (
-          <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
-            <div className="max-w-4xl w-full p-4 ">
-              <button
-                className="absolute top-4 right-4 text-white"
-                onClick={closeModal}
-              >
-                <X size={40} />
-              </button>
-              <h2 className="text-white text-xl text-center mb-2">
-                {currentEvent}
+    <div className="bg-green-200">
+      <PageLayout gallery={"gallery"}>
+        <div className="pt-[6rem] ">
+          <Subtitle title={"GALLERY"} />
+          {images.map((event, eventIndex) => (
+            <div key={eventIndex} className="mb-8">
+              <h2 className="text-xl font-semibold text-center mb-4">
+                {event.title}
               </h2>
-              <img
-                src={selectedImage}
-                alt="Selected"
-                className="w-full max-h-[80vh] object-contain rounded-lg"
-              />
-              <p className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white bg-gray-900 px-4 py-1 rounded-md">
-                {currentIndex + 1} / {currentImages.length}
-              </p>
-              <button
-                className="absolute top-1/2 left-4 text-white bg-gray-900 p-3 rounded-full hover:bg-gray-700 transition"
-                onClick={prevImage}
-              >
-                <ChevronLeft size={40} />
-              </button>
-              <button
-                className="absolute top-1/2 right-4 text-white bg-gray-900 p-3 rounded-full hover:bg-gray-700 transition"
-                onClick={nextImage}
-              >
-                <ChevronRight size={40} />
-              </button>
+              <div className="container mx-auto py-4 px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+                {event.data.map((img, index) => (
+                  <img
+                    key={index}
+                    src={img}
+                    alt={`Gallery Image ${index + 1}`}
+                    className="w-full h-60 object-cover rounded-sm cursor-pointer hover:opacity-80 transition"
+                    onClick={() => openModal(event.title, event.data, index)}
+                  />
+                ))}
+              </div>
             </div>
-          </div>
-        )}
-      </div>
-    </PageLayout>
+          ))}
+
+          {/* Modal */}
+          {selectedImage && (
+            <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+              <div className="max-w-4xl w-full p-4 ">
+                <button
+                  className="absolute top-4 right-4 text-white"
+                  onClick={closeModal}
+                >
+                  <X size={40} />
+                </button>
+                <h2 className="text-white text-xl text-center mb-2">
+                  {currentEvent}
+                </h2>
+                <img
+                  src={selectedImage}
+                  alt="Selected"
+                  className="w-full max-h-[80vh] object-contain rounded-lg"
+                />
+                <p className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white bg-gray-900 px-4 py-1 rounded-md">
+                  {currentIndex + 1} / {currentImages.length}
+                </p>
+                <button
+                  className="absolute top-1/2 left-4 text-white bg-gray-900 p-3 rounded-full hover:bg-gray-700 transition"
+                  onClick={prevImage}
+                >
+                  <ChevronLeft size={40} />
+                </button>
+                <button
+                  className="absolute top-1/2 right-4 text-white bg-gray-900 p-3 rounded-full hover:bg-gray-700 transition"
+                  onClick={nextImage}
+                >
+                  <ChevronRight size={40} />
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
+      </PageLayout>
+    </div>
   );
 };
 

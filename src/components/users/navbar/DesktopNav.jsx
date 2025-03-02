@@ -65,9 +65,7 @@ const DesktopNav = ({ openMobileNav, gallery }) => {
               {label}
             </Link>
           ))}
-          <button className="bg-blue-600 text-white px-5 py-2 rounded-sm text-sm font-medium transition hover:bg-blue-700">
-            Dashboard
-          </button>
+          <button className="btn-primary">Dashboard</button>
         </nav>
 
         {/* Action Buttons */}

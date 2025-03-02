@@ -1,74 +1,79 @@
 import "./Hero.css";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
+import { HeroData } from "./HeroData";
+
 import MegaDashboard from "../navbar/MegaDashboard";
-import { motion } from "framer-motion";
+
+import { useNavigate } from "react-router-dom";
+
+const responsive = {
+  superLargeDesktop: { breakpoint: { max: 4000, min: 3000 }, items: 1 },
+  desktop: { breakpoint: { max: 3000, min: 1024 }, items: 1 },
+  tablet: { breakpoint: { max: 1024, min: 464 }, items: 1 },
+  mobile: { breakpoint: { max: 464, min: 0 }, items: 1 },
+};
 
 const Hero = () => {
-  // Framer Motion Variants
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.3, delayChildren: 0.2 },
-    },
-  };
+  const navigate = useNavigate();
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  const navigateRequiredPage = (link) => {
+    navigate(link);
   };
 
   return (
     <div className="hero">
       <MegaDashboard />
-
-      <motion.div
-        className="content text-white w-full z-10"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        <div className="container text-center custom-mobile-screen:text-start px-4">
-          {/* Title */}
-          <motion.h1
-            className="text-4xl md:text-5xl lg:text-7xl font-bold mb-4 tracking-wider hero-header"
-            variants={itemVariants}
-          >
-            Empowering Meru's <br />
-            Brightest Innovators
-          </motion.h1>
-
-          {/* Description */}
-          <motion.p className="text-lg md:text-xl mb-8" variants={itemVariants}>
-            Join the movement driving creativity, entrepreneurship, and
-            cutting-edge solutions in Meru and beyond.
-            <br />
-            Let's shape the future together!
-          </motion.p>
-
-          {/* Buttons */}
-          <motion.div
-            className="flex flex-col space-y-4 custom-mobile-screen:flex-row custom-mobile-screen:space-y-0 custom-mobile-screen:space-x-4 items-center justify-center custom-mobile-screen:justify-start hero-buttons"
-            variants={itemVariants}
-          >
-            <motion.a
-              href="#projects"
-              className="px-6 py-3 w-full custom-mobile-screen:w-auto bg-white text-orange-500 font-semibold text-center rounded-md hover:bg-gray-200 transition"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Explore Our Projects
-            </motion.a>
-            <motion.a
-              href="#join-us"
-              className="px-6 py-3 w-full custom-mobile-screen:w-auto border border-white text-white font-semibold text-center rounded-md hover:bg-orange-600 transition"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Join the Community
-            </motion.a>
-          </motion.div>
-        </div>
-      </motion.div>
+      <div>
+        <Carousel
+          swipeable={false}
+          draggable={false}
+          responsive={responsive}
+          ssr={true}
+          infinite={true}
+          autoPlay={true}
+          autoPlaySpeed={2000}
+          keyBoardControl={true}
+          customTransition="all .5s ease"
+          transitionDuration={500}
+          containerClass="carousel-container"
+          removeArrowOnDeviceType={["tablet", "mobile"]}
+          dotListClass="custom-dot-list-style"
+          itemClass="carousel-item-padding-40-px"
+        >
+          {HeroData.map((item) => (
+            <div key={item.id} className="relative w-full h-[500px] hero-image">
+              {/* Background Image */}
+              <img
+                src={item.urlImage}
+                alt={item.title}
+                fill
+                className="object-cover w-full h-full"
+              />
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-black/50"></div>
+              {/* Text Content */}
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
+                <h2 className="text-3xl md:text-5xl font-bold mb-4">
+                  {item.title}
+                </h2>
+                <p className="text-lg md:text-xl max-w-2xl">
+                  {item.description}
+                </p>
+                <button
+                  className="text-white  border-2 border-white px-[3rem] py-[0.5rem] rounded-[30px] mt-[2rem]"
+                  onClick={() => {
+                    navigateRequiredPage(item.buttonUrl);
+                  }}
+                >
+                  {item.buttonDesc}
+                </button>
+              </div>
+            </div>
+          ))}
+        </Carousel>
+      </div>
     </div>
   );
 };

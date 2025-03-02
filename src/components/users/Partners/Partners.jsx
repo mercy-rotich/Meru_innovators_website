@@ -99,7 +99,7 @@ const Partners = () => {
                 <p className="text-gray-600 text-sm mt-2 px-4">
                   {partner.description}
                 </p>
-                <button className="mt-4 px-5 py-2 text-sm font-medium text-white bg-orange-600 hover:bg-orange-700 rounded-full transition-all duration-200">
+                <button className="universal-button mt-[1rem]">
                   {partner.buttonText}
                 </button>
               </div>

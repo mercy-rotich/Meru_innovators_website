@@ -1,6 +1,7 @@
 import React from "react";
 import Blog from "../blog/Blog";
 import Subtitle from "../../Subtitle/Subtitle";
+import ShowMoreButton from "../../ShowMore/ShowMore";
 
 const LatestBlogs = () => {
   return (
@@ -12,9 +13,7 @@ const LatestBlogs = () => {
           <Blog />
           <Blog />
         </div>
-        <button className="universal-button mx-auto block mt-[2rem]">
-          More blogs
-        </button>
+      <ShowMoreButton/>
       </div>
     </div>
   );

@@ -97,7 +97,10 @@ const DesktopNav = ({ openMobileNav, gallery }) => {
             <button className="theme-button" onClick={toggleTheme}>
               {isDarkMode ? <Sun /> : <Moon />}
             </button>
-            <button className="border-2 rounded-full border-white p-[0.5rem]">
+            <button
+              className="border-2 rounded-full border-white p-[0.5rem]"
+              onClick={() => navigate("/account/profile")}
+            >
               <User />
             </button>
             <button

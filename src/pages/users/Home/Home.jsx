@@ -1,3 +1,4 @@
+import Preloader from "../../../components/Preloader/Preloader";
 import About from "../../../components/users/about/About";
 import Event from "../../../components/users/events/Event";
 import Footer from "../../../components/users/Footer/Footer";

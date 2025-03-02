@@ -89,8 +89,18 @@ body.dark-mode .theme-toggler li {
 
 body.dark-mode input[type="text"],
 body.dark-mode input[type="email"],
-body.dark-mode input[type="password"] {
+body.dark-mode input[type="password"],
+body.dark-mode textarea,
+body.dark-mode input[type="tel"] {
   background: transparent;
+}
+
+body.dark-mode .user-account-sidebar {
+  background: #333;
+}
+
+body.dark-mode .user-account-sidebar nav .bg-green-800:hover {
+  background: #555;
 }
 
 body.dark-mode .desktop-navbar .theme-button {
@@ -155,8 +165,6 @@ body.dark-mode .desktop-navbar .theme-button {
   flex-direction: column;
 
   background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55));
-
-  z-index: 99;
 }
 
 .bg-primary-one {
@@ -164,10 +172,6 @@ body.dark-mode .desktop-navbar .theme-button {
 }
 .bg-primary-two {
   background-image: linear-gradient(to bottom, #fef9c3, #fef9c3);
-}
-
-.inner-wrapper {
-  background: #fff;
 }
 
 img {

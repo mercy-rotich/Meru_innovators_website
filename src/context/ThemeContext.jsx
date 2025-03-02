@@ -1,9 +1,15 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 const ThemeContext = createContext();
 
 const ThemeProvider = ({ children }) => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const storedTheme = sessionStorage.getItem("isDarkMode") === "true";
+
+  const [isDarkMode, setIsDarkMode] = useState(storedTheme);
+
+  useEffect(() => {
+    sessionStorage.setItem("isDarkMode", isDarkMode);
+  }, [isDarkMode]);
 
   const toggleTheme = () => {
     setIsDarkMode((prevMode) => !prevMode);

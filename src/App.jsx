@@ -28,6 +28,8 @@ import AlumniPage from "./pages/users/Alumni/AlumniPage";
 
 import Gallery from "./components/users/Gallery/Gallery";
 
+import Profile from "./pages/UserAccount/Profile/Profile";
+
 const App = () => {
   const { isDarkMode } = useTheme();
 
@@ -36,7 +38,7 @@ const App = () => {
       document.body.classList.add("dark-mode");
     } else {
       document.body.classList.remove("bg-primary-one");
-      document.body.classList.remove("bg-primary-two");
+      document.body.classList.remove("dark-mode");
     }
   }, [isDarkMode]);
 
@@ -53,6 +55,10 @@ const App = () => {
         <Route path="/blogs/:id" element={<SingleBlog />} />
         <Route path="/alumni/" element={<AlumniPage />} />
         <Route path="/gallery/" element={<Gallery />} />
+
+        {/* User Account */}
+
+        <Route path="/account/profile" element={<Profile />} />
       </Routes>
       <SocialMedia />
       <NavigateTopArrow />

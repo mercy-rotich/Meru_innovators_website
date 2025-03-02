@@ -1,7 +1,6 @@
-import React from "react";
-
-import { useState } from "react";
+import React, { useState } from "react";
 import { X } from "lucide-react";
+import Preloader from "../../Preloader/Preloader";
 
 const BookRsvp = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
@@ -11,21 +10,45 @@ const BookRsvp = ({ isOpen, onClose }) => {
     message: "",
   });
 
+  const [isLoading, setIsLoading] = useState(false);
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("RSVP Details:", formData);
-    onClose();
+
+    // Show Preloader
+    setIsLoading(true);
+
+    setTimeout(() => {
+      console.log("RSVP Details:", formData);
+
+      // Hide Preloader
+      setIsLoading(false);
+
+      // Close Modal
+      onClose();
+
+      // Clear form
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    }, 2000); // Hide Preloader after 2 seconds
   };
 
   if (!isOpen) return null;
+
   return (
-    <div className="modal">
-      <div className="inner-wrapper relative p-[2rem]">
-        <div className="">
+    <div className="modal z-30">
+      {isLoading ? (
+        <Preloader />
+      ) : (
+        <div className="inner-wrapper bg-white relative p-[2rem]">
           <button
             onClick={onClose}
             className="absolute top-4 right-4 text-neutral-500 hover:text-neutral-700"
@@ -76,7 +99,7 @@ const BookRsvp = ({ isOpen, onClose }) => {
             </button>
           </form>
         </div>
-      </div>
+      )}
     </div>
   );
 };

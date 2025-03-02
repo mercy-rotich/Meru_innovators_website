@@ -38,3 +38,96 @@ export const hotEvents = [
     interest: "I'm Interested",
   },
 ];
+
+export const events = [
+  {
+    id: 1,
+    title: "Innovation Hackathon 2023",
+    date: "October 15, 2023",
+    location: "Meru University, Main Hall",
+    description:
+      "Join us for a 48-hour hackathon to solve real-world problems using technology. Open to all students and innovators.",
+    image:
+      "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+  {
+    id: 2,
+    title: "Startup Pitch Competition",
+    date: "November 5, 2023",
+    location: "Meru University, Auditorium",
+    description:
+      "Pitch your startup idea to a panel of judges and win funding to bring your idea to life.",
+    image:
+      "https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+  {
+    id: 3,
+    title: "Tech Expo 2023",
+    date: "December 10, 2023",
+    location: "Meru University, Innovation Hub",
+    description:
+      "Explore the latest innovations in technology and network with industry experts.",
+    image:
+      "https://images.pexels.com/photos/1181673/pexels-photo-1181673.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+  {
+    id: 4,
+    title: "AI & Machine Learning Workshop",
+    date: "January 20, 2024",
+    location: "Meru University, Lab 3",
+    description:
+      "Learn the fundamentals of AI and Machine Learning with hands-on training sessions.",
+    image:
+      "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+  {
+    id: 5,
+    title: "Cybersecurity Awareness Seminar",
+    date: "February 8, 2024",
+    location: "Meru University, Conference Room",
+    description:
+      "Understand the importance of cybersecurity and learn how to protect yourself online.",
+    image:
+      "https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+  {
+    id: 6,
+    title: "Blockchain & Cryptocurrency Forum",
+    date: "March 15, 2024",
+    location: "Meru University, Business Center",
+    description:
+      "Get insights into blockchain technology and the future of cryptocurrencies.",
+    image:
+      "https://images.pexels.com/photos/1181673/pexels-photo-1181673.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+  {
+    id: 7,
+    title: "Women in Tech Conference",
+    date: "April 5, 2024",
+    location: "Meru University, Innovation Hub",
+    description:
+      "Empowering women in technology through networking and knowledge-sharing sessions.",
+    image:
+      "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+  {
+    id: 8,
+    title: "Mobile App Development Bootcamp",
+    date: "May 22, 2024",
+    location: "Meru University, Coding Lab",
+    description:
+      "A beginner-friendly bootcamp on building Android and iOS applications.",
+    image:
+      "https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+  {
+    id: 9,
+    title: "Cloud Computing & DevOps Workshop",
+    date: "June 18, 2024",
+    location: "Meru University, Cloud Lab",
+    description:
+      "Hands-on training on cloud platforms, DevOps tools, and best practices.",
+    image:
+      "https://images.pexels.com/photos/1181673/pexels-photo-1181673.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+];

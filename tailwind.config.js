@@ -19,7 +19,7 @@ export default {
         bodyBackground: "#280137",
 
         lightGreen: "#90ee90",
-        green: "#008000",
+
         darkGreen: "#006400",
         emeraldGreen: "#50c878",
         topicColor: "#008000",

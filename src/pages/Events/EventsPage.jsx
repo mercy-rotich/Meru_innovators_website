@@ -11,6 +11,8 @@ import { Play, X } from "lucide-react";
 import { motion } from "framer-motion";
 import EventCard from "./EventCard";
 
+import { events } from "./EventsCustom";
+
 // Carousel responsive settings
 const responsive = {
   superLargeDesktop: {
@@ -40,39 +42,6 @@ const EventsPage = () => {
     setIsPlaying(true);
   };
 
-  const events = [
-    {
-      id: 1,
-      title: "Innovation Hackathon 2023",
-      date: "October 15, 2023",
-      location: "Meru University, Main Hall",
-      description:
-        "Join us for a 48-hour hackathon to solve real-world problems using technology. Open to all students and innovators.",
-      image:
-        "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-    {
-      id: 2,
-      title: "Startup Pitch Competition",
-      date: "November 5, 2023",
-      location: "Meru University, Auditorium",
-      description:
-        "Pitch your startup idea to a panel of judges and win funding to bring your idea to life.",
-      image:
-        "https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-    {
-      id: 3,
-      title: "Tech Expo 2023",
-      date: "December 10, 2023",
-      location: "Meru University, Innovation Hub",
-      description:
-        "Explore the latest innovations in technology and network with industry experts.",
-      image:
-        "https://images.pexels.com/photos/1181673/pexels-photo-1181673.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-  ];
-
   return (
     <div className="bg-gray-50 min-h-screen">
       {/* Navbar */}
@@ -87,7 +56,7 @@ const EventsPage = () => {
           <div className="relative w-full max-w-4xl">
             {/* Video Placeholder */}
             <div
-              className="relative w-full h-[400px] rounded-lg shadow-lg overflow-hidden cursor-pointer"
+              className="mx-[1rem]relative w-full h-[400px] rounded-lg shadow-lg overflow-hidden cursor-pointer"
               onClick={() => setIsModalOpen(true)}
             >
               <img
@@ -192,22 +161,7 @@ const EventsPage = () => {
         {/* Upcoming Events Section */}
         <div className="mb-12">
           <Subtitle title={"UPCOMING EVENTS"} centered />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {events.map((event) => (
-              <EventCard event={event} key={event.id} />
-            ))}
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {events.map((event) => (
-              <EventCard event={event} key={event.id} />
-            ))}
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {events.map((event) => (
-              <EventCard event={event} key={event.id} />
-            ))}
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[0.3rem]">
             {events.map((event) => (
               <EventCard event={event} key={event.id} />
             ))}

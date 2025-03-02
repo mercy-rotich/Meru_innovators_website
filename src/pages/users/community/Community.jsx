@@ -65,7 +65,7 @@ const Community = () => {
             {users.map((user) => (
               <div
                 key={user.id}
-                className="bg-white rounded-md shadow-least hover:shadow-xl transition duration-300 cursor-pointer p-6"
+                className="bg-white rounded-sm shadow-least hover:shadow-xl transition duration-300 cursor-pointer p-6"
                 onClick={() => handleUserSelect(user)}
               >
                 <div className="flex justify-center">

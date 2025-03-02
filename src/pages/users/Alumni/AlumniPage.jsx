@@ -23,7 +23,7 @@ const AlumniPage = () => {
             {Alumnis.map((alum) => (
               <motion.div
                 key={alum.id}
-                className="bg-white border border-neutral-300 rounded-lg overflow-hidden transform transition duration-300 hover:scale-105"
+                className="bg-white border border-neutral-300 rounded-sm overflow-hidden transform transition duration-300 hover:scale-105"
                 whileHover={{ scale: 1.05 }}
               >
                 <img
@@ -53,7 +53,9 @@ const AlumniPage = () => {
               </motion.div>
             ))}
           </div>
-          <ShowMoreButton />
+          <div className="mb-2">
+            <ShowMoreButton />
+          </div>
         </section>
       </PageLayout>
     </div>

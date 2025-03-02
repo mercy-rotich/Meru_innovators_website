@@ -92,7 +92,7 @@ const Blogs = () => {
   }, []);
 
   return (
-    <div className="bg-gray-100">
+    <div className="bg-green-200">
       <MegaDashboard />
       <SubHero title="BLOGS" />
       <div
@@ -193,7 +193,9 @@ const Blogs = () => {
         </div>
       </motion.div>
 
-      <ShowMoreButton />
+      <div className="mb-[2rem]">
+        <ShowMoreButton />
+      </div>
 
       <Footer />
     </div>

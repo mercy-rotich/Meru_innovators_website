@@ -8,7 +8,7 @@ const Communities = () => {
       className="mt-20 py-12 bg-fixed communities-bg"
       // style={{
       //   background: "linear-gradient(to bottom, #fef9c3, #fef9c3)",
-      //   backgroundAttachment: "fixed", 
+      //   backgroundAttachment: "fixed",
       // }}
     >
       {/* Title Section */}
@@ -22,7 +22,7 @@ const Communities = () => {
           {CommunitiesData.map((community) => (
             <div
               key={community.id}
-              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              className="bg-white rounded-sm shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
             >
               {/* Community Image */}
               <img

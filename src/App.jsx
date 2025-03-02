@@ -1,5 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
+
 import Home from "./pages/users/Home/Home";
+
+import { useTheme } from "./context/ThemeContext";
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Community from "./pages/users/community/Community";
@@ -25,6 +29,17 @@ import AlumniPage from "./pages/users/Alumni/AlumniPage";
 import Gallery from "./components/users/Gallery/Gallery";
 
 const App = () => {
+  const { isDarkMode } = useTheme();
+
+  useEffect(() => {
+    if (isDarkMode) {
+      document.body.classList.add("dark-mode");
+    } else {
+      document.body.classList.remove("bg-primary-one");
+      document.body.classList.remove("bg-primary-two");
+    }
+  }, [isDarkMode]);
+
   return (
     <BrowserRouter>
       <ScrollToTop />

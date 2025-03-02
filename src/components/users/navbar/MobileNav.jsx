@@ -21,7 +21,7 @@ const MobileNav = ({ onClose, showMobile }) => {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            className="bg-white h-full w-[300px] max-w-[90%] ml-auto shadow-lg"
+            className="bg-white mobile-nav-ul h-full w-[300px] max-w-[90%] ml-auto shadow-lg"
           >
             <button
               onClick={onClose}

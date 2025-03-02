@@ -1,6 +1,6 @@
 import React from "react";
 
-const EventCard = ({ event }) => {
+const EventCard = ({ event, openRsvpModal }) => {
   return (
     <div className="relative w-full h-96 rounded-sm overflow-hidden border border-neutral-300 shadow-lg hover:shadow-xl transition-shadow duration-300">
       {/* Background Image */}
@@ -26,7 +26,10 @@ const EventCard = ({ event }) => {
           <button className="w-1/2 bg-blue-600 text-white py-2 rounded-sm font-semibold hover:bg-blue-700 transition-colors">
             Learn More
           </button>
-          <button className="w-1/2 bg-green-600 text-white py-2 rounded-sm font-semibold hover:bg-green-700 transition-colors">
+          <button
+            className="w-1/2 bg-green-600 text-white py-2 rounded-sm font-semibold hover:bg-green-700 transition-colors"
+            onClick={openRsvpModal}
+          >
             Book RSVP
           </button>
         </div>

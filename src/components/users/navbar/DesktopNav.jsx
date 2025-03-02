@@ -3,8 +3,11 @@ import brand from "../../../assets/brand/logo.svg";
 import "./Navbar.css";
 import { User } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useTheme } from "../../../context/ThemeContext";
 
 const DesktopNav = ({ openMobileNav, gallery }) => {
+  const { isDarkMode } = useTheme();
+
   const navigate = useNavigate();
   const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,12 +28,12 @@ const DesktopNav = ({ openMobileNav, gallery }) => {
 
   return (
     <div
-      className={`fixed w-full top-0 left-0 right-0 z-20 navbar transition-all duration-300 py-[0.5rem] ${
-        isScrolled
-          ? "bg-green shadow-md text-black"
-          : "bg-transparent text-white"
+      className={`fixed w-full top-0 left-0 right-0 z-20 navbar desktop-navbar transition-all duration-300 py-[0.5rem] ${
+        isScrolled ? "onscroll" : "bg-transparent text-white"
       }`}
-      style={gallery === "gallery" ? { background: "green" } : ""}
+      style={
+        gallery === "gallery" && isDarkMode ? { background: "#333" } : "green"
+      }
     >
       <div className="container flex items-center justify-between py-3 px-6">
         {/* Logo */}

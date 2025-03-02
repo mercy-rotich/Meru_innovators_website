@@ -3,7 +3,7 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white bg-green-600 py-10">
+    <footer className="bg-gray-900 text-white bg-green-600 py-10 footer">
       <div className="container mx-auto px-6 md:px-12 lg:px-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Newsletter Section */}

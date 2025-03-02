@@ -66,11 +66,11 @@ const Navbar = () => {
 
         <div className="flex">
           <button
-            className={`text-white h-[40px] w-[40px] rounded-full border-2 border-white flex items-center justify-center ${
+            className={`text-white h-[30px] w-[30px] rounded-full border-2 border-white flex items-center justify-center ${
               isScrolled ? "text-black border-black" : "text-white border-white"
             }`}
           >
-            <User size={24} color={isScrolled ? "black" : "white"} />
+            <User size={20} color={isScrolled ? "black" : "white"} />
           </button>
           <button className="block custom-mobile-screen:hidden ml-[1rem] text-2xl">
             &#9776;

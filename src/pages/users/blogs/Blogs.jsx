@@ -96,8 +96,8 @@ const Blogs = () => {
       <MegaDashboard />
       <SubHero title="BLOGS" />
       <div
-        className={`transition-all duration-300 ${
-          isSticky ? "fixed top-[55px] w-full right-0 left-0   z-50 " : ""
+        className={`transition-all duration-300   ${
+          isSticky ? "fixed top-[55px]  w-full right-0 left-0   z-50 " : ""
         }`}
       >
         <BlogsNavbar />

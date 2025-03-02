@@ -12,6 +12,7 @@ import { motion } from "framer-motion";
 import EventCard from "./EventCard";
 
 import { events } from "./EventsCustom";
+import BookRsvp from "../../components/modals/BookRsvp/BookRsvp";
 
 // Carousel responsive settings
 const responsive = {
@@ -40,6 +41,15 @@ const EventsPage = () => {
 
   const handlePlay = () => {
     setIsPlaying(true);
+  };
+
+  const [isRsvpModal, setRsvpModal] = useState(false);
+
+  const openRsvpModal = () => {
+    setRsvpModal(true);
+  };
+  const closeRsvpModal = () => {
+    setRsvpModal(false);
   };
 
   return (
@@ -138,7 +148,7 @@ const EventsPage = () => {
             {hotEvents.map((event) => (
               <div
                 key={event.id}
-                className="relative h-[400px] rounded-lg overflow-hidden mx-2"
+                className="relative h-[400px] rounded-sm overflow-hidden mx-2"
               >
                 <img
                   src={event.imageUrl}
@@ -163,7 +173,11 @@ const EventsPage = () => {
           <Subtitle title={"UPCOMING EVENTS"} centered />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[0.3rem]">
             {events.map((event) => (
-              <EventCard event={event} key={event.id} />
+              <EventCard
+                event={event}
+                key={event.id}
+                openRsvpModal={openRsvpModal}
+              />
             ))}
           </div>
         </div>
@@ -171,6 +185,7 @@ const EventsPage = () => {
 
       {/* Footer */}
       <Footer />
+      <BookRsvp isOpen={isRsvpModal} onClose={closeRsvpModal} />
     </div>
   );
 };

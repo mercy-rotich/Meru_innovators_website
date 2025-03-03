@@ -75,7 +75,7 @@ const partners = [
 const Partners = () => {
   return (
     <div className="bg-green-200 p-[3rem]">
-      <Subtitle title="Our University Partners" />
+      <Subtitle title="Our University Partners" centered />
       <div className="container">
         <Carousel
           responsive={responsive}

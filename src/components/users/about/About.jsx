@@ -8,7 +8,7 @@ const About = () => {
       <div className="mx-auto ">
         {/* Introduction Section */}
         <div className="text-center container">
-          <Subtitle title="About Our Meru University Innovators" />
+          <Subtitle title="About Our Meru University Innovators" centered />
           <p className="text-gray-700 leading-relaxed mt-4">
             Our university is a beacon of academic excellence, committed to
             fostering innovation, research, and professional development. We aim

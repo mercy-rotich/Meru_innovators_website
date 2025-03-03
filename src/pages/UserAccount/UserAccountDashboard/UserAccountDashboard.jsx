@@ -11,7 +11,7 @@ import {
 const UserAccountDashboard = () => {
   return (
     <UserAccountLayout>
-      <div className="p-6">
+      <div className="">
         {/* Welcome Section */}
         <div className="bg-white shadow-least rounded-sm p-6 flex items-center gap-4">
           <img
@@ -26,7 +26,7 @@ const UserAccountDashboard = () => {
         </div>
 
         {/* Quick Actions */}
-        <div className="mt-6 flex gap-4">
+        <div className="mt-[0.5rem] flex gap-4">
           <button className="flex items-center gap-2 px-4 py-2 bg-blue-500 text-white rounded-sm hover:bg-blue-600 transition">
             <Edit size={18} />
             Edit Profile
@@ -42,7 +42,7 @@ const UserAccountDashboard = () => {
         </div>
 
         {/* Statistics Cards */}
-        <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="mt-[0.5rem] grid grid-cols-1 md:grid-cols-3 gap-[0.5rem]">
           <div className="bg-white p-4 rounded-sm shadow-least flex items-center gap-4">
             <Briefcase size={28} className="text-blue-500" />
             <div>
@@ -67,7 +67,7 @@ const UserAccountDashboard = () => {
         </div>
 
         {/* Recent Activities */}
-        <div className="mt-6 bg-white p-6 rounded-sm shadow-least">
+        <div className="mt-[0.5rem] bg-white p-6 rounded-sm shadow-least">
           <h3 className="text-lg font-semibold mb-4">Recent Activities</h3>
           <ul className="space-y-3 text-gray-600">
             <li>🚀 Submitted a new project for review.</li>

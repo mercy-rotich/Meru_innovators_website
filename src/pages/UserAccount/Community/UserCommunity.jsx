@@ -5,7 +5,7 @@ import { Search, Users, MessageCircle, Flame } from "lucide-react";
 const UserCommunity = () => {
   return (
     <UserAccountLayout>
-      <div className="pr-6">
+      <div className="">
         {/* UserCommunity Header */}
         <div className="bg-white shadow-least rounded-sm p-6 flex flex-col md:flex-row items-center justify-between">
           <h2 className="text-2xl font-semibold text-gray-800">

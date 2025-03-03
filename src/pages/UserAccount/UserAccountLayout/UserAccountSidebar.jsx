@@ -51,7 +51,7 @@ const UserAccountSidebar = () => {
           text="Profile"
         />
         <SidebarLink
-          to="/settings"
+          to="/account/user-settings"
           icon={<Settings size={20} />}
           text="Settings"
         />

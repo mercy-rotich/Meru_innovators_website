@@ -36,6 +36,8 @@ import UserCommunity from "./pages/UserAccount/Community/UserCommunity";
 
 import UserProjects from "./pages/UserAccount/UserProjects/UserProjects";
 
+import UserSettings from "./pages/UserAccount/UserSettings/UserSettings";
+
 const App = () => {
   const { isDarkMode } = useTheme();
 
@@ -68,6 +70,7 @@ const App = () => {
         <Route path="/account/dashboard" element={<UserAccountDashboard />} />
         <Route path="/account/community" element={<UserCommunity />} />
         <Route path="/account/projects" element={<UserProjects />} />
+        <Route path="/account/user-settings" element={<UserSettings />} />
       </Routes>
       <SocialMedia />
       <NavigateTopArrow />

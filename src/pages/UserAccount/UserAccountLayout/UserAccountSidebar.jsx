@@ -21,10 +21,7 @@ const UserAccountSidebar = () => {
   return (
     <div className="w-64  bg-green-600  user-account-sidebar text-white flex flex-col p-4 shadow-lg">
       {/* Logo / Brand */}
-      <div className="flex items-center gap-3 mb-6">
-       
-        <h1 className="text-xl font-semibold">Meru Innovators</h1>
-      </div>
+    
 
       {/* Navigation Links */}
       <nav className="flex flex-col gap-4 flex-1">

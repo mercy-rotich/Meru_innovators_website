@@ -5,7 +5,7 @@ import { Edit, Mail, Phone, Calendar } from "lucide-react";
 const Profile = () => {
   return (
     <UserAccountLayout>
-      <div className="p-6 i mx-auto">
+      <div className="i mx-auto">
         {/* Profile Card */}
         <div className="bg-white shadow-least rounded-sm p-6 flex flex-col items-center text-center">
           <img

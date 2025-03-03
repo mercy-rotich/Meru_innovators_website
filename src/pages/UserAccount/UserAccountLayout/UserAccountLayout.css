@@ -10,4 +10,17 @@
   width: calc(100% - 280px);
   float: right;
   margin-top: 50px;
+  padding:1rem 0.5rem;
+}
+
+@media (max-width: 1050px) {
+  .user-account-sidebar {
+    height: calc(100vh - 58px);
+    width: 200px;
+  }
+  .account-layout .main {
+    width: calc(100% - 200px);
+    float: right;
+    margin-top: 50px;
+  }
 }

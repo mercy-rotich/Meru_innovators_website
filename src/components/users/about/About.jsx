@@ -35,18 +35,21 @@ const About = () => {
         </div>
 
         {/* Our Mission Section */}
-        <div className="mt-10 flex flex-col sm:flex-row gap-4 bg-gradient-to-b from-[#fef9c3] to-[#fef9c3]">
-          <div className="max-w-5xl flex flex-col sm:flex-row gap-6 mx-auto py-6 px-6 items-center">
+        <div className="mt-10 bg-gradient-to-b from-[#fef9c3] to-[#fff9e0] py-12">
+          <div className="max-w-5xl mx-auto flex flex-col-reverse sm:flex-row items-center gap-8 px-6">
+            {/* Image Section */}
             <div className="sm:w-1/3">
               <img
-                src="https://example.com/valid-image.jpg"
-                className="h-auto w-[100px] rounded-lg"
+                src="https://images.pexels.com/photos/6208696/pexels-photo-6208696.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 alt="Our Mission"
+                className="w-full rounded-lg shadow-md"
               />
             </div>
+
+            {/* Content Section */}
             <div className="sm:w-2/3 text-center sm:text-left">
               <Subtitle title="Our Mission" />
-              <p className="text-gray-600 leading-relaxed mt-2">
+              <p className="text-gray-700 leading-relaxed mt-4 text-lg">
                 Our mission is to empower students with a holistic education
                 that integrates academic knowledge, ethical values, and
                 practical skills. We strive to create an inclusive environment

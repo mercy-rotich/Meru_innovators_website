@@ -3,7 +3,7 @@ import { Instagram, Linkedin } from "lucide-react";
 const Testmonial = () => {
   return (
     <div className="p-[10px] bg-white border border-b-0 border-neutral-300 rounded-md">
-      <div className="border-2 border-orange-500 p-[10px] translate-y-6 rounded-md">
+      <div className="border-none border-orange-500 p-[10px]  rounded-md">
         <div className="flex items-center gap-4 mt-4">
           <img
             src="https://images.pexels.com/photos/14723868/pexels-photo-14723868.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -22,7 +22,7 @@ const Testmonial = () => {
           dolorum quas placeat minima totam, quo officiis, dignissimos quia,
           temporibus aspernatur quisquam?
         </p>
-        <div className="flex gap-4 pt-[1.5rem] mt-[1rem] border-t border-neutral-300">
+        <div className="flex gap-4 pt-[1.5rem]  border-t border-neutral-300 items-center">
           <a
             href="https://www.instagram.com"
             target="_blank"

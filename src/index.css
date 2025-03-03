@@ -99,6 +99,15 @@ body.dark-mode .user-account-sidebar {
   background: #333;
 }
 
+body.dark-mode .text-neutral-800,
+body.dark-mode .text-neutral-600 {
+  color: #f2f2f2;
+}
+
+body.dark-mode span {
+  color: #f2f2f2;
+}
+
 body.dark-mode .user-account-sidebar nav .bg-green-800:hover {
   background: #555;
 }

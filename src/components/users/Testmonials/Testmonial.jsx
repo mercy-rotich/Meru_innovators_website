@@ -15,7 +15,7 @@ const Testmonial = () => {
             <p className="text-neutral-400 text-sm">Web Engineer</p>
           </div>
         </div>
-        <p className="leading-7 text-neutral-600">
+        <p className="leading-7 text-neutral-600 ">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam natus
           fuga modi nostrum odio recusandae optio dolore, accusantium est rem
           nihil reprehenderit obcaecati aperiam. Officia eligendi a atque

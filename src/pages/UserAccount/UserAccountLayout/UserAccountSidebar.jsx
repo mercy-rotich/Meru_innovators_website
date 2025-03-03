@@ -59,7 +59,7 @@ const UserAccountSidebar = () => {
 
       {/* Logout Button */}
       <button
-        className="mt-6 flex items-center gap-3 text-red-500 hover:text-red-400 transition-all logout relative"
+        className="mt-4 mb-[1rem] flex items-center gap-3 bg-red-500 hover:text-red-400 transition-all logout relative h-[40px]"
         onClick={() => navigate("/")}
       >
         <LogOut size={20} />

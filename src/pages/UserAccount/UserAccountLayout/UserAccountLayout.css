@@ -7,6 +7,9 @@
   display: flex;
   justify-content: center;
 }
+.user-account-sidebar .logout:hover .sidebar-subtitle{
+  display:block;
+}
 .user-account-sidebar .sidebar-subtitle {
   position: absolute;
   font-size: 0.7rem;

@@ -85,7 +85,7 @@ const Partners = () => {
         >
           {partners.map((partner, index) => (
             <div key={index}>
-              <div className="bg-white  rounded-xl overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl duration-300 mx-3 p-6 flex flex-col items-center text-center border border-neutral-300">
+              <div className="bg-white  rounded-sm overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl duration-300 mx-3 p-6 flex flex-col items-center text-center border border-neutral-300">
                 <div className="w-32 h-32 rounded-full overflow-hidden shadow-lg border-4 border-gray-200">
                   <img
                     src={partner.img}

@@ -1,9 +1,10 @@
 .user-account-sidebar {
-  height: 100vh;
+  height: calc(100vh - 58px);
   max-width: 280px;
   width: 80%;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
   position: fixed;
+  top: 58px;
 }
 .account-layout .main {
   width: calc(100% - 280px);

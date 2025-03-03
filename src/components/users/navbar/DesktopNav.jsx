@@ -30,7 +30,7 @@ const DesktopNav = ({ openMobileNav, gallery }) => {
 
   return (
     <div
-      className={`fixed w-full top-0 left-0 right-0 z-20 navbar desktop-navbar transition-all duration-300 py-[0.5rem] ${
+      className={`fixed w-full top-0 left-0 right-0 z-20 navbar desktop-navbar transition-all duration-300 h-[58px] flex  items-center ${
         isScrolled ? "onscroll" : "bg-transparent text-white"
       }`}
       style={

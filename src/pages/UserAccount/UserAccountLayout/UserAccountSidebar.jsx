@@ -19,14 +19,10 @@ const UserAccountSidebar = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="w-64 min-h-screen bg-green-600  user-account-sidebar text-white flex flex-col p-4 shadow-lg">
+    <div className="w-64  bg-green-600  user-account-sidebar text-white flex flex-col p-4 shadow-lg">
       {/* Logo / Brand */}
       <div className="flex items-center gap-3 mb-6">
-        <img
-          src="/logo.png"
-          alt="Meru Innovators Club"
-          className="w-10 h-10 rounded-full"
-        />
+       
         <h1 className="text-xl font-semibold">Meru Innovators</h1>
       </div>
 

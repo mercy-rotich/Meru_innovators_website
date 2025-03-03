@@ -66,14 +66,9 @@ const EventsPage = () => {
           <div className="relative w-full max-w-4xl">
             {/* Video Placeholder */}
             <div
-              className="mx-[1rem]relative w-full h-[400px] rounded-lg shadow-lg overflow-hidden cursor-pointer"
+              className="container mx-auto relative w-full h-[400px] rounded-lg shadow-lg overflow-hidden cursor-pointer"
               onClick={() => setIsModalOpen(true)}
             >
-              <img
-                src="https://img.youtube.com/vi/FRNmrfhGFFI/maxresdefault.jpg"
-                alt="Video Thumbnail"
-                className="w-full h-full object-cover"
-              />
               <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-60 rounded-lg">
                 <motion.div
                   className="relative flex items-center justify-center w-24 h-24 bg-white rounded-full cursor-pointer shadow-lg"

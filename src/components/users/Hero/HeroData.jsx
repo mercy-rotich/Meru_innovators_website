@@ -1,5 +1,6 @@
 import Hero1 from "../../../assets/images/herobg.webp";
 import Hero2 from "../../../assets/images/whatsapp.jpeg";
+import Hero3 from "../../../assets/images/herobg3.jpg";
 const HeroData = [
   {
     id: 1,
@@ -24,7 +25,7 @@ const HeroData = [
     title: "Technology Meets Impact",
     description:
       "From AI to sustainability, we explore cutting-edge innovations that drive social and economic impact in our communities.",
-    urlImage: Hero2,
+    urlImage: Hero3,
     buttonUrl: "/events",
     buttonDesc: "See Events",
   },

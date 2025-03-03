@@ -77,11 +77,11 @@ const SidebarLink = ({ to, icon, text }) => {
   return (
     <Link
       to={to}
-      className={`flex items-center gap-3 p-3  relative rounded-lg transition-all duration-300 
+      className={`flex items-center justify-center gap-3 p-3  relative rounded-sm transition-all duration-300 
         ${
           isActive
             ? "bg-green-800 text-white scale-105"
-            : "text-gray-300 hover:text-white hover:bg-green-700 hover:scale-105"
+            : "text-gray-300 hover:text-white hover:bg-green-700 hover:rounded-sm hover:scale-105"
         }`}
     >
       {icon}

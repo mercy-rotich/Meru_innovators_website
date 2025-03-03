@@ -1,55 +1,35 @@
 .user-account-sidebar {
   height: calc(100vh - 58px);
-  max-width: 280px;
-  width: 80%;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
-  position: fixed;
-  top: 58px;
+  width: 50px;
+  padding: 0;
+}
+.user-account-sidebar .logout {
+  display: flex;
+  justify-content: center;
+}
+.user-account-sidebar .sidebar-subtitle {
+  position: absolute;
+  font-size: 0.7rem;
+  left: 100%;
+  background: green;
+  padding: 0.1rem 0.3rem;
+  border-radius: 10px;
+  display: none;
+}
+.user-account-sidebar nav a:hover .sidebar-subtitle {
+  transition: all 0.5rem;
+  display: block;
 }
 .account-layout .main {
-  width: calc(100% - 280px);
+  width: calc(100% - 50px);
   float: right;
   margin-top: 50px;
   padding: 1rem 0.5rem;
 }
+.user-account-sidebar {
+  height: calc(100vh - 58px);
 
-@media (max-width: 1050px) {
-  .user-account-sidebar {
-    height: calc(100vh - 58px);
-    width: 200px;
-  }
-  .account-layout .main {
-    width: calc(100% - 200px);
-    float: right;
-    margin-top: 50px;
-  }
-}
-@media (max-width: 860px) {
-  .user-account-sidebar {
-    height: calc(100vh - 58px);
-    width: 50px;
-    padding: 0;
-  }
-  .user-account-sidebar .logout {
-    display: flex;
-    justify-content: center;
-  }
-  .user-account-sidebar .sidebar-subtitle {
-    position: absolute;
-    font-size: 0.7rem;
-    left: 100%;
-    background: green;
-    padding: 0.1rem 0.3rem;
-    border-radius: 10px;
-    display: none;
-  }
-  .user-account-sidebar nav a:hover .sidebar-subtitle {
-    transition: all 0.5rem;
-    display: block;
-  }
-  .account-layout .main {
-    width: calc(100% - 50px);
-    float: right;
-    margin-top: 50px;
-  }
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 58px;
 }

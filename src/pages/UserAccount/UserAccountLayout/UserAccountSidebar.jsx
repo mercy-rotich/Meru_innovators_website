@@ -8,6 +8,7 @@ import {
   Folder,
   Settings,
   LogOut,
+  User,
 } from "lucide-react";
 
 import { useNavigate } from "react-router-dom";
@@ -24,12 +25,12 @@ const UserAccountSidebar = () => {
       {/* Navigation Links */}
       <nav className="flex flex-col gap-4 flex-1">
         <SidebarLink
-          to="/dashboard"
+          to="/account/dashboard"
           icon={<Home size={20} />}
           text="Dashboard"
         />
         <SidebarLink
-          to="/community"
+          to="/account/community"
           icon={<Users size={20} />}
           text="Community"
         />
@@ -43,6 +44,11 @@ const UserAccountSidebar = () => {
           to="/messages"
           icon={<MessageSquare size={20} />}
           text="Messages"
+        />
+        <SidebarLink
+          to="/account/profile"
+          icon={<User size={20} />}
+          text="Profile"
         />
         <SidebarLink
           to="/settings"

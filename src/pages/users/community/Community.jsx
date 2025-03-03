@@ -30,22 +30,22 @@ const Community = () => {
       <SubHero title={"COMMUNITY"} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mb-8">
-          <div className="flex items-center bg-white rounded-lg border border-neutral-300 w-full sm:w-auto">
+          <div className="flex items-center bg-white rounded-sm border border-neutral-300 w-full sm:w-auto">
             <input
               type="text"
               placeholder="Search users"
-              className="px-4 py-2 rounded-l-lg focus:outline-none w-full"
+              className="px-4 py-2 rounded-smlg focus:outline-none w-full"
             />
-            <button className="p-3 bg-orange-500 text-white rounded-r-lg hover:bg-orange-600 transition">
+            <button className="p-3 bg-orange-500 text-white rounded-smlg hover:bg-orange-600 transition">
               <Search size={20} />
             </button>
           </div>
           <div className="flex items-center gap-4">
-            <button className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg border border-neutral-300 hover:bg-gray-100 transition">
+            <button className="flex items-center gap-2 bg-white px-4 py-2 rounded-sm border border-neutral-300 hover:bg-gray-100 transition">
               <Filter size={20} />
               <span>Filters</span>
             </button>
-            <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg border border-neutral-300">
+            <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-sm border border-neutral-300">
               <User size={20} />
               <span>{users.length} Users</span>
             </div>
@@ -72,7 +72,7 @@ const Community = () => {
                   <img
                     src={user.avatar}
                     alt={user.name}
-                    className="w-20 h-20 rounded-full object-cover"
+                    className="w-20 h-20 rounded-smll object-cover"
                   />
                 </div>
                 <div className="text-center mt-4">
@@ -88,7 +88,7 @@ const Community = () => {
                   {user.skills.map((skill, index) => (
                     <span
                       key={index}
-                      className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm"
+                      className="px-3 py-1 bg-gray-100 text-gray-700 rounded-smll text-sm"
                     >
                       {skill}
                     </span>
@@ -103,7 +103,7 @@ const Community = () => {
                   {user.badges.map((badge, index) => (
                     <span
                       key={index}
-                      className="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm"
+                      className="px-3 py-1 bg-orange-100 text-orange-700 rounded-smll text-sm"
                     >
                       {badge}
                     </span>

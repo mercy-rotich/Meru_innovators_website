@@ -101,7 +101,7 @@ const DesktopNav = ({ openMobileNav, gallery }) => {
             </button>
             <button
               className="border-2 rounded-full border-white h-[33px] w-[33px] flex justify-center items-center"
-              onClick={() => navigate("/account/profile")}
+              onClick={() => navigate("/account/dashboard")}
             >
               <User />
             </button>

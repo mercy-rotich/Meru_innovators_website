@@ -42,7 +42,7 @@ const UserProjects = () => {
         </div>
 
         {/* Project Summary Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-[0.5rem]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-[0.5rem] mt-[0.5rem]">
           <div className="bg-white p-6 rounded-sm shadow-least flex items-center gap-4">
             <FolderOpen className="text-blue-500" size={32} />
             <div>
@@ -84,7 +84,7 @@ const UserProjects = () => {
               {projects.map((project) => (
                 <tr
                   key={project.id}
-                  className="border-b hover:bg-gray-50 transition"
+                  className="border-b border-neutral-300 hover:bg-gray-50 transition"
                 >
                   <td className="p-3">{project.name}</td>
                   <td className="p-3">
@@ -93,7 +93,7 @@ const UserProjects = () => {
                         project.status === "Completed"
                           ? "bg-green-100 text-green-600"
                           : project.status === "Ongoing"
-                          ? "bg-yellow-100 text-yellow-600"
+                          ? "bg-yellow-100 text-orange-700"
                           : "bg-gray-100 text-gray-600"
                       }`}
                     >

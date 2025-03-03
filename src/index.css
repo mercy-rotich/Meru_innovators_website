@@ -89,6 +89,9 @@ body.dark-mode .theme-toggler li {
 body.dark-mode .text-orange-700 {
   color: var(--orange);
 }
+body.dark-mode .text-green-600 {
+  color:green;
+}
 
 body.dark-mode input[type="text"],
 body.dark-mode input[type="email"],

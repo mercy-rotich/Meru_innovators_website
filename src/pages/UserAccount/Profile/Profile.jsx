@@ -24,7 +24,7 @@ const Profile = () => {
         </div>
 
         {/* User Details Section */}
-        <div className="mt-6 bg-white shadow-least rounded-sm p-6">
+        <div className="mt-[0.5rem] bg-white shadow-least rounded-sm p-6">
           <h3 className="text-xl font-semibold mb-4 text-steelBlue">
             User Information
           </h3>

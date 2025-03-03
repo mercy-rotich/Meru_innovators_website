@@ -12,16 +12,14 @@ import {
 
 import { useNavigate } from "react-router-dom";
 
-import "./UserAccountLayout.css"
-
+import "./UserAccountLayout.css";
 
 const UserAccountSidebar = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="w-64  bg-green-600  user-account-sidebar text-white flex flex-col p-4 shadow-lg">
+    <div className=" bg-green-600  user-account-sidebar text-white flex flex-col p-4 shadow-lg">
       {/* Logo / Brand */}
-    
 
       {/* Navigation Links */}
       <nav className="flex flex-col gap-4 flex-1">
@@ -55,11 +53,11 @@ const UserAccountSidebar = () => {
 
       {/* Logout Button */}
       <button
-        className="mt-6 flex items-center gap-3 text-red-500 hover:text-red-400 transition-all"
+        className="mt-6 flex items-center gap-3 text-red-500 hover:text-red-400 transition-all logout relative"
         onClick={() => navigate("/")}
       >
         <LogOut size={20} />
-        <span>Logout</span>
+        <span className="sidebar-subtitle">Logout</span>
       </button>
     </div>
   );
@@ -73,7 +71,7 @@ const SidebarLink = ({ to, icon, text }) => {
   return (
     <Link
       to={to}
-      className={`flex items-center gap-3 p-3 rounded-lg transition-all duration-300 
+      className={`flex items-center gap-3 p-3  relative rounded-lg transition-all duration-300 
         ${
           isActive
             ? "bg-green-800 text-white scale-105"
@@ -81,7 +79,7 @@ const SidebarLink = ({ to, icon, text }) => {
         }`}
     >
       {icon}
-      <span>{text}</span>
+      <span className="sidebar-subtitle">{text}</span>
     </Link>
   );
 };

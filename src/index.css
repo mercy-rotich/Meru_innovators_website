@@ -97,7 +97,6 @@ body.dark-mode input[type="tel"] {
 
 body.dark-mode .user-account-sidebar {
   background: #333;
-  z-index: 99;
 }
 
 body.dark-mode .text-neutral-800,

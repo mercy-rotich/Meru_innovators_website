@@ -44,7 +44,7 @@ const BookRsvp = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="modal z-30">
+    <div className="modal z-40">
       {isLoading ? (
         <Preloader />
       ) : (

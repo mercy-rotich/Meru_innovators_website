@@ -76,7 +76,7 @@ const DesktopNav = ({ openMobileNav, gallery }) => {
         </nav>
 
         {/* Action Buttons */}
-        <div className="flex items-center gap-[2rem]">
+        <div className="flex items-center gap-[1rem]">
           <div className="flex items-center gap-[1rem]">
             <button
               className="universal-button"
@@ -86,19 +86,19 @@ const DesktopNav = ({ openMobileNav, gallery }) => {
             </button>
 
             <button
-              className="universal-button"
+              className="hidden universal-button md:visible"
               onClick={() => navigate("/auth/signup")}
             >
               Signup
             </button>
           </div>
 
-          <div className="flex gap-[1rem]">
+          <div className="flex gap-[1rem] items-center">
             <button className="theme-button" onClick={toggleTheme}>
               {isDarkMode ? <Sun /> : <Moon />}
             </button>
             <button
-              className="border-2 rounded-full border-white p-[0.5rem]"
+              className="border-2 rounded-full border-white h-[33px] w-[33px] flex justify-center items-center"
               onClick={() => navigate("/account/profile")}
             >
               <User />

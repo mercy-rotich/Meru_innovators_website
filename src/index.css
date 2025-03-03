@@ -130,8 +130,8 @@ body.dark-mode .desktop-navbar .theme-button {
 
 .universal-button {
   background: rgb(0, 157, 255);
-  padding: 0.3rem 2rem;
-  border-radius: 3px;
+  padding: 0.15rem 2rem;
+  border-radius: 2px;
   color: #fff;
   transition: All 0.5s;
   border: 2px solid rgb(0, 157, 255);

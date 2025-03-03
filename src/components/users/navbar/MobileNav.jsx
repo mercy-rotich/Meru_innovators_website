@@ -54,7 +54,7 @@ const MobileNav = ({ onClose, showMobile }) => {
                         scale: 1.05,
                         backgroundColor: "#f3f4f6",
                         transition: { duration: 0.2 },
-                        borderRadius:"2px"
+                        borderRadius: "2px",
                       }}
                       className="rounded-lg"
                     >

@@ -115,7 +115,7 @@ const UserSettings = () => {
             action cannot be undone.
           </p>
 
-          <button className="bg-gray-600 text-white px-4 py-2 rounded-sm hover:bg-gray-700 transition">
+          <button className="text-white px-4 py-2 rounded-sm hover:bg-gray-700 transition bg-red-500 ">
             Delete Account
           </button>
         </div>

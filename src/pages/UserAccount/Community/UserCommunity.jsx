@@ -78,7 +78,7 @@ const UserCommunity = () => {
         </div>
 
         {/* Trending Topics */}
-        <div className="mt-6 bg-white p-6 rounded-sm shadow-least">
+        <div className="mt-[0.5rem] bg-white p-6 rounded-sm shadow-least">
           <h3 className="text-sm font-semibold text-gray-800">
             🔥 Trending Topics
           </h3>

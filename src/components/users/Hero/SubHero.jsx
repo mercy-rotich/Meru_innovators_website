@@ -46,9 +46,9 @@ const SubHero = ({ title, subtitle }) => {
         </motion.p>
 
         {/* CTA Buttons */}
-        <div className="flex justify-center gap-4">
+        <div className="flex flex-col md:flex-row justify-center gap-4">
           <motion.button
-            className="btn-primary"
+            className="text-white  border-2 border-white px-[3rem] py-[0.5rem] rounded-[30px] mt-[2rem]"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -56,7 +56,7 @@ const SubHero = ({ title, subtitle }) => {
           </motion.button>
 
           <motion.button
-            className="btn-primary"
+            className="text-white  border-2 border-white px-[3rem] py-[0.5rem] rounded-[30px] mt-[0.2rem] md:mt-[2rem]"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

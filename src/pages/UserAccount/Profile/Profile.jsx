@@ -9,7 +9,7 @@ const Profile = () => {
         {/* Profile Card */}
         <div className="bg-white shadow-least rounded-sm p-6 flex flex-col items-center text-center">
           <img
-            src="/profile-placeholder.png"
+            src="https://images.unsplash.com/photo-1739992115892-36453a241b5e?q=80&w=1612&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="Profile"
             className="w-24 h-24 rounded-full border-4 border-steelBlue shadow-least"
           />

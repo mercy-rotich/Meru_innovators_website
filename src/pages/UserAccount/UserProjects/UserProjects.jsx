@@ -67,56 +67,58 @@ const UserProjects = () => {
         </div>
 
         {/* Projects List */}
-        <div className="mt-[0.5rem] bg-white p-6 rounded-sm shadow-least">
-          <h3 className="text-lg font-semibold text-gray-800">
+        <div className="mt-[0.5rem] bg-white rounded-sm shadow-least ">
+          <h3 className="text-lg font-semibold text-gray-800 px-6 pt-6 ">
             🛠️ Project List
           </h3>
-          <table className="w-full mt-4 border-collapse">
-            <thead>
-              <tr className="bg-gray-100 text-gray-700">
-                <th className="p-3 text-left">Project Name</th>
-                <th className="p-3 text-left">Status</th>
-                <th className="p-3 text-left">Deadline</th>
-                <th className="p-3 text-left">Progress</th>
-              </tr>
-            </thead>
-            <tbody>
-              {projects.map((project) => (
-                <tr
-                  key={project.id}
-                  className="border-b border-neutral-300 hover:bg-gray-50 transition"
-                >
-                  <td className="p-3">{project.name}</td>
-                  <td className="p-3">
-                    <span
-                      className={`px-3 py-1 text-sm font-semibold rounded-sm ${
-                        project.status === "Completed"
-                          ? "bg-green-100 text-green-600"
-                          : project.status === "Ongoing"
-                          ? "bg-yellow-100 text-orange-700"
-                          : "bg-gray-100 text-gray-600"
-                      }`}
-                    >
-                      {project.status}
-                    </span>
-                  </td>
-                  <td className="p-3">{project.deadline}</td>
-                  <td className="p-3">
-                    <div className="w-full bg-gray-200 rounded-smll h-2">
-                      <div
-                        className={`h-2 rounded-smll ${
-                          project.progress === 100
-                            ? "bg-green-500"
-                            : "bg-blue-500"
-                        }`}
-                        style={{ width: `${project.progress}%` }}
-                      ></div>
-                    </div>
-                  </td>
+          <div className="px-6 w-full overflow-x-scroll pb-6">
+            <table className="w-full mt-4 border-collapse">
+              <thead>
+                <tr className="bg-gray-100 text-gray-700">
+                  <th className="p-3 text-left">Project Name</th>
+                  <th className="p-3 text-left">Status</th>
+                  <th className="p-3 text-left">Deadline</th>
+                  <th className="p-3 text-left">Progress</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {projects.map((project) => (
+                  <tr
+                    key={project.id}
+                    className="border-b border-neutral-300 hover:bg-gray-50 transition"
+                  >
+                    <td className="p-3">{project.name}</td>
+                    <td className="p-3">
+                      <span
+                        className={`px-3 py-1 text-sm font-semibold rounded-sm ${
+                          project.status === "Completed"
+                            ? "bg-green-100 text-green-600"
+                            : project.status === "Ongoing"
+                            ? "bg-yellow-100 text-orange-700"
+                            : "bg-gray-100 text-gray-600"
+                        }`}
+                      >
+                        {project.status}
+                      </span>
+                    </td>
+                    <td className="p-3">{project.deadline}</td>
+                    <td className="p-3">
+                      <div className="w-full bg-gray-200 rounded-smll h-2">
+                        <div
+                          className={`h-2 rounded-smll ${
+                            project.progress === 100
+                              ? "bg-green-500"
+                              : "bg-blue-500"
+                          }`}
+                          style={{ width: `${project.progress}%` }}
+                        ></div>
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </UserAccountLayout>

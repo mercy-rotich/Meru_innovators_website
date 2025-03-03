@@ -40,11 +40,11 @@ const UserAccountSidebar = () => {
           icon={<Folder size={20} />}
           text="Projects"
         />
-        <SidebarLink
+        {/* <SidebarLink
           to="/messages"
           icon={<MessageSquare size={20} />}
           text="Messages"
-        />
+        /> */}
         <SidebarLink
           to="/account/profile"
           icon={<User size={20} />}

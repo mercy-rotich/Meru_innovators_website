@@ -72,7 +72,9 @@ const DesktopNav = ({ openMobileNav, gallery }) => {
               {label}
             </Link>
           ))}
-          <button className="btn-primary">Dashboard</button>
+          <button className="text-white  border-2 border-white px-[3rem] py-[0.5rem] rounded-[30px]">
+            Dashboard
+          </button>
         </nav>
 
         {/* Action Buttons */}

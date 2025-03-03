@@ -63,10 +63,10 @@ const EventsPage = () => {
       <div className="mt-[3rem]">
         <Subtitle title={"MAJOR ANOUNCEMENT"} />
         <div className="flex justify-center mt-4">
-          <div className="relative w-full max-w-4xl">
+          <div className="relative w-full max-w-4xl px-[1rem]">
             {/* Video Placeholder */}
             <div
-              className="container mx-auto relative w-full h-[400px] rounded-lg shadow-lg overflow-hidden cursor-pointer"
+              className="mx-auto relative w-full h-[400px] rounded-lg shadow-lg overflow-hidden cursor-pointer"
               onClick={() => setIsModalOpen(true)}
             >
               <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-60 rounded-lg">
@@ -105,7 +105,7 @@ const EventsPage = () => {
                   </button>
                   <iframe
                     className="w-full h-[400px] rounded-lg shadow-lg"
-                    src="https://www.youtube.com/embed/SKBZMDu41oY"
+                    src="https://www.youtube.com/embed/D56K_RDVPhA"
                     title="University Innovation Week"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

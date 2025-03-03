@@ -25,7 +25,7 @@ const About = () => {
           <div className="relative w-full max-w-3xl">
             <iframe
               className="w-full h-[400px] rounded-lg shadow-lg"
-              src="https://www.youtube.com/embed/SKBZMDu41oY"
+              src="https://www.youtube.com/embed/D56K_RDVPhA"
               title="University Innovation Week"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

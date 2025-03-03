@@ -36,7 +36,7 @@ const UserAccountSidebar = () => {
         />
         <SidebarLink to="/events" icon={<Calendar size={20} />} text="Events" />
         <SidebarLink
-          to="/projects"
+          to="/account/projects"
           icon={<Folder size={20} />}
           text="Projects"
         />

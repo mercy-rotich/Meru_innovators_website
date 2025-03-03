@@ -34,6 +34,8 @@ import UserAccountDashboard from "./pages/UserAccount/UserAccountDashboard/UserA
 
 import UserCommunity from "./pages/UserAccount/Community/UserCommunity";
 
+import UserProjects from "./pages/UserAccount/UserProjects/UserProjects";
+
 const App = () => {
   const { isDarkMode } = useTheme();
 
@@ -63,8 +65,9 @@ const App = () => {
         {/* User Account */}
 
         <Route path="/account/profile" element={<Profile />} />
-        <Route path="/account/dashboard" element={<UserAccountDashboard/>} />
-        <Route path="/account/community" element={<UserCommunity/>} />
+        <Route path="/account/dashboard" element={<UserAccountDashboard />} />
+        <Route path="/account/community" element={<UserCommunity />} />
+        <Route path="/account/projects" element={<UserProjects />} />
       </Routes>
       <SocialMedia />
       <NavigateTopArrow />

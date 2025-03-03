@@ -7,7 +7,7 @@ const UserModal = ({ user, closeUser }) => {
   // Added onClose prop for closing the modal
   return (
     <div
-      className={`fixed inset-0 bg-black/50 flex justify-center items-center p-4 z-50 ${
+      className={`fixed inset-0 bg-black/80 flex justify-center items-center p-4 z-50 ${
         user ? "visible" : "hidden"
       }`}
     >
@@ -130,7 +130,7 @@ const UserModal = ({ user, closeUser }) => {
           aria-label="Close modal"
           onClick={closeUser}
         >
-          <X size={30} className="text-white" />
+          <X size={30} className="text-red-500" />
         </button>
       </div>
     </div>

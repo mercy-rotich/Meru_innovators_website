@@ -48,12 +48,12 @@ const BookRsvp = ({ isOpen, onClose }) => {
       {isLoading ? (
         <Preloader />
       ) : (
-        <div className="inner-wrapper bg-white relative p-[2rem]">
+        <div className="inner-wrapper bg-white relative p-[2rem] m-[1rem]">
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 text-neutral-500 hover:text-neutral-700"
+            className="absolute top-4 right-4 text-red-500"
           >
-            <X size={24} />
+            <X size={30} />
           </button>
           <h2 className="text-xl font-bold mb-4 text-center">Book Your RSVP</h2>
           <form onSubmit={handleSubmit} className="space-y-4">

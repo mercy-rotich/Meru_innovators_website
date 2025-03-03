@@ -53,8 +53,8 @@ const App = () => {
         <Route path="/events" element={<EventsPage />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blogs/:id" element={<SingleBlog />} />
-        <Route path="/alumni/" element={<AlumniPage />} />
-        <Route path="/gallery/" element={<Gallery />} />
+        <Route path="/alumni" element={<AlumniPage />} />
+        <Route path="/gallery" element={<Gallery />} />
 
         {/* User Account */}
 

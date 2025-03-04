@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@mui/material": "^6.4.6",
+    "@reduxjs/toolkit": "^2.6.0",
     "antd": "^5.24.2",
     "axios": "^1.8.1",
     "framer-motion": "^12.4.7",
@@ -20,10 +22,12 @@
     "react-markdown": "^10.0.0",
     "react-multi-carousel": "^2.8.5",
     "react-native-multi-slider": "^0.3.6",
+    "react-redux": "^9.2.0",
     "react-router-dom": "^7.0.0",
     "react-slick": "^0.30.2",
     "react-syntax-highlighter": "^15.6.1",
     "react-toastify": "^11.0.5",
+    "redux": "^5.0.1",
     "remark-gfm": "^4.0.1",
     "slick-carousel": "^1.8.1",
     "swiper": "^11.1.15"

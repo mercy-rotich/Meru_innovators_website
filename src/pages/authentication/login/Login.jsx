@@ -5,7 +5,17 @@ import { BiShow, BiHide } from "react-icons/bi";
 import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
 
+import {
+  openPreloader,
+  closePreloader,
+} from "../../../store/features/PreloaderSlice";
+
+import { useDispatch } from "react-redux";
+
+
 const Login = () => {
+  const dispatch = useDispatch();
+
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -13,6 +23,28 @@ const Login = () => {
 
   const handleShowPassword = () => {
     setPasswordVisible(!passwordVisible);
+  };
+
+  const handleSubmit = (e) => {
+
+    e.preventDefault();
+
+    if (email.length == 0 && password.length == 0) {
+
+      alert("Fill all the fields kindly");
+
+    } else {
+
+      dispatch(openPreloader());
+
+      setTimeout(() => {
+
+        dispatch(closePreloader());
+
+        navigate("/account/dashboard");
+
+      }, 2000);
+    }
   };
 
   return (
@@ -34,7 +66,7 @@ const Login = () => {
           </button>
         </div>
 
-        <form className="w-full lg:w-1/2 p-10">
+        <form className="w-full lg:w-1/2 p-10" onSubmit={handleSubmit}>
           <h2 className="text-2xl font-bold text-center text-green border-b border-indigo-100 pb-2 mb-6 uppercase">
             LOGIN
           </h2>
@@ -73,7 +105,7 @@ const Login = () => {
           </div>
 
           <button
-            type="button"
+            type="submit"
             className="w-full py-2 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 focus:outline-none"
           >
             LOGIN

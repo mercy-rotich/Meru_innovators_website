@@ -38,6 +38,8 @@ import UserProjects from "./pages/UserAccount/UserProjects/UserProjects";
 
 import UserSettings from "./pages/UserAccount/UserSettings/UserSettings";
 
+import Preloader from "./components/Preloader/Preloader";
+
 const App = () => {
   const { isDarkMode } = useTheme();
 
@@ -72,6 +74,7 @@ const App = () => {
         <Route path="/account/projects" element={<UserProjects />} />
         <Route path="/account/user-settings" element={<UserSettings />} />
       </Routes>
+      <Preloader />
       <SocialMedia />
       <NavigateTopArrow />
     </BrowserRouter>

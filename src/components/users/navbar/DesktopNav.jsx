@@ -96,11 +96,16 @@ const DesktopNav = ({ openMobileNav, gallery }) => {
           </div>
 
           <div className="flex gap-[1rem] items-center">
-            <button className="theme-button" onClick={toggleTheme}>
+            <button
+              className="theme-button"
+              onClick={toggleTheme}
+              style={isScrolled ? { color: "#fff" } : null}
+            >
               {isDarkMode ? <Sun /> : <Moon />}
             </button>
             <button
               className="border-2 rounded-full border-white h-[33px] w-[33px] flex justify-center items-center"
+              style={isScrolled ? { color: "#fff" } : null}
               onClick={() => navigate("/account/dashboard")}
             >
               <User />

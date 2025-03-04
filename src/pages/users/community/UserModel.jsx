@@ -12,7 +12,7 @@ const UserModal = ({ user, closeUser }) => {
       }`}
     >
       {/* Modal Container */}
-      <div className="bg-white rounded-lg shadow-xl max-w-[900px] w-[90%] overflow-y-scroll inner-modal">
+      <div className="bg-white rounded-lg shadow-xl max-w-[900px] w-[98%] overflow-y-scroll inner-modal">
         {/* Header Section */}
         <div className="p-6 border-b border-gray-200">
           <div className="flex items-center gap-4">

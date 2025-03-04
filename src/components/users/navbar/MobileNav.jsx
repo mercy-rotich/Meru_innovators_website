@@ -33,7 +33,7 @@ const MobileNav = ({ onClose, showMobile }) => {
 
             {/* Navigation Menu */}
             <nav className="pt-16">
-              <ul className="flex flex-col gap-2 px-4">
+              <ul className="flex flex-col gap-2 px-4 border-b border-neutral-300 ">
                 {[
                   { label: "Home", href: "/" },
                   { label: "Community", href: "/communities" },
@@ -48,6 +48,7 @@ const MobileNav = ({ onClose, showMobile }) => {
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
+                    className="border-b border-neutral-300 last:border-none"
                   >
                     <motion.div
                       whileHover={{

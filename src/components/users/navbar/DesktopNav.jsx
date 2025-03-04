@@ -72,7 +72,7 @@ const DesktopNav = ({ openMobileNav, gallery }) => {
               {label}
             </Link>
           ))}
-          <button className="text-white  border-2 border-white px-[3rem] py-[0.5rem] rounded-[30px]">
+          <button className="text-white  border-2 border-white px-[3rem] py-[0.5rem] rounded-[30px] hover:scale-105">
             Dashboard
           </button>
         </nav>
@@ -81,14 +81,14 @@ const DesktopNav = ({ openMobileNav, gallery }) => {
         <div className="flex items-center gap-[1rem]">
           <div className="flex items-center gap-[1rem]">
             <button
-              className="universal-button"
+              className="text-white   px-[3rem] py-[0.5rem] rounded-[30px] hover:scale-105 bg-orange-500"
               onClick={() => navigate("/auth/login")}
             >
               Login
             </button>
 
             <button
-              className="hidden universal-button md:visible"
+              className="hidden universal-button md:visible hover:scale-105 "
               onClick={() => navigate("/auth/signup")}
             >
               Signup

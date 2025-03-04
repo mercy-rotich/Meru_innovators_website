@@ -61,7 +61,7 @@ const EventsPage = () => {
       <SubHero title={"EVENTS"} />
 
       <div className="mt-[3rem]">
-        <Subtitle title={"MAJOR ANOUNCEMENT"} />
+        <Subtitle title={"MAJOR ANNOUNCEMENT"} />
         <div className="flex justify-center mt-4">
           <div className="relative w-full max-w-4xl px-[1rem]">
             {/* Video Placeholder */}

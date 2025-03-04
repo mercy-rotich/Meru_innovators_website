@@ -30,6 +30,8 @@
     "redux": "^5.0.1",
     "remark-gfm": "^4.0.1",
     "slick-carousel": "^1.8.1",
+    "swal": "^0.1.0",
+    "sweetalert2": "^11.17.2",
     "swiper": "^11.1.15"
   },
   "devDependencies": {

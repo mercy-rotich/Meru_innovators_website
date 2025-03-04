@@ -8,7 +8,10 @@ import {
   Users,
 } from "lucide-react";
 
+import { useNavigate } from "react-router-dom";
 const UserAccountDashboard = () => {
+  const navigate = useNavigate();
+
   return (
     <UserAccountLayout>
       <div className="">
@@ -31,11 +34,19 @@ const UserAccountDashboard = () => {
             <Edit size={18} />
             Edit Profile
           </button>
-          <button className="flex items-center gap-2 px-4 py-2 bg-gray-500 text-white rounded-sm hover:bg-gray-600 transition">
+          <button
+            className="flex items-center gap-2 px-4 py-2 bg-gray-500 text-white rounded-sm hover:bg-gray-600 transition"
+            onClick={() => {
+              navigate("/account/user-settings");
+            }}
+          >
             <Settings size={18} />
             Settings
           </button>
-          <button className="flex items-center gap-2 px-4 py-2 bg-red-500 text-white rounded-sm hover:bg-red-600 transition">
+          <button
+            className="flex items-center gap-2 px-4 py-2 bg-red-500 text-white rounded-sm hover:bg-red-600 transition"
+            onClick={() => navigate("/")}
+          >
             <LogOut size={18} />
             Logout
           </button>

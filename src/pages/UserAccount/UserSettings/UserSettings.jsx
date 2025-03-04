@@ -2,7 +2,42 @@ import React from "react";
 import UserAccountLayout from "../UserAccountLayout/UserAccountLayout";
 import { User, Lock, Bell, Trash2, Mail, KeyRound } from "lucide-react";
 
+import { useTheme } from "../../../context/ThemeContext";
+
+import Swal from "sweetalert2";
+
+import { toast } from "react-toastify";
+
+
+import {
+  openPreloader,
+  closePreloader,
+} from "../../../store/features/PreloaderSlice";
+
 const UserSettings = () => {
+  const { isDarkMode } = useTheme();
+
+  const handleDeleteAccount = () => {
+    Swal.fire({
+      title: "Do you want to delete your account?",
+      text: "This action cannot be undone!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonText: "Yes, delete it",
+      cancelButtonText: "Cancel",
+      background: isDarkMode ? "#1E1E1E" : "#FFFFFF",
+      color: isDarkMode ? "#FFFFFF" : "#000000",
+      confirmButtonColor: isDarkMode ? "#DC2626" : "#FF0000",
+      cancelButtonColor: isDarkMode ? "#374151" : "#D1D5DB",
+      customClass: {
+        popup: "my-swal-modal",
+      },
+    }).then((result) => {
+      if (result.isConfirmed) {
+         toast.success("Request sent to admins for approval!")
+      }
+    });
+  };
   return (
     <UserAccountLayout>
       <div className="p-6 max-w-3xl mx-auto">
@@ -115,7 +150,10 @@ const UserSettings = () => {
             action cannot be undone.
           </p>
 
-          <button className="text-white px-4 py-2 rounded-sm hover:bg-gray-700 transition bg-red-500 ">
+          <button
+            className="text-white px-4 py-2 rounded-sm hover:bg-gray-700 transition bg-red-500"
+            onClick={handleDeleteAccount}
+          >
             Delete Account
           </button>
         </div>

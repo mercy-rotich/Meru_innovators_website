@@ -40,6 +40,9 @@ import UserSettings from "./pages/UserAccount/UserSettings/UserSettings";
 
 import Preloader from "./components/Preloader/Preloader";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const App = () => {
   const { isDarkMode } = useTheme();
 
@@ -55,6 +58,17 @@ const App = () => {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme={isDarkMode ? true : false}
+      />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/communities" element={<Community />} />

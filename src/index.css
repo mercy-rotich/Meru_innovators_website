@@ -90,7 +90,7 @@ body.dark-mode .text-orange-700 {
   color: var(--orange);
 }
 body.dark-mode .text-green-600 {
-  color:green;
+  color: green;
 }
 
 body.dark-mode input[type="text"],
@@ -126,6 +126,28 @@ body.dark-mode .user-account-sidebar nav .bg-green-800:hover {
 }
 
 body.dark-mode .desktop-navbar .theme-button {
+}
+
+body.dark-mode .Toastify__toast--dark {
+  background: #333;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+body.dark-mode .Toastify__progress-bar--dark {
+  background: #2563eb;
+}
+
+/* Custom SweetAlert2 Modal */
+.my-swal-modal {
+  border: 2px solid gray !important; /* Gray border */
+  border-radius: 2px !important; /* Optional: Rounded corners */
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1) !important;
+}
+
+.my-swal-modal button {
+  border-radius: 2px;
+  padding: 0.2rem 1.5rem;
 }
 
 ::-webkit-scrollbar {

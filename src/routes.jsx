@@ -39,11 +39,10 @@ const AppRoutes = () => {
         <Route path="/auth/login" element={<Login />} />
         <Route path="/auth/signup" element={<Signup />} />
         <Route path="/events" element={<EventsPage />} />
+        <Route path="/gallery" element={<Gallery />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blogs/:id" element={<SingleBlog />} />
         <Route path="/alumni" element={<AlumniPage />} />
-        <Route path="/gallery" element={<Gallery />} />
-
         {/* User Account Routes */}
         <Route path="/account/profile" element={<Profile />} />
         <Route path="/account/dashboard" element={<UserAccountDashboard />} />
@@ -54,6 +53,5 @@ const AppRoutes = () => {
     </Routes>
   );
 };
-
 
 export default AppRoutes;

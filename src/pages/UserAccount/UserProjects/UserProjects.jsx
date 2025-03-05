@@ -1,7 +1,18 @@
 import React, { useState } from "react";
 import UserAccountLayout from "../UserAccountLayout/UserAccountLayout";
-import { FolderOpen, Plus, CheckCircle, Clock, Link, X } from "lucide-react";
+import {
+  FolderOpen,
+  Plus,
+  CheckCircle,
+  Clock,
+  Link,
+  Pencil,
+  Trash,
+} from "lucide-react";
 import AddProjectModal from "./AddProjectModal";
+
+import { customProjects } from "./CustomProjects";
+import { toast } from "react-toastify";
 
 const truncateDescription = (text, wordLimit = 25) => {
   const words = text.split(" ");
@@ -11,38 +22,7 @@ const truncateDescription = (text, wordLimit = 25) => {
 };
 
 const UserProjects = () => {
-  const [projects, setProjects] = useState([
-    {
-      id: 1,
-      name: "AI Chatbot Development",
-      description:
-        "Developing an AI chatbot for automated customer support and seamless user interaction using NLP and machine learning models.",
-      status: "Ongoing",
-      deadline: "Aug 30, 2024",
-      progress: 75,
-      liveLink: "https://aichatbot.com",
-    },
-    {
-      id: 2,
-      name: "E-commerce Platform",
-      description:
-        "A feature-rich e-commerce platform allowing vendors to list products, manage inventory, and process transactions with a secure payment gateway.",
-      status: "Completed",
-      deadline: "July 15, 2024",
-      progress: 100,
-      liveLink: "https://ecommerceplatform.com",
-    },
-    {
-      id: 3,
-      name: "Blockchain Research",
-      description:
-        "Exploring blockchain technologies and smart contracts to develop a decentralized application for secure and transparent transactions.",
-      status: "Pending",
-      deadline: "Sept 10, 2024",
-      progress: 20,
-      liveLink: "",
-    },
-  ]);
+  const [projects, setProjects] = useState([...customProjects]);
 
   const [showModal, setShowModal] = useState(false);
   const [newProject, setNewProject] = useState({
@@ -50,7 +30,7 @@ const UserProjects = () => {
     description: "",
     status: "Pending",
     deadline: "",
-    progress: 0,
+    progress: 35,
     liveLink: "",
   });
 
@@ -63,7 +43,7 @@ const UserProjects = () => {
   // Handle form submission
   const addProject = () => {
     if (!newProject.name.trim() || !newProject.description.trim()) {
-      alert("Project name and description are required.");
+      toast.error("Kindly fill all fields");
       return;
     }
 
@@ -133,7 +113,7 @@ const UserProjects = () => {
 
         {/* Project List */}
         <div className="bg-white rounded-sm shadow-least p-4 mt-[0.5rem] overflow-x-auto">
-          <table className="w-full border-collapse min-w-[800px]">
+          <table className="w-full border-collapse min-w-[1000px]">
             <thead>
               <tr className="bg-gray-100 text-gray-700">
                 <th className="p-3 text-left">Project Name</th>
@@ -142,6 +122,8 @@ const UserProjects = () => {
                 <th className="p-3 text-left">Deadline</th>
                 <th className="p-3 text-left">Progress</th>
                 <th className="p-3 text-left">Live Link</th>
+                <th className="p-3 text-left">Edit</th>
+                <th className="p-3 text-left">Delete</th>
               </tr>
             </thead>
             <tbody>
@@ -193,6 +175,22 @@ const UserProjects = () => {
                     ) : (
                       <span className="text-gray-400">N/A</span>
                     )}
+                  </td>
+                  <td className="p-3">
+                    <button
+                      className="bg-green-500 text-white p-2 rounded-sm hover:bg-green-600 transition"
+                      aria-label="Edit"
+                    >
+                      <Pencil size={18} />
+                    </button>
+                  </td>
+                  <td className="p-3">
+                    <button
+                      className="bg-red-500 text-white p-2 rounded-sm hover:bg-red-600 transition"
+                      aria-label="Delete"
+                    >
+                      <Trash size={18} />
+                    </button>
                   </td>
                 </tr>
               ))}

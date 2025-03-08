@@ -32,6 +32,8 @@ import UserSettings from "./pages/UserAccount/UserSettings/UserSettings";
 
 import UserBlogs from "./pages/UserAccount/UserBlogs/UserBlogs";
 
+import AdminDashboard from "./pages/AdminPages/AdminDashboard/AdminDashboard";
+
 const AppRoutes = () => {
   return (
     <Routes>
@@ -52,6 +54,11 @@ const AppRoutes = () => {
         <Route path="/account/projects" element={<UserProjects />} />
         <Route path="/account/user-settings" element={<UserSettings />} />
         <Route path="/account/blogs" element={<UserBlogs />} />
+
+        {/* Admin Routes */}
+
+        <Route path="/admin/dashboard" element={<AdminDashboard />} />
+
       </Route>
     </Routes>
   );

@@ -82,6 +82,12 @@ const DesktopNav = ({ openMobileNav, gallery }) => {
           <div className="flex items-center gap-[1rem]">
             <button
               className="text-white   px-[3rem] py-[0.5rem] rounded-[30px] hover:scale-105 bg-orange-500"
+              onClick={() => navigate("/admin/dashboard")}
+            >
+              Admin
+            </button>
+            <button
+              className="text-white   px-[3rem] py-[0.5rem] rounded-[30px] hover:scale-105 bg-orange-500"
               onClick={() => navigate("/auth/login")}
             >
               Login

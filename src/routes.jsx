@@ -30,6 +30,8 @@ import UserProjects from "./pages/UserAccount/UserProjects/UserProjects";
 
 import UserSettings from "./pages/UserAccount/UserSettings/UserSettings";
 
+import UserBlogs from "./pages/UserAccount/UserBlogs/UserBlogs";
+
 const AppRoutes = () => {
   return (
     <Routes>
@@ -49,6 +51,7 @@ const AppRoutes = () => {
         <Route path="/account/community" element={<UserCommunity />} />
         <Route path="/account/projects" element={<UserProjects />} />
         <Route path="/account/user-settings" element={<UserSettings />} />
+        <Route path="/account/blogs" element={<UserBlogs />} />
       </Route>
     </Routes>
   );

@@ -4,7 +4,6 @@ import {
   Home,
   Users,
   Calendar,
-  MessageSquare,
   Folder,
   Settings,
   LogOut,
@@ -39,6 +38,11 @@ const UserAccountSidebar = () => {
           to="/account/projects"
           icon={<Folder size={20} />}
           text="Projects"
+        />
+        <SidebarLink
+          to="/account/blogs"
+          icon={<Folder size={20} />}
+          text="Blogs"
         />
         {/* <SidebarLink
           to="/messages"

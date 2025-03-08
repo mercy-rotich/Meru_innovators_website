@@ -57,7 +57,7 @@ const AppRoutes = () => {
 
         {/* Admin Routes */}
 
-        <Route path="/admin/dashboard" element={<AdminDashboard />} />
+        <Route path="/admin/dashboard" element={<AdminDashboard/>} />
 
       </Route>
     </Routes>

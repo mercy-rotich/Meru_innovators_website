@@ -34,6 +34,8 @@ import UserBlogs from "./pages/UserAccount/UserBlogs/UserBlogs";
 
 import AdminDashboard from "./pages/AdminPages/AdminDashboard/AdminDashboard";
 
+import AdminUsers from "./pages/AdminPages/AdminUsers/AdminUsers";
+
 const AppRoutes = () => {
   return (
     <Routes>
@@ -58,6 +60,7 @@ const AppRoutes = () => {
         {/* Admin Routes */}
 
         <Route path="/admin/dashboard" element={<AdminDashboard/>} />
+        <Route path="/admin/users" element={<AdminUsers/>} />
 
       </Route>
     </Routes>

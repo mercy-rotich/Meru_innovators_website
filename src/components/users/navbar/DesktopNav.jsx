@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import brand from "../../../assets/brand/logo.svg";
 import "./Navbar.css";
 import { User } from "lucide-react";
@@ -7,8 +8,16 @@ import { useTheme } from "../../../context/ThemeContext";
 
 import { Sun, Moon } from "lucide-react";
 
+import { ArrowDown, ChevronDown } from "lucide-react";
+
 const DesktopNav = ({ openMobileNav, gallery }) => {
   const { isDarkMode, toggleTheme } = useTheme();
+
+  const [isDropdown, setIsDropDown] = useState(false);
+
+  const handleSetIsDropdown = () => {
+    setIsDropDown((prev) => !prev);
+  };
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -72,7 +81,10 @@ const DesktopNav = ({ openMobileNav, gallery }) => {
               {label}
             </Link>
           ))}
-          <button className="text-white  border-2 border-white px-[3rem] py-[0.5rem] rounded-[30px] hover:scale-105" onClick={() => navigate("/account/dashboard")}>
+          <button
+            className="text-white  border-2 border-white px-[3rem] py-[0.5rem] rounded-[30px] hover:scale-105"
+            onClick={() => navigate("/account/dashboard")}
+          >
             Account
           </button>
         </nav>
@@ -81,19 +93,6 @@ const DesktopNav = ({ openMobileNav, gallery }) => {
         <div className="flex items-center gap-[1rem]">
           <div className="flex items-center gap-[1rem]">
             <button
-              className="text-white   px-[3rem] py-[0.5rem] rounded-[30px] hover:scale-105 bg-orange-500"
-              onClick={() => navigate("/admin/dashboard")}
-            >
-              Admin
-            </button>
-            <button
-              className="text-white   px-[3rem] py-[0.5rem] rounded-[30px] hover:scale-105 bg-orange-500"
-              onClick={() => navigate("/auth/login")}
-            >
-              Login
-            </button>
-
-            <button
               className="hidden universal-button md:visible hover:scale-105 "
               onClick={() => navigate("/auth/signup")}
             >
@@ -101,7 +100,7 @@ const DesktopNav = ({ openMobileNav, gallery }) => {
             </button>
           </div>
 
-          <div className="flex gap-[1rem] items-center">
+          <div className="flex gap-[1rem] items-center ">
             <button
               className="theme-button"
               onClick={toggleTheme}
@@ -109,13 +108,44 @@ const DesktopNav = ({ openMobileNav, gallery }) => {
             >
               {isDarkMode ? <Sun /> : <Moon />}
             </button>
-            <button
-              className="border-2 rounded-full border-white h-[33px] w-[33px] flex justify-center items-center"
-              style={isScrolled ? { color: "#fff" } : null}
-              onClick={() => navigate("/account/dashboard")}
-            >
-              <User />
-            </button>
+            <div className="flex justify-between items-center relative">
+              <button
+                className="border-2 rounded-full border-white h-[33px] w-[33px] flex justify-center items-center"
+                style={isScrolled ? { color: "#fff" } : null}
+                onClick={() => navigate("/account/dashboard")}
+              >
+                <User />
+              </button>
+              <button className="ml-[1rem]" onClick={handleSetIsDropdown}>
+                <ChevronDown />
+              </button>
+
+              <AnimatePresence>
+                {isDropdown && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.3 }}
+                    className="flex absolute flex-col right-0 top-[130%] p-[0.4rem] shadow-least bg-white"
+                  >
+                    <button
+                      className="text-white px-[3rem] py-[0.5rem] rounded-sm hover:scale-105 bg-orange-500"
+                      onClick={() => navigate("/admin/dashboard")}
+                    >
+                      Admin
+                    </button>
+                    <button
+                      className="text-white px-[3rem] py-[0.5rem] rounded-sm hover:scale-105 bg-orange-500 mt-[1rem]"
+                      onClick={() => navigate("/auth/login")}
+                    >
+                      Login
+                    </button>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
             <button
               className={`block md:hidden text-3xl ${
                 isScrolled ? "text-white" : ""

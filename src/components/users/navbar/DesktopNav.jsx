@@ -39,7 +39,7 @@ const DesktopNav = ({ openMobileNav, gallery }) => {
           : { background: "green" }
       }
     >
-      <div className="container flex items-center justify-between py-3 px-6">
+      <div className="container flex items-center justify-between py-3 ">
         {/* Logo */}
         <Link to="/">
           <img

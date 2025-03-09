@@ -36,7 +36,6 @@
 
 body.dark-mode {
   background-color: var(--background-color-dark);
-
   color: var(--text-color-dark);
 }
 
@@ -223,6 +222,7 @@ img {
 }
 
 .container {
+
   width: 100%;
 
   max-width: 1500px;

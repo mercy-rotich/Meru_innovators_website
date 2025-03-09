@@ -2,9 +2,13 @@ import React from "react";
 import { useTheme } from "../../../../context/ThemeContext";
 import { User, Sun, Moon } from "lucide-react";
 import brand from "../../../../assets/brand/logo.svg";
-import { Link } from "react-router-dom";
-
+import { Link, Navigate, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 const AdminNavbar = () => {
+  const navigate = useNavigate();
+
+  const dispatch = useDispatch();
+
   const { isDarkMode, toggleTheme } = useTheme();
 
   return (
@@ -48,7 +52,18 @@ const AdminNavbar = () => {
           </Link>
 
           <div className="flex justify-between items-center">
-            <button className="ml-[1.5rem] text-white   px-[3rem] py-[0.5rem] rounded-[30px] hover:scale-105 bg-orange-500">
+            <button
+              className="ml-[1.5rem] text-white   px-[3rem] py-[0.5rem] rounded-[30px] hover:scale-105 bg-orange-500"
+              onClick={() => navigate("/account/dashboard")}
+            >
+              Account
+            </button>
+            <button
+              className="ml-[1.5rem] text-white   px-[3rem] py-[0.5rem] rounded-[30px] hover:scale-105 bg-orange-500"
+              onClick={() => {
+                navigate("/");
+              }}
+            >
               Home
             </button>
             <button

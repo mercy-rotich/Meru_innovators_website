@@ -72,8 +72,8 @@ const DesktopNav = ({ openMobileNav, gallery }) => {
               {label}
             </Link>
           ))}
-          <button className="text-white  border-2 border-white px-[3rem] py-[0.5rem] rounded-[30px] hover:scale-105">
-            Dashboard
+          <button className="text-white  border-2 border-white px-[3rem] py-[0.5rem] rounded-[30px] hover:scale-105" onClick={() => navigate("/account/dashboard")}>
+            Account
           </button>
         </nav>
 

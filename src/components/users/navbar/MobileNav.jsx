@@ -6,7 +6,12 @@ import "./MobileNav.css";
 
 import { motion, AnimatePresence } from "framer-motion";
 
+import { useNavigate } from "react-router-dom";
+
 const MobileNav = ({ onClose, showMobile }) => {
+
+  const navigate = useNavigate()
+
   return (
     <AnimatePresence>
       {showMobile && (
@@ -70,8 +75,11 @@ const MobileNav = ({ onClose, showMobile }) => {
                   </motion.li>
                 ))}
               </ul>
-              <button className="bg-blue-600 text-white px-5 py-2 rounded-sm text-sm font-medium transition hover:bg-blue-700 ml-4 mt-4">
-                Dashboard
+              <button
+                className="bg-blue-600 text-white px-5 py-2 rounded-sm text-sm font-medium transition hover:bg-blue-700 ml-4 mt-4 "
+                onClick={() => navigate("/account/dashboard")}
+              >
+                Account
               </button>
             </nav>
           </motion.div>

@@ -136,6 +136,9 @@ body.dark-mode .Toastify__toast--dark {
 body.dark-mode .Toastify__progress-bar--dark {
   background: #2563eb;
 }
+body.dark-mode .badge {
+  background:#121212;
+}
 
 /* Custom SweetAlert2 Modal */
 .my-swal-modal {

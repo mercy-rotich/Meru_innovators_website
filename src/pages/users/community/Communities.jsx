@@ -2,7 +2,7 @@ import React from "react";
 import Subtitle from "../../../components/Subtitle/Subtitle";
 import { CommunitiesData } from "./CommunitiesData";
 
-const Communities = () => {
+const Communities = ({ handleShowCommunity }) => {
   return (
     <div
       className="mt-20 py-12 bg-fixed communities-bg"
@@ -23,6 +23,9 @@ const Communities = () => {
             <div
               key={community.id}
               className="bg-white rounded-sm shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              onClick={() => {
+                handleShowCommunity();
+              }}
             >
               {/* Community Image */}
               <img

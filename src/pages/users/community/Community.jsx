@@ -12,9 +12,12 @@ import Communities from "./Communities";
 import SubHero from "../../../components/users/Hero/SubHero";
 
 import "./Community.css";
+import CommunityModal from "./CommunityModal";
 
 const Community = () => {
   const [selectedUser, setSelectedUser] = useState(null);
+
+  const [showCommunity, setShowCommunity] = useState(false);
 
   const handleUserSelect = (userData) => {
     setSelectedUser(userData);
@@ -22,6 +25,10 @@ const Community = () => {
 
   const handleUserClose = () => {
     setSelectedUser(null);
+  };
+
+  const handleShowCommunity = () => {
+    setShowCommunity((prev) => !prev);
   };
 
   return (
@@ -52,8 +59,11 @@ const Community = () => {
           </div>
         </div>
       </div>
-      <Communities />
-      <div className="bg-green-200 pb-[4rem]">
+      <Communities handleShowCommunity={handleShowCommunity} />
+      <div
+        className="bg-green-200 pb-[4rem]"
+       
+      >
         <div
           className="container py-[3rem]"
           style={{
@@ -118,6 +128,8 @@ const Community = () => {
         <Footer />
       </div>
       <UserModal user={selectedUser} closeUser={handleUserClose} />
+
+      {showCommunity && <CommunityModal onClose={handleShowCommunity} />}
     </div>
   );
 };

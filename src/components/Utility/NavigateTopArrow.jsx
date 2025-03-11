@@ -46,9 +46,9 @@ const NavigateTopArrow = () => {
           className="text-6xl sm:text-5xl   text-orange-500 sm:cursor-pointer block"
           // onClick={navigate(-1)}
         >
-          <span>
+          {/* <span>
             <ArrowBigLeft size={50} />
-          </span>
+          </span> */}
         </button>
       </div>
     )

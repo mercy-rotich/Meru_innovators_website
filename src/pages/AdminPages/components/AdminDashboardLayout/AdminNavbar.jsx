@@ -48,6 +48,7 @@ const AdminNavbar = () => {
             >
               Account
             </button> */}
+            <p>ID:6734JKL812</p>
             <button
               className="text-white px-4 py-1 rounded-sm hover:scale-105 bg-orange-500"
               onClick={() => navigate("/")}
@@ -64,7 +65,7 @@ const AdminNavbar = () => {
             </button>
 
             {/* Profile & Dropdown */}
-            <div className="relative">
+            <div className="relative pr-[0.8rem]">
               <button
                 onClick={() => setIsDropDown((prev) => !prev)}
                 className="flex items-center"
@@ -80,7 +81,7 @@ const AdminNavbar = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.3 }}
-                    className="absolute w-[150px] right-0 top-[140%] p-2 shadow-least bg-white rounded-sm"
+                    className="absolute w-[150px] right-[1rem] top-[140%] p-2 shadow-least bg-white rounded-sm"
                   >
                     <button
                       className="block w-full text-left text-gray-800 px-4 py-2  rounded"

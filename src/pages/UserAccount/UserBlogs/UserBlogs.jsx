@@ -65,8 +65,8 @@ const UserBlogs = () => {
 
   return (
     <UserAccountLayout>
-      <div className="mx-auto p-4">
-        <div className="flex justify-between items-center bg-white p-[1rem]">
+      <div className="mx-auto px-[0.5rem]">
+        <div className="flex justify-between items-center bg-white p-[1rem] mb-[0.5rem]">
           <h2 className="text-2xl font-semibold">My Blogs</h2>
           <button
             onClick={() => openModal()}
@@ -80,7 +80,7 @@ const UserBlogs = () => {
         <div className="overflow-x-auto bg-white shadow-least rounded-sm ">
           <table className="w-full border-collapse min-w-[1000px]">
             <thead>
-              <tr className="bg-gray-200 ">
+              <tr className="bg-gray-200 border-b border-neutral-300">
                 <th className="p-3 text-start">Title</th>
                 <th className="p-3 text-start">Description</th>
                 <th className="p-3 text-start">Published</th>
@@ -89,7 +89,7 @@ const UserBlogs = () => {
             </thead>
             <tbody>
               {blogs.map((blog) => (
-                <tr key={blog.id} className="">
+                <tr key={blog.id} className="hover:bg-green-500 border-b border-neutral-300">
                   <td className="p-3 ">{blog.title}</td>
                   <td className="p-3 ">{truncateText(blog.description, 20)}</td>
                   <td className="p-3 ">{blog.date}</td>

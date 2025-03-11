@@ -71,8 +71,8 @@ const AdminBlogs = () => {
 
         {/* Edit Modal */}
         {showModal && (
-          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 w-[96%]">
-            <div className="bg-white p-6 rounded-least shadow-sm max-w-[800px]">
+          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+            <div className="bg-white p-6 rounded-least shadow-sm max-w-[800px]  w-[96%]">
               <h3 className="text-xl font-semibold mb-4">Edit Blog</h3>
               <input
                 type="text"

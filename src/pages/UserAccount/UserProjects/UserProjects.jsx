@@ -121,7 +121,7 @@ const UserProjects = () => {
                 <th className="p-3 text-left">Status</th>
                 <th className="p-3 text-left">Deadline</th>
                 <th className="p-3 text-left">Progress</th>
-                <th className="p-3 text-left">Live Link</th>
+                <th className="p-3 text-left w-[90px]">Live Link</th>
                 <th className="p-3 text-left">Edit</th>
                 <th className="p-3 text-left">Delete</th>
               </tr>

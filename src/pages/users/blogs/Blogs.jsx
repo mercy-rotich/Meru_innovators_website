@@ -21,7 +21,7 @@ import "./Blogs.css";
 import { useNavigate } from "react-router-dom";
 import ShowMoreButton from "../../../components/ShowMore/ShowMore";
 
-const blogPosts = [
+export const blogPosts = [
   {
     id: 1,
     title: "The Future of AI in Innovation",

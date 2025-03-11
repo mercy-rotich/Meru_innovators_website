@@ -51,7 +51,7 @@ const AdminEvents = () => {
           </button>
         </div>
 
-        <div className="bg-white shadow-least rounded-lg p-4 overflow-x-auto">
+        <div className="bg-white shadow-least rounded-sm p-4 overflow-x-auto">
           <table className="w-full border-collapse min-w-[1000px]">
             <thead>
               <tr className="bg-gray-100 text-left">

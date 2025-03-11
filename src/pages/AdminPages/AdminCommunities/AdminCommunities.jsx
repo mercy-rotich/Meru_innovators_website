@@ -112,7 +112,7 @@ const AdminCommunities = () => {
               {communities.map((community) => (
                 <tr
                   key={community.id}
-                  className="border-b border-neutral-300 hover:bg-gray-100 transition"
+                  className="border-b border-neutral-300 hover:bg-green-500 transition"
                 >
                   <td className="p-3">{community.name}</td>
                   <td className="p-3">{community.description}</td>

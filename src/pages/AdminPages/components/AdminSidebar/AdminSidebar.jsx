@@ -34,13 +34,13 @@ const AdminAccountSidebar = () => {
         <SidebarLink to="/admin/communities" icon={<CommunitiesIcon size={20} />} text="Communities" />
 
      
-        <SidebarLink to="/admin/projects" icon={<Folder size={20} />} text="Projects" />
+        <SidebarLink to="#" icon={<Folder size={20} />} text="Projects" />
 
 
         <SidebarLink to="/admin/blogs" icon={<Book size={20} />} text="Blogs" />
 
 
-        <SidebarLink to="/admin/testimonials" icon={<Star size={20} />} text="Testimonials" />
+        <SidebarLink to="/admin/testmonials" icon={<Star size={20} />} text="Testimonials" />
 
 
 
@@ -57,7 +57,7 @@ const AdminAccountSidebar = () => {
     
         <SidebarLink to="/admin/profile" icon={<User size={20} />} text="Profile" />
 
-        
+
         
         <SidebarLink to="/admin/user-settings" icon={<Settings size={20} />} text="Settings" />
       </nav>

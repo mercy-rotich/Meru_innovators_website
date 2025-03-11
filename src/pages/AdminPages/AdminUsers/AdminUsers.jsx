@@ -76,6 +76,8 @@ const AdminUsers = () => {
                   <th className="p-3 text-left">Image</th>
                   <th className="p-3 text-left">Name</th>
                   <th className="p-3 text-left">Email</th>
+                  <th className="p-3 text-left">Bio</th>
+                  <th className="p-3 text-left">Position</th>
                   <th className="p-3 text-left">Role</th>
                   <th className="p-3 text-left">Community</th>
                   <th className="p-3 text-left">Course</th>
@@ -88,13 +90,19 @@ const AdminUsers = () => {
                   .map((user, index) => (
                     <tr
                       key={index}
-                      className="border-b border-neutral-300 hover:bg-gray-100 transition"
+                      className="border-b border-neutral-300 hover:bg-green-500 transition"
                     >
                       <td className="p-3">
-                        <img src="https://images.pexels.com/photos/7009583/pexels-photo-7009583.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="profile-icon" className="w-[50px]" />
+                        <img
+                          src="https://images.pexels.com/photos/7009583/pexels-photo-7009583.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                          alt="profile-icon"
+                          className="w-[50px]"
+                        />
                       </td>
                       <td className="p-3">{user.name}</td>
                       <td className="p-3">{user.email}</td>
+                      <td className="p-3">Null</td>
+                      <td className="p-3">Lead Web</td>
                       <td className="p-3">{user.role}</td>
                       <td className="p-3">{user.community}</td>
                       <td className="p-3 flex items-center gap-2">
@@ -137,7 +145,7 @@ const AdminUsers = () => {
                 {users.map((user, index) => (
                   <tr
                     key={index}
-                    className="border-b border-neutral-300 hover:bg-gray-100 transition"
+                    className="border-b border-neutral-300 hover:bg-green-500 transition"
                   >
                     <td className="p-3">{user.name}</td>
                     <td className="p-3">{user.email}</td>
@@ -165,7 +173,7 @@ const AdminUsers = () => {
         {/* Modal for Changing Role */}
         {isModalOpen && selectedExecutive && (
           <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-            <div className="bg-white p-6 rounded-sm shadow-lg max-w-[500px] w-[90%]">
+            <div className="bg-white p-6 rounded-sm shadow-lg max-w-[500px] w-[97%]">
               <h3 className="text-lg font-semibold mb-4">
                 Change Role for {selectedExecutive.name}
               </h3>

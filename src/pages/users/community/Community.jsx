@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import MegaDashboard from "../../../components/users/navbar/MegaDashboard";
 import Footer from "../../../components/users/Footer/Footer";
 import { Search, Filter, User } from "lucide-react";
 import { users } from "../../../components/data/users";
-import { FaFacebookSquare, FaLinkedin, FaGithub } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
 import UserModal from "./UserModel";
 import Subtitle from "../../../components/Subtitle/Subtitle";
 import Communities from "./Communities";
@@ -15,6 +13,9 @@ import "./Community.css";
 import CommunityModal from "./CommunityModal";
 
 const Community = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
   const [selectedUser, setSelectedUser] = useState(null);
 
   const [showCommunity, setShowCommunity] = useState(false);
@@ -31,10 +32,20 @@ const Community = () => {
     setShowCommunity((prev) => !prev);
   };
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   return (
     <div className="bg-gray-50 min-h-screen">
       <MegaDashboard />
-      <SubHero title={"COMMUNITY"} />
+      <SubHero title={"COMMUNITY"} isCommmunity />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mb-8">
           <div className="flex items-center bg-white rounded-sm border border-neutral-300 w-full sm:w-auto">
@@ -48,10 +59,35 @@ const Community = () => {
             </button>
           </div>
           <div className="flex items-center gap-4">
-            <button className="flex items-center gap-2 bg-white px-4 py-2 rounded-sm border border-neutral-300 hover:bg-gray-100 transition">
-              <Filter size={20} />
-              <span>Filters</span>
-            </button>
+            {/* Dropdown Container */}
+            <div className="relative" ref={dropdownRef}>
+              {/* Toggle Button */}
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="flex items-center gap-2 bg-white px-4 py-2 rounded-sm border border-neutral-300 hover:bg-gray-100 transition"
+              >
+                <Filter size={20} />
+                <span>Filters</span>
+              </button>
+
+              {/* Dropdown Menu */}
+              {isOpen && (
+                <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg border border-neutral-300 overflow-hidden z-10 animate-fade-in">
+                  {["Name", "Modification Date", "Skill"].map(
+                    (filter, index) => (
+                      <button
+                        key={index}
+                        className="w-full text-left px-4 py-2 hover:bg-orange-500 hover:text-white transition"
+                      >
+                        {filter}
+                      </button>
+                    )
+                  )}
+                </div>
+              )}
+            </div>
+
+            {/* Users Count */}
             <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-sm border border-neutral-300">
               <User size={20} />
               <span>{users.length} Users</span>
@@ -60,10 +96,7 @@ const Community = () => {
         </div>
       </div>
       <Communities handleShowCommunity={handleShowCommunity} />
-      <div
-        className="bg-green-200 pb-[4rem]"
-       
-      >
+      <div className="bg-green-200 pb-[4rem]">
         <div
           className="container py-[3rem]"
           style={{

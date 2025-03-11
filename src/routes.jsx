@@ -38,6 +38,8 @@ import AdminUsers from "./pages/AdminPages/AdminUsers/AdminUsers";
 
 import AdminCommunities from "./pages/AdminPages/AdminCommunities/AdminCommunities";
 
+import AdminEvents from "./pages/AdminPages/AdminEvents/AdminEvents";
+
 const AppRoutes = () => {
   return (
     <Routes>
@@ -64,6 +66,7 @@ const AppRoutes = () => {
         <Route path="/admin/dashboard" element={<AdminDashboard/>} />
         <Route path="/admin/users" element={<AdminUsers/>} />
         <Route path="/admin/communities" element={<AdminCommunities/>} />
+        <Route path="/admin/events" element={<AdminEvents/>} />
 
       </Route>
     </Routes>

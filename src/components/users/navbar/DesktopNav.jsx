@@ -8,7 +8,7 @@ import { useTheme } from "../../../context/ThemeContext";
 
 import { Sun, Moon } from "lucide-react";
 
-import { ArrowDown, ChevronDown } from "lucide-react";
+import {ChevronDown } from "lucide-react";
 
 const DesktopNav = ({ openMobileNav, gallery }) => {
   const { isDarkMode, toggleTheme } = useTheme();

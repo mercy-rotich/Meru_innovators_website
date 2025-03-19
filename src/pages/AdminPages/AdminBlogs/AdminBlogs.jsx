@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Pencil, Trash2 } from "lucide-react";
 import AdminAccountLayout from "../components/AdminDashboardLayout/AdminAccountLayout";
-import { blogPosts as initialBlogPosts } from "../../users/blogs/Blogs";
+
+import { BlogPosts as initialBlogPosts } from "../../users/blogs/BlogsData";
 
 const AdminBlogs = () => {
   const [blogs, setBlogs] = useState(initialBlogPosts);

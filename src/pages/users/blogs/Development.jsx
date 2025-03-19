@@ -1,6 +1,7 @@
 import { BlogPosts } from "./BlogsData";
 import Subtitle from "../../../components/Subtitle/Subtitle";
 import { motion } from "framer-motion";
+import ShowMoreButton from "../../../components/ShowMore/ShowMore";
 const Development = () => {
   return (
     <div className="container mx-auto px-4 sm:px-8 py-12">
@@ -32,6 +33,9 @@ const Development = () => {
             </motion.div>
           ))}
         </div>
+        <div className="mb-[2rem]">
+        <ShowMoreButton />
+      </div>
       </div>
     </div>
   );

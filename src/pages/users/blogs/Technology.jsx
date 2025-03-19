@@ -1,9 +1,10 @@
 import { BlogPosts } from "./BlogsData";
 import Subtitle from "../../../components/Subtitle/Subtitle";
 import { motion } from "framer-motion";
+import ShowMoreButton from "../../../components/ShowMore/ShowMore";
 const Technology = () => {
   return (
-    <div  className="container mx-auto px-4 sm:px-8 py-12">
+    <div className="container mx-auto px-4 sm:px-8 py-12">
       <div className="mt-[3rem]">
         <Subtitle title={"TECHNOLOGY"} />
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-[2rem]">
@@ -31,6 +32,9 @@ const Technology = () => {
               </span>
             </motion.div>
           ))}
+        </div>
+        <div className="mb-[2rem]">
+          <ShowMoreButton />
         </div>
       </div>
     </div>

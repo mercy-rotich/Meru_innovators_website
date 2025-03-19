@@ -35,7 +35,7 @@ const Home = () => {
     <div>
       <Hero />
       <div
-        className={`transition-all duration-300   ${
+        className={`transition-all duration-300  z-10  ${
           isSticky ? "fixed top-[55px]  w-full right-0 left-0   " : ""
         }`}
       >

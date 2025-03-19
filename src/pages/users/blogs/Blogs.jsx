@@ -103,6 +103,9 @@ const Blogs = () => {
                     </span>
                   </motion.div>
                 ))}
+                <div className="mb-[2rem]">
+                  <ShowMoreButton />
+                </div>
               </div>
             </motion.div>
           )}
@@ -175,10 +178,6 @@ const Blogs = () => {
           )}
         </AnimatePresence>
       </motion.div>
-
-      <div className="mb-[2rem]">
-        <ShowMoreButton />
-      </div>
 
       <Footer />
     </div>

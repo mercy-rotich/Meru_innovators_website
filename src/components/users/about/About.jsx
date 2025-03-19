@@ -64,7 +64,7 @@ const About = () => {
         </div>
 
         {/* Core Values Section */}
-        <div className=" mx-auto bg-green-200 py-[3rem]">
+        <div className=" mx-auto bg-green-200 py-[3rem]" id="core-values">
           <Subtitle title="Our Core Values" />
           <div className="container grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
             {[

@@ -8,7 +8,7 @@ import { useTheme } from "../../../context/ThemeContext";
 
 import { Sun, Moon } from "lucide-react";
 
-import {ChevronDown } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 const DesktopNav = ({ openMobileNav, gallery }) => {
   const { isDarkMode, toggleTheme } = useTheme();
@@ -127,7 +127,7 @@ const DesktopNav = ({ openMobileNav, gallery }) => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.3 }}
-                    className="flex absolute flex-col right-0 top-[130%] p-[0.4rem] shadow-least bg-white"
+                    className="flex absolute drop-down flex-col right-0 top-[130%] p-[0.4rem] z-30 shadow-least bg-white"
                   >
                     <button
                       className="text-white px-[3rem] py-[0.5rem] rounded-sm hover:scale-105 bg-orange-500"

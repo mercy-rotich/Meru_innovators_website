@@ -5,6 +5,8 @@ import PreloaderSlice from "./features/PreloaderSlice";
 
 
 
+import IncomponentPreloaderSlice from "./features/IncomponentPreloaderSlice";
+
 
  const Store = configureStore({
 
@@ -12,8 +14,9 @@ import PreloaderSlice from "./features/PreloaderSlice";
     reducer:{
         
         
-        preloader:PreloaderSlice.reducer
+        preloader:PreloaderSlice.reducer,
 
+        incomponent:IncomponentPreloaderSlice.reducer,
 
     }
 

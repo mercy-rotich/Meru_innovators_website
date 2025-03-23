@@ -1,16 +1,22 @@
 import React from "react";
 
 const EventCard = ({ event, openRsvpModal }) => {
+ 
+  const truncateDescription = (text, wordLimit) => {
+    const words = text.split(" ");
+    return words.length > wordLimit ? words.slice(0, wordLimit).join(" ") + "..." : text;
+  };
+
   return (
     <div className="relative w-full h-96 rounded-sm overflow-hidden border border-neutral-300 shadow-lg hover:shadow-xl transition-shadow duration-300">
-      {/* Background Image */}
+     
       <img
-        src={event.image}
+        src={event.image_url}
         alt={event.title}
         className="absolute inset-0 w-full h-full object-cover"
       />
 
-      {/* Overlay */}
+  
       <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end p-6 text-white">
         <h2 className="text-xl font-bold mb-2">{event.title}</h2>
         <p className="text-sm mb-1">
@@ -19,9 +25,9 @@ const EventCard = ({ event, openRsvpModal }) => {
         <p className="text-sm mb-2">
           <span className="font-semibold">Location:</span> {event.location}
         </p>
-        <p className="text-sm mb-4">{event.description}</p>
+        <p className="text-sm mb-4">{truncateDescription(event.description, 15)}</p>
 
-        {/* Button Container */}
+  
         <div className="flex justify-between gap-2">
           <button className="w-1/2 bg-blue-600 text-white py-2 rounded-sm font-semibold hover:bg-blue-700 transition-colors">
             Learn More

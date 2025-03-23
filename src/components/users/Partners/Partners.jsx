@@ -6,6 +6,9 @@ import "react-multi-carousel/lib/styles.css";
 
 import Subtitle from "../../Subtitle/Subtitle";
 
+import api from "../../../configuration/Configuration";
+import { useEffect, useState } from "react";
+
 const responsive = {
   superLargeDesktop: { breakpoint: { max: 4000, min: 3000 }, items: 5 },
   desktop: { breakpoint: { max: 3000, min: 1024 }, items: 3 },
@@ -73,6 +76,30 @@ const partners = [
 ];
 
 const Partners = () => {
+
+  const [backendPartners, setBackendPartners] = useState([]);
+
+  const fetchPartners = async () => {
+    try{
+
+      const response = await api.get("partners/");
+
+      setBackendPartners(response.data.data || []);
+
+    }catch(error){
+
+      console.log(`Error getting partners: Error=>${error.message}`);
+
+    }
+  }
+
+  useEffect(()=>{
+
+    fetchPartners()
+
+  },[])
+
+
   return (
     <div className="bg-green-200 p-[3rem]">
       <Subtitle title="Our University Partners" centered />

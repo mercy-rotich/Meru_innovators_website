@@ -82,6 +82,12 @@ const AdminCommunities = () => {
     setNewCommunityDescription("");
   };
 
+  const closeModal = () => {
+    setIsAddModalOpen(false);
+    setNewCommunityName("");
+    setNewCommunityDescription("");
+  };
+
   return (
     <AdminAccountLayout>
       <div className="mx-auto p-[0.5rem] bg-gray-50 min-h-screen">
@@ -133,7 +139,18 @@ const AdminCommunities = () => {
         {/* Add Community Modal */}
         {isAddModalOpen && (
           <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-            <div className="bg-white p-6 rounded-lg shadow-lg max-w-[500px] w-[97%]">
+            <div className="bg-white p-6 rounded-lg shadow-lg max-w-[500px] w-[97%] relative">
+              {/* Close (X) Button */}
+              <button 
+                onClick={closeModal}
+                className="absolute top-3 right-3 text-gray-500 hover:text-gray-800 transition"
+                aria-label="Close modal"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+              
               <h3 className="text-xl font-semibold mb-4">Add New Community</h3>
               <div className="mb-4">
                 <label className="block text-sm font-medium text-gray-700">
@@ -161,7 +178,7 @@ const AdminCommunities = () => {
               </div>
               <div className="flex justify-end gap-3">
                 <button
-                  onClick={() => setIsAddModalOpen(false)}
+                  onClick={closeModal}
                   className="bg-gray-400 text-white px-4 py-2 rounded hover:bg-gray-500 transition"
                 >
                   Cancel

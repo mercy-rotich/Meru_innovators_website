@@ -3,6 +3,18 @@ import { motion } from "framer-motion";
 import "./Subhero.css";
 
 const SubHero = ({ title, subtitle }) => {
+  // Function to handle scrolling to communities section
+  const scrollToCommunities = () => {
+    const communitiesSection = document.getElementById('communities-section');
+    
+    if (communitiesSection) {
+      communitiesSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <motion.div
       className="relative bg-gradient-to-r text-white py-24 rounded-b-lg shadow-xl sub-hero"
@@ -48,15 +60,16 @@ const SubHero = ({ title, subtitle }) => {
         {/* CTA Buttons */}
         <div className="flex flex-col md:flex-row justify-center gap-4">
           <motion.button
-            className="text-white  border-2 border-white px-[3rem] py-[0.5rem] rounded-[30px] mt-[2rem]"
+            className="text-white border-2 border-white px-12 py-2 rounded-full mt-8"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={scrollToCommunities}
           >
             Join Community
           </motion.button>
 
           <motion.button
-            className="text-white  border-2 border-white px-[3rem] py-[0.5rem] rounded-[30px] mt-[0.2rem] md:mt-[2rem]"
+            className="text-white border-2 border-white px-12 py-2 rounded-full mt-1 md:mt-8"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

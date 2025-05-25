@@ -10,7 +10,9 @@ import { motion } from "framer-motion";
 import EventCard from "./EventCard";
 import { hotEvents } from "./EventsCustom";
 import BookRsvp from "../../components/modals/BookRsvp/BookRsvp";
+import FeaturedEventsRSVP from "./FeaturedEventsRSVP";
 import api from "../../configuration/Configuration";
+
 // Carousel responsive settings
 const responsive = {
   superLargeDesktop: { breakpoint: { max: 4000, min: 3000 }, items: 2 },
@@ -101,6 +103,12 @@ const EventsPage = () => {
           </div>
         </div>
       )}
+
+      {/* NEW RSVP SECTION - Added here */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <Subtitle title={"RESERVE YOUR SPOT"} centered />
+        <FeaturedEventsRSVP events={events} />
+      </div>
 
       {/* Events Calendar Section */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">

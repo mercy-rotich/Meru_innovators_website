@@ -53,9 +53,6 @@ const Communities = ({ handleShowCommunity }) => {
             <div
               key={community.id}
               className="bg-white rounded-sm shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
-              onClick={() => {
-                handleShowCommunity();
-              }}
             >
               {/* Community Image */}
               <img
@@ -70,9 +67,35 @@ const Communities = ({ handleShowCommunity }) => {
                   <h2 className="text-xl font-bold text-gray-800">
                     {community.club}
                   </h2>
+                </div>
+                <p className="text-gray-600 mb-4">{community.description}</p>
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="text-sm text-gray-500">
+                    {community.members} members
+                  </span>
+                </div>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {community.tags.map((tag, index) => (
+                    <span
+                      key={index}
+                      className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                
+                
+                <div className="flex gap-4 mt-4">
+                  <button
+                    onClick={() => handleShowCommunity(community.id)}
+                    className="flex-1 px-4 py-2 bg-transparent border border-blue-600 text-blue-600 rounded-md text-sm font-medium hover:bg-blue-50 transition-colors duration-200"
+                  >
+                    View Details
+                  </button>
                   <button
                     onClick={(e) => handleJoinCommunity(community.id, e)}
-                    className={`px-4 py-1 rounded-md text-sm font-medium transition-colors duration-200 ${
+                    className={`flex-1 px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
                       joinedCommunities.includes(community.id)
                         ? "bg-gray-200 text-gray-700"
                         : joinedCommunities.length >= 2
@@ -83,22 +106,6 @@ const Communities = ({ handleShowCommunity }) => {
                   >
                     {joinedCommunities.includes(community.id) ? "Leave" : "Join"}
                   </button>
-                </div>
-                <p className="text-gray-600 mb-4">{community.description}</p>
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="text-sm text-gray-500">
-                    {community.members} members
-                  </span>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {community.tags.map((tag, index) => (
-                    <span
-                      key={index}
-                      className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm"
-                    >
-                      {tag}
-                    </span>
-                  ))}
                 </div>
               </div>
             </div>

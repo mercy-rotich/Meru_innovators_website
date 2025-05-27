@@ -65,7 +65,7 @@ const DesktopNav = ({ openMobileNav, gallery }) => {
             { path: "/communities", label: "Community" },
             { path: "/events", label: "Events" },
             { path: "/alumni", label: "Alumni" },
-
+            { path: "/projects", label: "Projects" },
             { path: "/blogs", label: "Blogs" },
 
             { path: "/gallery", label: "Gallery" },

@@ -53,14 +53,19 @@ const Navbar = () => {
               <a href="">Alumni</a>
             </li>
             <li>
+              <a href="">Projects</a>
+            </li>
+            <li>
               <a href="">Testmonials</a>
             </li>
             <li>
               <a href="">Blogs</a>
             </li>
+
             <li>
               <a href="">Support</a>
             </li>
+            
           </ul>
         </div>
 

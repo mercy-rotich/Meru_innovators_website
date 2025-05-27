@@ -2,7 +2,19 @@ import React from "react";
 import { motion } from "framer-motion";
 import "./Subhero.css";
 
-const SubHero = ({ title, subtitle }) => {
+const SubHero = ({ 
+  title, 
+  subtitle, 
+  description, 
+  showButtons = true,
+  primaryButtonText = "Join Community",
+  secondaryButtonText = "Learn More",
+  onPrimaryClick,
+  onSecondaryClick 
+}) => {
+  // Default description if none provided
+  const defaultDescription = "Unlock the full potential of your projects with our cutting-edge platform. Join a thriving community of professionals, enhance your workflow, and take your career to the next level.";
+
   // Function to handle scrolling to communities section
   const scrollToCommunities = () => {
     const communitiesSection = document.getElementById('communities-section');
@@ -12,6 +24,22 @@ const SubHero = ({ title, subtitle }) => {
         behavior: 'smooth',
         block: 'start'
       });
+    }
+  };
+
+  // Handle primary button click
+  const handlePrimaryClick = () => {
+    if (onPrimaryClick) {
+      onPrimaryClick();
+    } else {
+      scrollToCommunities();
+    }
+  };
+
+  // Handle secondary button click
+  const handleSecondaryClick = () => {
+    if (onSecondaryClick) {
+      onSecondaryClick();
     }
   };
 
@@ -52,30 +80,31 @@ const SubHero = ({ title, subtitle }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.4 }}
         >
-          Unlock the full potential of your projects with our cutting-edge
-          platform. Join a thriving community of professionals, enhance your
-          workflow, and take your career to the next level.
+          {description || defaultDescription}
         </motion.p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col md:flex-row justify-center gap-4">
-          <motion.button
-            className="text-white border-2 border-white px-12 py-2 rounded-full mt-8"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={scrollToCommunities}
-          >
-            Join Community
-          </motion.button>
+        {showButtons && (
+          <div className="flex flex-col md:flex-row justify-center gap-4">
+            <motion.button
+              className="text-white border-2 border-white px-12 py-2 rounded-full mt-8"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={handlePrimaryClick}
+            >
+              {primaryButtonText}
+            </motion.button>
 
-          <motion.button
-            className="text-white border-2 border-white px-12 py-2 rounded-full mt-1 md:mt-8"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Learn More
-          </motion.button>
-        </div>
+            <motion.button
+              className="text-white border-2 border-white px-12 py-2 rounded-full mt-1 md:mt-8"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={handleSecondaryClick}
+            >
+              {secondaryButtonText}
+            </motion.button>
+          </div>
+        )}
       </div>
     </motion.div>
   );

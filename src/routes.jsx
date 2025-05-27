@@ -44,6 +44,7 @@ import AdminBlogs from "./pages/AdminPages/AdminBlogs/AdminBlogs";
 
 import AdminTestmonials from "./pages/AdminPages/AdminTestmonials/AdminTestmonials";
 import Communities from "./pages/users/community/Communities";
+import AdminProjects from "./pages/AdminPages/AdminProjects/AdminProjects";
 
 const AppRoutes = () => {
   return (
@@ -73,6 +74,7 @@ const AppRoutes = () => {
         <Route path="/admin/users" element={<AdminUsers/>} />
         <Route path="/admin/communities" element={<AdminCommunities/>} />
         <Route path="/admin/events" element={<AdminEvents/>} />
+        <Route path="/admin/projects" element={<AdminProjects/>} />
 
         <Route path="/admin/blogs" element={<AdminBlogs/>} />
 

@@ -34,7 +34,7 @@ const AdminAccountSidebar = () => {
         <SidebarLink to="/admin/communities" icon={<CommunitiesIcon size={20} />} text="Communities" />
 
      
-        <SidebarLink to="#" icon={<Folder size={20} />} text="Projects" />
+        <SidebarLink to="/admin/projects" icon={<Folder size={20} />} text="Projects" />
 
 
         <SidebarLink to="/admin/blogs" icon={<Book size={20} />} text="Blogs" />
